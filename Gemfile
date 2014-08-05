@@ -30,6 +30,10 @@ gem 'spring',        group: :development
 # https://github.com/thoughtbot/factory_girl_rails
 gem 'factory_girl_rails'
 
+# authenticate users through google
+# https://github.com/zquestz/omniauth-google-oauth2
+gem "omniauth-google-oauth2"
+
 group :development, :test do
 
   # Our preferred testing framework
