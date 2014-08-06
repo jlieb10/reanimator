@@ -52,7 +52,7 @@ group :development, :test do
   # Test interactive features in our app
   # http://rubydoc.info/github/jnicklas/capybara/master
   # https://github.com/jnicklas/capybara
-  gem 'capybara-rails'
+  # gem 'capybara-rails'
 end
 
 
