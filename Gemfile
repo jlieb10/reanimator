@@ -32,6 +32,7 @@ gem 'factory_girl_rails'
 
 # authenticate users through google
 # https://github.com/zquestz/omniauth-google-oauth2
+# https://code.google.com/apis/console/ 
 gem "omniauth-google-oauth2"
 
 group :development, :test do
@@ -40,6 +41,7 @@ group :development, :test do
   # https://github.com/rspec/rspec-rails
   gem 'rspec-rails'
 
+  gem 'pry'
 end
 
 

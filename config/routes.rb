@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  
+  root 'home#index'
+
+  get 'auth/google/callback' => 'sessions#create'
+
+  get 'auth/failure', to: redirect('/')
+  delete '/sign_out' => 'sessions#destroy', as: 'sign_out'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
