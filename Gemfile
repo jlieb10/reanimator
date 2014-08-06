@@ -30,6 +30,10 @@ gem 'spring',        group: :development
 # https://github.com/thoughtbot/factory_girl_rails
 gem 'factory_girl_rails'
 
+# generate fake data
+# https://github.com/stympy/faker
+gem 'faker'
+
 # authenticate users through google
 # https://github.com/zquestz/omniauth-google-oauth2
 # https://code.google.com/apis/console/ 
@@ -41,7 +45,14 @@ group :development, :test do
   # https://github.com/rspec/rspec-rails
   gem 'rspec-rails'
 
+  # An IRB alternative and runtime developer console
+  # https://github.com/pry/pry
   gem 'pry'
+
+  # Test interactive features in our app
+  # http://rubydoc.info/github/jnicklas/capybara/master
+  # https://github.com/jnicklas/capybara
+  gem 'capybara-rails'
 end
 
 
