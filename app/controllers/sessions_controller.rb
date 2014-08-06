@@ -1,10 +1,9 @@
 class SessionsController < ApplicationController
-
   def create
     @user = User.from_omniauth(request.env['omniauth.auth'])
 
     if @user.persisted?
-      sessions[:user_id] = @user.id
+      sign_in(@user)
       redirect_to root_path, notice: "Successfully signed in with Google."
     else
       redirect_to root_path, error: "Failed to sign in."
@@ -12,8 +11,7 @@ class SessionsController < ApplicationController
   end
   
   def destroy
-    sessions[:user_id] = nil
-
+    sign_out
     redirect_to root_path, notice: "Successfully signed out."
   end
 end

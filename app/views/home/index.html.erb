@@ -1,1 +1,5 @@
-<%= link_to "sign in", sign_in_path, method: :post %>
+<% if signed_in? %>
+  <%= link_to "sign_out", sign_out_path, :method => :delete %>
+<% else %>
+  <%= link_to "sign in", sign_in_path, :method => :post %>
+<% end %>
