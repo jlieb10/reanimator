@@ -9,4 +9,6 @@ class Task < ActiveRecord::Base
   # tasks in a particular category should have unique names
   validates_uniqueness_of :name, :scope => [:category]
 
+  has_many :questions
+
 end
