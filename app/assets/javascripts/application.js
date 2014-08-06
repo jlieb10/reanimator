@@ -15,7 +15,7 @@
 //= require fastclick
 //= require jquery
 //= require jquery_ujs
-//= require jquery.cookie
+//= require jquery-cookie
+//= require foundation.min
 //= require turbolinks
-//= require foundation
 //= require_tree .
