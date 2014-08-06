@@ -1,0 +1,158 @@
+tasks:
+-
+  name: Title Task
+  category: Title
+  question: 
+    content: Which title is better?
+    answers:
+      - First Title
+      - Second Title
+      - About the Same
+      - These Aren't the Same Book
+-
+  name: Find Short Title
+  category: Title
+  question: 
+    content: Is it possible to shorten the title?
+    answers:
+      - Yes (input)
+      - "No"
+-
+  name: Subtitle Task
+  category: Title
+  question: 
+    content: How important is the subtitle?
+    answers:
+      - It's important
+      - Leave it off
+      - Not all of it (input)
+-
+  name: Description Quality
+  category: Description
+  question: 
+    content: Rate the Gutenberg Description
+    answers: 
+      - This description is great!
+      - This description is usable
+      - This description would be usable if corrected
+      - This description is too specific
+      - This description is from a different book
+      - This description should not be used
+-
+  name: Description Audience
+  category: Description
+  question: 
+    content: Who is the audience of this description?
+    answers: 
+      - Adults
+      - Children
+      - Both
+      - This description should not be used
+-
+  name: Cover Quality
+  category: Covers
+  question: 
+    content: Rate the Gutenberg Cover
+    answers: 
+      - Great
+      - Usable
+      - Generic or computer-generated
+      - Awful
+      - Too Specific
+      - For a different book
+      - This Isn't for a book
+-
+  name: Cover Comparison
+  category: Covers
+  question: 
+    content: "Compare these two covers:"
+    answers:
+      - Left cover is better
+      - Right cover is better
+      - No preference
+      - These are not for the same work
+
+  name: Evaluate Image from Text as Cover
+  category: Covers
+  question: 
+    content: Would this image make good cover art?
+    answers: 
+      - Yes
+      - Yes if Cropped
+      - No - Generic/Dull
+      - No - Not Representative
+      - No - Image is visually too crowded
+      - Scan quality is too bad to judge
+      - Not suitable (input)
+      - No opinion
+-
+  name: Fiction Genre
+  category: Classification
+  question:
+    content: Is there a good subcategory of fiction for this book?
+    answers: 
+      - Adventure
+      - Crime
+      - Fantasy
+      - Horror
+      - Mystery
+      - Romance
+      - SciFi
+      - Western
+      - Inspirational
+      - Other (input)
+      - Just "fiction" is fine
+      - Not Fiction
+-
+  name: Modern Standards for Juvenile Literature
+  category: Classification
+  question: 
+    content: Would this be suitable for children today?
+    answers: 
+      - Yes
+      - No it's horribly racist/sexist
+      - No it's dangerous
+      - It's outdated for another reason (input)
+      - It's a misclassified book for adults
+-
+  name: Target Age
+  category: Classification
+  question: 
+    content: This book is classified as "juvenile literature" but for what age group?
+    answers: 
+      - Preschool
+      - Grade school
+      - Young adults
+      - It's a misclassified book for adults
+-
+  name: Modern Standards for Nonfiction
+  category: Classification
+  question: 
+    content: Is this book still relevant?
+    answers: 
+      - Yes! No reservations
+      - Yes but it may have inaccuracies
+      - Yes because we're not likely to get anything better
+      - No it's been updated
+      - No it's based on an archaic worldview
+-
+  name: Write a Description
+  category: Heavy Duty
+  question: 
+    content: Write a description for this book
+    answers: 
+     - input
+-
+  name: Pull Quote
+  category: Heavy Duty
+  question: 
+    content: Find a pull quote from this book
+    answers: 
+      - input
+-
+  name: Overall Evaluation
+  category: Heavy Duty
+  question: 
+    content: Please evaluate this book overall for presentation to patrons. Include which audiences (anybody, average readers, heavy readers of this genre, scholarly specialists, nobody) it would be suited to.
+    answers: 
+      - input
