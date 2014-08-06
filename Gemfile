@@ -36,8 +36,12 @@ gem 'faker'
 
 # authenticate users through google
 # https://github.com/zquestz/omniauth-google-oauth2
-# https://code.google.com/apis/console/ 
+# https://code.google.com/apis/console/
 gem "omniauth-google-oauth2"
+
+# gem for foundation instead of manual install
+# https://github.com/zurb/foundation-rails
+gem "foundation-rails"
 
 group :development, :test do
 
