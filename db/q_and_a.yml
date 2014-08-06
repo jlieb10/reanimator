@@ -2,7 +2,9 @@ tasks:
 -
   name: Title Task
   category: Title
-  question: 
+  questions:
+  - 
+    expectation: single
     content: Which title is better?
     answers:
       - First Title
@@ -12,7 +14,9 @@ tasks:
 -
   name: Find Short Title
   category: Title
-  question: 
+  questions:
+  - 
+    expectation: single
     content: Is it possible to shorten the title?
     answers:
       - Yes (input)
@@ -20,7 +24,9 @@ tasks:
 -
   name: Subtitle Task
   category: Title
-  question: 
+  questions:
+  - 
+    expectation: single
     content: How important is the subtitle?
     answers:
       - It's important
@@ -29,7 +35,9 @@ tasks:
 -
   name: Description Quality
   category: Description
-  question: 
+  questions:
+  - 
+    expectation: single
     content: Rate the Gutenberg Description
     answers: 
       - This description is great!
@@ -41,7 +49,9 @@ tasks:
 -
   name: Description Audience
   category: Description
-  question: 
+  questions:
+  -
+    expectation: single
     content: Who is the audience of this description?
     answers: 
       - Adults
@@ -51,7 +61,9 @@ tasks:
 -
   name: Cover Quality
   category: Covers
-  question: 
+  questions:
+  - 
+    expectation: single
     content: Rate the Gutenberg Cover
     answers: 
       - Great
@@ -64,7 +76,9 @@ tasks:
 -
   name: Cover Comparison
   category: Covers
-  question: 
+  questions:
+  - 
+    expectation: single
     content: "Compare these two covers:"
     answers:
       - Left cover is better
@@ -74,7 +88,9 @@ tasks:
 
   name: Evaluate Image from Text as Cover
   category: Covers
-  question: 
+  questions:
+  - 
+    expectation: single
     content: Would this image make good cover art?
     answers: 
       - Yes
@@ -88,7 +104,9 @@ tasks:
 -
   name: Fiction Genre
   category: Classification
-  question:
+  questions:
+  -
+    expectation: single
     content: Is there a good subcategory of fiction for this book?
     answers: 
       - Adventure
@@ -106,7 +124,9 @@ tasks:
 -
   name: Modern Standards for Juvenile Literature
   category: Classification
-  question: 
+  questions:
+  - 
+    expectation: single
     content: Would this be suitable for children today?
     answers: 
       - Yes
@@ -117,7 +137,9 @@ tasks:
 -
   name: Target Age
   category: Classification
-  question: 
+  questions:
+  -
+    expectation: single
     content: This book is classified as "juvenile literature" but for what age group?
     answers: 
       - Preschool
@@ -127,7 +149,9 @@ tasks:
 -
   name: Modern Standards for Nonfiction
   category: Classification
-  question: 
+  questions:
+  - 
+    expectation: single
     content: Is this book still relevant?
     answers: 
       - Yes! No reservations
@@ -138,21 +162,27 @@ tasks:
 -
   name: Write a Description
   category: Heavy Duty
-  question: 
+  questions:
+  - 
+    expectation: text
     content: Write a description for this book
     answers: 
      - input
 -
   name: Pull Quote
   category: Heavy Duty
-  question: 
+  questions:
+  - 
+    expectation: text
     content: Find a pull quote from this book
     answers: 
       - input
 -
   name: Overall Evaluation
   category: Heavy Duty
-  question: 
+  questions:
+  - 
+    expectation: text
     content: Please evaluate this book overall for presentation to patrons. Include which audiences (anybody, average readers, heavy readers of this genre, scholarly specialists, nobody) it would be suited to.
     answers: 
       - input
