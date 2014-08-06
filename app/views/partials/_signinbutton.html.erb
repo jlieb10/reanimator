@@ -1,0 +1,5 @@
+<% if signed_in? %>
+  <%= link_to "Sign Out", sign_out_path, :class => "small button", :method => :delete %>
+<% else %>
+  <%= link_to "Sign in with Google", sign_in_path, :class => "small button", :method => :post %>
+<% end %>
