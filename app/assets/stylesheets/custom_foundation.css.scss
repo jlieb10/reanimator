@@ -1,0 +1,19 @@
+// Navbar Styles
+// Overriding Default Accordion Settings
+div.content.active {
+  &#titletasks, &#covertasks, &#desctasks, &#classtasks {
+    padding: 0;
+    margin: 0;
+    background: #333333;
+  }
+}
+
+li a, dl.accordion dd.accordion-navigation a.accordion-title {
+  background: #333333;
+  color: #FFFFFF
+}
+
+// Adding L-R margin to sign in/out button
+li.session-button {
+  margin: 0 10px;
+}

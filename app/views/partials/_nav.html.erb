@@ -1,38 +1,23 @@
-<!-- Logo -->
-<nav class="top-bar docs-bar" data-topbar="">
+<nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
-      <h1><a href="/">Reanimator</a></h1>
+      <!-- Logo -->
+      <h1><a href="#">Reanimator</a></h1>
     </li>
+    <li class="left-off-canvas-toggle toggle-topbar menu-icon"><a href="#"><span></span></a></li>
   </ul>
   <!-- Dropdown Menu -->
   <section class="top-bar-section">
     <ul class="right">
       <li class="has-dropdown not-click">
-        <a href="#" class="">Tasks</a>
+        <a href="#">Tasks</a>
         <ul class="dropdown">
-          <li>
-            <a href="#">Titles</a>
-          </li>
-          <li>
-            <a href="#">Covers</a>
-          </li>
-          <li>
-            <a href="#">Descriptions</a>
-          </li>
-          <li>
-            <a href="#">Classifications</a>
-          </li>
-          <li>
-            <a href="#">Read a Book!</a>
-          </li>
+          <%= render "partials/nav_accordion" %>
         </ul>
       </li>
       <li class="divider"></li>
       <!-- Sign In Button -->
-      <li class="has-form">
-        <%= render "partials/signinbutton" %>
-      </li>
+      <li class="session-button"><%= session_btn %></li>
     </ul>
   </section>
 </nav>

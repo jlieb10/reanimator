@@ -1,0 +1,235 @@
+{
+  "tasks": [
+    {
+      "category": "Title",
+      "name": "Title Task",
+      "questions": [
+        {
+          "content": "Which title is better?",
+          "expectation": "single",
+          "answers": [
+            "First Title",
+            "Second Title",
+            "About the Same",
+            "These Aren't the Same Book"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Title",
+      "name": "Find Short Title",
+      "questions": [
+        {
+          "content": "Is it possible to shorten the title?",
+          "expectation": "single",
+          "answers": [
+            "Yes (input)",
+            "No"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Title",
+      "name": "Subtitle Task",
+      "questions": [
+        {
+          "content": "How important is the subtitle?",
+          "expectation": "single",
+          "answers": [
+            "It's important",
+            "Leave it off",
+            "Not all of it (input)"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Description",
+      "name": "Description Quality",
+      "questions": [
+        {
+          "content": "Rate the Gutenberg Description",
+          "expectation": "single",
+          "answers": [
+            "This description is great!",
+            "This description is usable",
+            "This description would be usable if corrected",
+            "This description is too specific",
+            "This description is from a different book",
+            "This description should not be used"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Description",
+      "name": "Description Audience",
+      "questions": [
+        {
+          "content": "Who is the audience of this description?",
+          "expectation": "single",
+          "answers": [
+            "Adults",
+            "Children",
+            "Both",
+            "This description should not be used"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Covers",
+      "name": "Cover Quality",
+      "questions": [
+        {
+          "content": "Rate the Gutenberg Cover",
+          "expectation": "single",
+          "answers": [
+            "Great",
+            "Usable",
+            "Generic or computer-generated",
+            "Awful",
+            "Too Specific",
+            "For a different book",
+            "This Isn't for a book"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Covers",
+      "name": "Evaluate Image from Text as Cover",
+      "questions": [
+        {
+          "content": "Would this image make good cover art?",
+          "expectation": "single",
+          "answers": [
+            true,
+            "Yes if Cropped",
+            "No - Generic/Dull",
+            "No - Not Representative",
+            "No - Image is visually too crowded",
+            "Scan quality is too bad to judge",
+            "Not suitable (input)",
+            "No opinion"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Classification",
+      "name": "Fiction Genre",
+      "questions": [
+        {
+          "content": "Is there a good subcategory of fiction for this book?",
+          "expectation": "single",
+          "answers": [
+            "Adventure",
+            "Crime",
+            "Fantasy",
+            "Horror",
+            "Mystery",
+            "Romance",
+            "SciFi",
+            "Western",
+            "Inspirational",
+            "Other (input)",
+            "Just \"fiction\" is fine",
+            "Not Fiction"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Classification",
+      "name": "Modern Standards for Juvenile Literature",
+      "questions": [
+        {
+          "content": "Would this be suitable for children today?",
+          "expectation": "single",
+          "answers": [
+            true,
+            "No it's horribly racist/sexist",
+            "No it's dangerous",
+            "It's outdated for another reason (input)",
+            "It's a misclassified book for adults"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Classification",
+      "name": "Target Age",
+      "questions": [
+        {
+          "content": "This book is classified as \"juvenile literature\" but for what age group?",
+          "expectation": "single",
+          "answers": [
+            "Preschool",
+            "Grade school",
+            "Young adults",
+            "It's a misclassified book for adults"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Classification",
+      "name": "Modern Standards for Nonfiction",
+      "questions": [
+        {
+          "content": "Is this book still relevant?",
+          "expectation": "single",
+          "answers": [
+            "Yes! No reservations",
+            "Yes but it may have inaccuracies",
+            "Yes because we're not likely to get anything better",
+            "No it's been updated",
+            "No it's based on an archaic worldview"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Heavy Duty",
+      "name": "Write a Description",
+      "questions": [
+        {
+          "content": "Write a description for this book",
+          "expectation": "text",
+          "answers": [
+            "input"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Heavy Duty",
+      "name": "Pull Quote",
+      "questions": [
+        {
+          "content": "Find a pull quote from this book",
+          "expectation": "text",
+          "answers": [
+            "input"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Heavy Duty",
+      "name": "Overall Evaluation",
+      "questions": [
+        {
+          "content": "Please evaluate this book overall for presentation to patrons. Include which audiences (anybody, average readers, heavy readers of this genre, scholarly specialists, nobody) it would be suited to.",
+          "expectation": "text",
+          "answers": [
+            "input"
+          ]
+        }
+      ]
+    }
+  ]
+}
