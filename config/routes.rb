@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'tasks/create'
+
   root 'home#index'
 
   get 'auth/google/callback' => 'sessions#new'
