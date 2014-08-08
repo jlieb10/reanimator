@@ -11,10 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140807024906) do
+ActiveRecord::Schema.define(version: 20140808123222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "options", force: true do |t|
+    t.string   "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "question_options", force: true do |t|
+    t.integer  "question_id"
+    t.integer  "option_id"
+    t.boolean  "additional_input", default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "questions", force: true do |t|
     t.string   "content"
@@ -27,11 +41,9 @@ ActiveRecord::Schema.define(version: 20140807024906) do
   add_index "questions", ["task_id"], name: "index_questions_on_task_id", using: :btree
 
   create_table "tasks", force: true do |t|
-    t.string   "name"
-    t.integer  "category"
-    t.integer  "point_value", default: 0
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string  "name"
+    t.integer "category"
+    t.integer "point_value", default: 0
   end
 
   create_table "users", force: true do |t|

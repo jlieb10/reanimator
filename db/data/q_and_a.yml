@@ -3,187 +3,298 @@ tasks:
 -
   name: Title Task
   category: Title
+  point_value: #!
   questions:
   - 
     expectation: single
     content: Which title is better?
-    answers:
-      - First Title
-      - Second Title
-      - About the Same
-      - These Aren't the Same Book
+    options:
+      -
+        value: First Title
+      - 
+        value: Second Title
+      - 
+        value: About the Same
+      - 
+        value: These Aren't the Same Book
 -
   name: Find Short Title
   category: Title
+  point_value: #!
   questions:
   - 
     expectation: single
     content: Is it possible to shorten the title?
-    answers:
-      - Yes (input)
-      - "No"
+    options:
+      - 
+        value: Yes
+        # what can it be shortened to?
+        additional_input: true
+      - 
+        value: No
 -
   name: Subtitle Task
   category: Title
+  point_value: #!
   questions:
   - 
     expectation: single
     content: How important is the subtitle?
-    answers:
-      - It's important
-      - Leave it off
-      - Not all of it (input)
+    options:
+      - 
+        value: It's important
+      - 
+        value: Leave it off
+      - 
+        value: Not all of it
+        # what can it be shortened to?
+        additional_input: true
 -
   name: Description Quality
   category: Description
+  point_value: #!
   questions:
   - 
     expectation: single
     content: Rate the Gutenberg Description
-    answers: 
-      - This description is great!
-      - This description is usable
-      - This description would be usable if corrected
-      - This description is too specific
-      - This description is from a different book
-      - This description should not be used
+    options: 
+      - 
+        value: This description is great!
+      - 
+        value: This description is usable
+      - 
+        value: This description would be usable if corrected
+      - 
+        value: This description is too specific
+      - 
+        value: This description is from a different book
+      - 
+        value: This description should not be used
 -
   name: Description Audience
   category: Description
+  point_value: #!
   questions:
   -
     expectation: single
     content: Who is the audience of this description?
-    answers: 
-      - Adults
-      - Children
-      - Both
-      - This description should not be used
+    options: 
+      - 
+        value: Adults
+      - 
+        value: Children
+      - 
+        value: Both
+      - 
+        # maybe a why? followup
+        value: This description should not be used
 -
   name: Cover Quality
   category: Covers
+  point_value: #!
   questions:
   - 
     expectation: single
     content: Rate the Gutenberg Cover
-    answers: 
-      - Great
-      - Usable
-      - Generic or computer-generated
-      - Awful
-      - Too Specific
-      - For a different book
-      - This Isn't for a book
+    options: 
+      - 
+        value: Great
+      - 
+        value: Usable
+      - 
+        value: Generic or computer-generated
+      - 
+        value: Awful
+      - 
+        value: Too Specific
+      - 
+        value: For a different book
+      - 
+        value: This Isn't for a book
 -
   name: Cover Comparison
   category: Covers
+  point_value: #!
   questions:
   - 
     expectation: single
     content: "Compare these two covers:"
-    answers:
-      - Left cover is better
-      - Right cover is better
-      - No preference
-      - These are not for the same work
+    options:
+      - 
+        value: Left cover is better
+      - 
+        value: Right cover is better
+      - 
+        value: No preference
+      - 
+        value: These are not for the same work
 
   name: Evaluate Image from Text as Cover
   category: Covers
+  point_value: #!
   questions:
   - 
     expectation: single
     content: Would this image make good cover art?
-    answers: 
-      - Yes
-      - Yes if Cropped
-      - No - Generic/Dull
-      - No - Not Representative
-      - No - Image is visually too crowded
-      - Scan quality is too bad to judge
-      - Not suitable (input)
-      - No opinion
+    options: 
+      - 
+        value: Yes
+      - 
+        value: Yes if Cropped
+      - 
+        value: No - Generic/Dull
+      - 
+        value: No - Not Representative
+      - 
+        value: No - Image is visually too crowded
+      - 
+        value: Scan quality is too bad to judge
+      - 
+        value: Not suitable
+        # why isnt this suitable
+        additional_input: true
+      - 
+        value: No opinion
 -
   name: Fiction Genre
   category: Classification
+  point_value: #!
   questions:
   -
     expectation: single
     content: Is there a good subcategory of fiction for this book?
-    answers: 
-      - Adventure
-      - Crime
-      - Fantasy
-      - Horror
-      - Mystery
-      - Romance
-      - SciFi
-      - Western
-      - Inspirational
-      - Other (input)
-      - Just "fiction" is fine
-      - Not Fiction
+    options: 
+      - 
+        value: Adventure
+      - 
+        value: Crime
+      - 
+        value: Fantasy
+      - 
+        value: Horror
+      - 
+        value: Mystery
+      - 
+        value: Romance
+      - 
+        value: SciFi
+      - 
+        value: Western
+      - 
+        value: Inspirational
+      - 
+        value: Other
+        # which other genre would be suitable?
+        additional_input: true
+      - 
+        value: Just "fiction" is fine
+      - 
+        value: Not Fiction
 -
   name: Modern Standards for Juvenile Literature
   category: Classification
+  point_value: #!
   questions:
   - 
     expectation: single
     content: Would this be suitable for children today?
-    answers: 
-      - Yes
-      - No it's horribly racist/sexist
-      - No it's dangerous
-      - It's outdated for another reason (input)
-      - It's a misclassified book for adults
+    options: 
+      - 
+        value: Yes
+      - 
+        value: No it's horribly racist/sexist
+      - 
+        value: No it's dangerous
+      - 
+        value: It's outdated for another reason
+        # why is this outdated?
+        additional_input: true
+      - 
+        value: It's a misclassified book for adults
 -
   name: Target Age
   category: Classification
+  point_value: #!
   questions:
   -
     expectation: single
     content: This book is classified as "juvenile literature" but for what age group?
-    answers: 
-      - Preschool
-      - Grade school
-      - Young adults
-      - It's a misclassified book for adults
+    options: 
+      - 
+        value: Preschool
+      - 
+        value: Grade school
+      - 
+        value: Young adults
+      - 
+        value: It's a misclassified book for adults
 -
   name: Modern Standards for Nonfiction
   category: Classification
+  point_value: #!
   questions:
   - 
     expectation: single
     content: Is this book still relevant?
-    answers: 
-      - Yes! No reservations
-      - Yes but it may have inaccuracies
-      - Yes because we're not likely to get anything better
-      - No it's been updated
-      - No it's based on an archaic worldview
+    options: 
+      - 
+        value: Yes! No reservations
+      - 
+        value: Yes but it may have inaccuracies
+      - 
+        value: Yes because we're not likely to get anything better
+      - 
+        value: No it's been updated
+      - 
+        value: No it's based on an archaic worldview
 -
   name: Write a Description
   category: Heavy Duty
+  point_value: #!
   questions:
   - 
     expectation: text
     content: Write a description for this book
-    answers: 
-     - input
+    options: 
+     - 
+      value: Input
+      additional_input: true
 -
   name: Pull Quote
   category: Heavy Duty
+  point_value: #!
   questions:
   - 
     expectation: text
     content: Find a pull quote from this book
-    answers: 
-      - input
+    options: 
+      - 
+        value: Input
+        additional_input: true
 -
   name: Overall Evaluation
   category: Heavy Duty
+  point_value: #!
   questions:
   - 
     expectation: text
-    content: Please evaluate this book overall for presentation to patrons. Include which audiences (anybody, average readers, heavy readers of this genre, scholarly specialists, nobody) it would be suited to.
-    answers: 
-      - input
+    content: Please evaluate this book overall for presentation to patrons. 
+    options: 
+      - 
+        value: input
+        additional_input: true
+  -
+    expectation: single
+    content: Who would you recommend this to?
+    options:
+      -
+        value: anybody
+      -
+        value: average readers
+      -
+        value: heavy readers of this genre
+      -
+        value: scholarly specialists
+      -
+        value: nobody
+      # Include which audiences (anybody, average readers, heavy readers of this genre, scholarly specialists, nobody) it would be suited to.

@@ -1,0 +1,2456 @@
+---
+- link_homepage: http://gutenberg.org/ebooks/10643
+  subtitle: 
+  language: en
+  title: The World's Greatest Books — Volume 02 — Fiction
+  link_epub: http://www.gutenberg.org/ebooks/10643.epub.noimages
+  link_html: http://www.gutenberg.org/files/10643/10643-h/10643-h.htm
+  subjects:
+    LCC:
+    - PN
+    LCSH:
+    - Fiction
+  authors: []
+  links_internal_image: []
+  id: Gutenberg-10643
+- link_homepage: http://gutenberg.org/ebooks/114
+  subtitle: 
+  language: en
+  title: The Tenniel Illustrations for Carroll's Alice in Wonderland
+  link_epub: 
+  adult_audience_confidence: 0.5714285714285714
+  link_html: http://www.gutenberg.org/files/114/114-h/114-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PR
+    - NC
+    LCSH:
+    - Children's stories
+    - Fantasy fiction
+  authors:
+  - name: "Tenniel, John"
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-114
+- link_homepage: http://gutenberg.org/ebooks/11
+  subtitle: 
+  language: en
+  title: Alice's Adventures in Wonderland
+  link_epub: http://www.gutenberg.org/ebooks/11.epub.noimages
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/11/11-h/11-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PR
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 250.153846153846
+  links_internal_image: []
+  id: Gutenberg-11
+- link_homepage: http://gutenberg.org/ebooks/12
+  subtitle: 
+  language: en
+  title: Through the Looking-Glass
+  link_epub: http://www.gutenberg.org/ebooks/12.epub.noimages
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/12/12-h/12-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PR
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 86.0
+  links_internal_image: []
+  id: Gutenberg-12
+- link_homepage: http://gutenberg.org/ebooks/15
+  subtitle: 
+  language: en
+  title: Moby Dick
+  link_epub: http://www.gutenberg.org/ebooks/15.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/ebooks/15.html.noimages
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Ship captains -- Fiction
+    - Sea stories
+    - Whaling -- Fiction
+    - Mentally ill -- Fiction
+    - Adventure stories
+    - "Ahab, Captain (Fictitious character) -- Fiction"
+    - Psychological fiction
+    - Whaling ships -- Fiction
+    - Whales -- Fiction
+  authors:
+  - viaf: '27068555'
+    name: "Melville, Herman"
+    lc: n79006936
+  fiction_confidence: 
+  popularity_rating: 68.6086956521739
+  links_internal_image: []
+  id: Gutenberg-15
+- link_homepage: http://gutenberg.org/ebooks/17482
+  subtitle: 
+  language: eo
+  title: La Aventuroj de Alicio en Mirlando
+  link_epub: http://www.gutenberg.org/ebooks/17482.epub.images
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/17482/17482-h/17482-h.htm
+  subjects:
+    LCC:
+    - PR
+    - PZ
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 2.0
+  links_internal_image: []
+  id: Gutenberg-17482
+- link_homepage: http://gutenberg.org/ebooks/19002
+  subtitle: Being a facsimile of the original Ms. book afterwards developed into "Alice's Adventures in Wonderland"
+  language: en
+  title: Alice's Adventures Under Ground
+  link_epub: http://www.gutenberg.org/ebooks/19002.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/19002/19002-h/19002-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/19002/pg19002.cover.medium.jpg
+  subjects:
+    LCC:
+    - PR
+    - PZ
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 31.5
+  links_internal_image: []
+  id: Gutenberg-19002
+- link_homepage: http://gutenberg.org/ebooks/19033
+  subtitle: 
+  language: en
+  title: Alice's Adventures in Wonderland
+  link_epub: http://www.gutenberg.org/ebooks/19033.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/19033/19033-h/19033-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/19033/pg19033.cover.medium.jpg
+  subjects:
+    LCC:
+    - PR
+    - PZ
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 250.153846153846
+  links_internal_image: []
+  id: Gutenberg-19033
+- link_homepage: http://gutenberg.org/ebooks/19551
+  subtitle: 
+  language: en
+  title: "Alice in Wonderland, Retold in Words of One Syllable"
+  link_epub: http://www.gutenberg.org/ebooks/19551.epub.images
+  adult_audience_confidence: 0.0
+  link_html: http://www.gutenberg.org/files/19551/19551-h/19551-h.htm
+  subjects:
+    LCC:
+    - PZ
+    LCSH:
+    - Fantasy
+    - Children's stories
+  authors:
+  - name: "Gorham, J. C., Mrs."
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-19551
+- link_homepage: http://gutenberg.org/ebooks/19597
+  subtitle: |-
+    A Thanksgiving Discourse Delivered November 15th, 1855,
+    in the Franklin Street Presbyterian Church
+  language: en
+  title: National Character
+  link_epub: http://www.gutenberg.org/ebooks/19597.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/19597/19597-h/19597-h.htm
+  subjects:
+    LCC:
+    - BV
+    LCSH:
+    - Thanksgiving Day sermons
+    - Nationalism
+  authors:
+  - name: "Burt, Nathaniel Clark"
+  fiction_confidence: 
+  popularity_rating: 2.0
+  links_internal_image: []
+  id: Gutenberg-19597
+- link_homepage: http://gutenberg.org/ebooks/19640
+  subtitle: 
+  language: en
+  title: Adventures of Huckleberry Finn
+  link_epub: 
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/19640/19640-index.html
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Race relations -- Fiction
+    - Fugitive slaves -- Fiction
+    - Mississippi River -- Fiction
+    - Missouri -- Fiction
+    - Adventure stories
+    - Runaway children -- Fiction
+    - Bildungsromans
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Male friendship -- Fiction
+    - Humorous stories
+    - Boys -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 140.76
+  links_internal_image: []
+  id: Gutenberg-19640
+- link_homepage: http://gutenberg.org/ebooks/19778
+  subtitle: 
+  language: de
+  title: Alice's Abenteuer im Wunderland
+  link_epub: http://www.gutenberg.org/ebooks/19778.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/19778/19778-h/19778-h.htm
+  subjects:
+    LCC:
+    - PR
+    - PZ
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 82.6666666666667
+  links_internal_image: []
+  id: Gutenberg-19778
+- link_homepage: http://gutenberg.org/ebooks/23716
+  subtitle: 
+  language: en
+  title: Alice's Adventures in Wonderland
+  link_epub: 
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/23716/23716-index.html
+  subjects:
+    LCC:
+    - PZ
+    - PR
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 250.153846153846
+  links_internal_image: []
+  id: Gutenberg-23716
+- link_homepage: http://gutenberg.org/ebooks/23718
+  subtitle: 
+  language: en
+  title: Through the Looking-Glass
+  link_epub: 
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/23718/23718-index.html
+  subjects:
+    LCC:
+    - PR
+    - PZ
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 86.0
+  links_internal_image: []
+  id: Gutenberg-23718
+- link_homepage: http://gutenberg.org/ebooks/2489
+  subtitle: 
+  language: en
+  title: "Moby Dick; Or, The Whale"
+  link_epub: http://www.gutenberg.org/ebooks/2489.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/ebooks/2489.html.gen
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Whaling -- Fiction
+    - Psychological fiction
+    - Ship captains -- Fiction
+    - "Ahab, Captain (Fictitious character) -- Fiction"
+    - Sea stories
+    - Whales -- Fiction
+    - Mentally ill -- Fiction
+    - Adventure stories
+    - Whaling ships -- Fiction
+  authors:
+  - viaf: '27068555'
+    name: "Melville, Herman"
+    lc: n79006936
+  fiction_confidence: 
+  popularity_rating: 79.7142857142857
+  links_internal_image: []
+  id: Gutenberg-2489
+- link_homepage: http://gutenberg.org/ebooks/26203
+  subtitle: 
+  language: en
+  title: The Adventures of Tom Sawyer
+  link_epub: 
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/26203/26203-index.html
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Mississippi River Valley -- Fiction
+    - Runaway children -- Fiction
+    - Adventure stories
+    - Child witnesses -- Fiction
+    - Boys -- Fiction
+    - Bildungsromans
+    - Missouri -- Fiction
+    - Male friendship -- Fiction
+    - Humorous stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 118.5
+  links_internal_image: []
+  id: Gutenberg-26203
+- link_homepage: http://gutenberg.org/ebooks/2701
+  subtitle: 
+  language: en
+  title: "Moby Dick; Or, The Whale"
+  link_epub: http://www.gutenberg.org/ebooks/2701.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/2701/2701-h/2701-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Sea stories
+    - Psychological fiction
+    - "Ahab, Captain (Fictitious character) -- Fiction"
+    - Whaling -- Fiction
+    - Ship captains -- Fiction
+    - Whales -- Fiction
+    - Whaling ships -- Fiction
+    - Adventure stories
+    - Mentally ill -- Fiction
+  authors:
+  - viaf: '27068555'
+    name: "Melville, Herman"
+    lc: n79006936
+  fiction_confidence: 
+  popularity_rating: 79.7142857142857
+  links_internal_image: []
+  id: Gutenberg-2701
+- link_homepage: http://gutenberg.org/ebooks/28371
+  subtitle: 
+  language: it
+  title: Le avventure d'Alice nel paese delle meraviglie
+  link_epub: http://www.gutenberg.org/ebooks/28371.epub.images
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/28371/28371-h/28371-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PR
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 2.0
+  links_internal_image: []
+  id: Gutenberg-28371
+- link_homepage: http://gutenberg.org/ebooks/28794
+  subtitle: 
+  language: en
+  title: "Moby Dick; Or, The Whale"
+  link_epub: 
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/28794/28794_index.html
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Mentally ill -- Fiction
+    - Whaling -- Fiction
+    - Psychological fiction
+    - Ship captains -- Fiction
+    - Whaling ships -- Fiction
+    - Sea stories
+    - Whales -- Fiction
+    - Adventure stories
+    - "Ahab, Captain (Fictitious character) -- Fiction"
+  authors:
+  - viaf: '27068555'
+    name: "Melville, Herman"
+    lc: n79006936
+  fiction_confidence: 
+  popularity_rating: 79.7142857142857
+  links_internal_image: []
+  id: Gutenberg-28794
+- link_homepage: http://gutenberg.org/ebooks/28885
+  subtitle: Illustrated by Arthur Rackham. With a Proem by Austin Dobson
+  language: en
+  title: Alice's Adventures in Wonderland
+  link_epub: http://www.gutenberg.org/ebooks/28885.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/28885/28885-h/28885-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/28885/pg28885.cover.medium.jpg
+  subjects:
+    LCC:
+    - PZ
+    - PR
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 250.153846153846
+  links_internal_image: []
+  id: Gutenberg-28885
+- link_homepage: http://gutenberg.org/ebooks/30165
+  subtitle: 
+  language: de
+  title: Die Abenteuer Tom Sawyers
+  link_epub: http://www.gutenberg.org/ebooks/30165.epub.noimages
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/30165/30165-h/30165-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Adventure stories
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Missouri -- Fiction
+    - Bildungsromans
+    - Runaway children -- Fiction
+    - Boys -- Fiction
+    - Humorous stories
+    - Child witnesses -- Fiction
+    - Mississippi River Valley -- Fiction
+    - Male friendship -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 4.25
+  links_internal_image: []
+  id: Gutenberg-30165
+- link_homepage: http://gutenberg.org/ebooks/30890
+  subtitle: 
+  language: ca
+  title: Les Aventures De Tom Sawyer
+  link_epub: http://www.gutenberg.org/ebooks/30890.epub.noimages
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/ebooks/30890.html.gen
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Humorous stories
+    - Adventure stories
+    - Boys -- Fiction
+    - Child witnesses -- Fiction
+    - Male friendship -- Fiction
+    - Mississippi River Valley -- Fiction
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Missouri -- Fiction
+    - Runaway children -- Fiction
+    - Bildungsromans
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 29.3333333333333
+  links_internal_image: []
+  id: Gutenberg-30890
+- link_homepage: http://gutenberg.org/ebooks/32325
+  subtitle: 
+  language: en
+  title: The Adventures of Huckleberry Finn (Tom Sawyer's Comrade)
+  link_epub: http://www.gutenberg.org/ebooks/32325.epub.images
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/32325/32325-h/32325-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Missouri -- Fiction
+    - Runaway children -- Fiction
+    - Male friendship -- Fiction
+    - Boys -- Fiction
+    - Race relations -- Fiction
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Fugitive slaves -- Fiction
+    - Bildungsromans
+    - Mississippi River -- Fiction
+    - Adventure stories
+    - Humorous stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 43.8
+  links_internal_image: []
+  id: Gutenberg-32325
+- link_homepage: http://gutenberg.org/ebooks/35688
+  subtitle: |-
+    A Dramatization of Lewis Carroll's "Alice's Adventures in
+    Wonderland" and "Through the Looking Glass"
+  language: en
+  title: Alice in Wonderland
+  link_epub: http://www.gutenberg.org/ebooks/35688.epub.images
+  adult_audience_confidence: 
+  link_html: http://www.gutenberg.org/files/35688/35688-h/35688-h.htm
+  subjects: {}
+  authors:
+  - name: "Gerstenberg, Alice"
+  fiction_confidence: 
+  popularity_rating: 82.3333333333333
+  links_internal_image: []
+  id: Gutenberg-35688
+- link_homepage: http://gutenberg.org/ebooks/35990
+  subtitle: Told for Young People by the Real Alice in Wonderland
+  language: en
+  title: The Story of Lewis Carroll
+  link_epub: http://www.gutenberg.org/ebooks/35990.epub.images
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/35990/35990-h/35990-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/35990/pg35990.cover.medium.jpg
+  subjects: {}
+  authors:
+  - name: "Bowman, Isa"
+  fiction_confidence: 
+  popularity_rating: 2.0
+  links_internal_image: []
+  id: Gutenberg-35990
+- link_homepage: http://gutenberg.org/ebooks/36308
+  subtitle: 
+  language: en
+  title: Songs From Alice in Wonderland and Through the Looking-Glass
+  link_epub: http://www.gutenberg.org/ebooks/36308.epub.images
+  adult_audience_confidence: 0.6666666666666666
+  link_html: http://www.gutenberg.org/files/36308/36308-h/36308-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/36308/pg36308.cover.medium.jpg
+  subjects: {}
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 3.0
+  links_internal_image: []
+  id: Gutenberg-36308
+- link_homepage: http://gutenberg.org/ebooks/45333
+  subtitle: Koulupojan historia
+  language: fi
+  title: Tom Sawyer
+  link_epub: http://www.gutenberg.org/ebooks/45333.epub.noimages
+  adult_audience_confidence: 
+  link_html: http://www.gutenberg.org/ebooks/45333.html.noimages
+  subjects: {}
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 47.9565217391304
+  links_internal_image: []
+  id: Gutenberg-45333
+- link_homepage: http://gutenberg.org/ebooks/7100
+  subtitle: 
+  language: en
+  title: "Adventures of Huckleberry Finn, Chapters 01 to 05"
+  link_epub: http://www.gutenberg.org/ebooks/7100.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7100/7100-h/7100-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Mississippi River -- Fiction
+    - Runaway children -- Fiction
+    - Bildungsromans
+    - Missouri -- Fiction
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Race relations -- Fiction
+    - Humorous stories
+    - Male friendship -- Fiction
+    - Fugitive slaves -- Fiction
+    - Boys -- Fiction
+    - Adventure stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7100
+- link_homepage: http://gutenberg.org/ebooks/7101
+  subtitle: 
+  language: en
+  title: "Adventures of Huckleberry Finn, Chapters 06 to 10"
+  link_epub: http://www.gutenberg.org/ebooks/7101.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7101/7101-h/7101-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Humorous stories
+    - Mississippi River -- Fiction
+    - Boys -- Fiction
+    - Runaway children -- Fiction
+    - Missouri -- Fiction
+    - Male friendship -- Fiction
+    - Bildungsromans
+    - Fugitive slaves -- Fiction
+    - Adventure stories
+    - Race relations -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7101
+- link_homepage: http://gutenberg.org/ebooks/7102
+  subtitle: 
+  language: en
+  title: "Adventures of Huckleberry Finn, Chapters 11 to 15"
+  link_epub: http://www.gutenberg.org/ebooks/7102.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7102/7102-h/7102-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Race relations -- Fiction
+    - Adventure stories
+    - Bildungsromans
+    - Male friendship -- Fiction
+    - Boys -- Fiction
+    - Mississippi River -- Fiction
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Fugitive slaves -- Fiction
+    - Missouri -- Fiction
+    - Humorous stories
+    - Runaway children -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7102
+- link_homepage: http://gutenberg.org/ebooks/7103
+  subtitle: 
+  language: en
+  title: "Adventures of Huckleberry Finn, Chapters 16 to 20"
+  link_epub: http://www.gutenberg.org/ebooks/7103.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7103/7103-h/7103-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Humorous stories
+    - Mississippi River -- Fiction
+    - Fugitive slaves -- Fiction
+    - Boys -- Fiction
+    - Runaway children -- Fiction
+    - Male friendship -- Fiction
+    - Adventure stories
+    - Race relations -- Fiction
+    - Bildungsromans
+    - Missouri -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7103
+- link_homepage: http://gutenberg.org/ebooks/7104
+  subtitle: 
+  language: en
+  title: "Adventures of Huckleberry Finn, Chapters 21 to 25"
+  link_epub: http://www.gutenberg.org/ebooks/7104.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7104/7104-h/7104-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Male friendship -- Fiction
+    - Humorous stories
+    - Runaway children -- Fiction
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Adventure stories
+    - Race relations -- Fiction
+    - Bildungsromans
+    - Mississippi River -- Fiction
+    - Missouri -- Fiction
+    - Fugitive slaves -- Fiction
+    - Boys -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7104
+- link_homepage: http://gutenberg.org/ebooks/7105
+  subtitle: 
+  language: en
+  title: "Adventures of Huckleberry Finn, Chapters 26 to 30"
+  link_epub: http://www.gutenberg.org/ebooks/7105.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7105/7105-h/7105-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Mississippi River -- Fiction
+    - Bildungsromans
+    - Missouri -- Fiction
+    - Male friendship -- Fiction
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Adventure stories
+    - Runaway children -- Fiction
+    - Fugitive slaves -- Fiction
+    - Boys -- Fiction
+    - Humorous stories
+    - Race relations -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7105
+- link_homepage: http://gutenberg.org/ebooks/7106
+  subtitle: 
+  language: en
+  title: "Adventures of Huckleberry Finn, Chapters 31 to 35"
+  link_epub: http://www.gutenberg.org/ebooks/7106.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7106/7106-h/7106-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Fugitive slaves -- Fiction
+    - Missouri -- Fiction
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Mississippi River -- Fiction
+    - Bildungsromans
+    - Humorous stories
+    - Race relations -- Fiction
+    - Runaway children -- Fiction
+    - Adventure stories
+    - Male friendship -- Fiction
+    - Boys -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7106
+- link_homepage: http://gutenberg.org/ebooks/7107
+  subtitle: 
+  language: en
+  title: "Adventures of Huckleberry Finn, Chapters 36 to The Last"
+  link_epub: http://www.gutenberg.org/ebooks/7107.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7107/7107-h/7107-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Male friendship -- Fiction
+    - Mississippi River -- Fiction
+    - Bildungsromans
+    - Missouri -- Fiction
+    - Race relations -- Fiction
+    - Adventure stories
+    - Fugitive slaves -- Fiction
+    - Humorous stories
+    - Boys -- Fiction
+    - Runaway children -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7107
+- link_homepage: http://gutenberg.org/ebooks/7193
+  subtitle: 
+  language: en
+  title: "The Adventures of Tom Sawyer, Part 1."
+  link_epub: http://www.gutenberg.org/ebooks/7193.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7193/7193-h/7193-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Missouri -- Fiction
+    - Humorous stories
+    - Child witnesses -- Fiction
+    - Boys -- Fiction
+    - Mississippi River Valley -- Fiction
+    - Runaway children -- Fiction
+    - Adventure stories
+    - Male friendship -- Fiction
+    - Bildungsromans
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7193
+- link_homepage: http://gutenberg.org/ebooks/7194
+  subtitle: 
+  language: en
+  title: "The Adventures of Tom Sawyer, Part 2."
+  link_epub: http://www.gutenberg.org/ebooks/7194.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7194/7194-h/7194-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Bildungsromans
+    - Child witnesses -- Fiction
+    - Mississippi River Valley -- Fiction
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Runaway children -- Fiction
+    - Male friendship -- Fiction
+    - Boys -- Fiction
+    - Missouri -- Fiction
+    - Adventure stories
+    - Humorous stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7194
+- link_homepage: http://gutenberg.org/ebooks/7195
+  subtitle: 
+  language: en
+  title: "The Adventures of Tom Sawyer, Part 3."
+  link_epub: http://www.gutenberg.org/ebooks/7195.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7195/7195-h/7195-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Adventure stories
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Child witnesses -- Fiction
+    - Humorous stories
+    - Bildungsromans
+    - Male friendship -- Fiction
+    - Runaway children -- Fiction
+    - Boys -- Fiction
+    - Mississippi River Valley -- Fiction
+    - Missouri -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7195
+- link_homepage: http://gutenberg.org/ebooks/7196
+  subtitle: 
+  language: en
+  title: "The Adventures of Tom Sawyer, Part 4."
+  link_epub: http://www.gutenberg.org/ebooks/7196.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7196/7196-h/7196-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Male friendship -- Fiction
+    - Mississippi River Valley -- Fiction
+    - Missouri -- Fiction
+    - Runaway children -- Fiction
+    - Adventure stories
+    - Bildungsromans
+    - Humorous stories
+    - Boys -- Fiction
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Child witnesses -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7196
+- link_homepage: http://gutenberg.org/ebooks/7197
+  subtitle: 
+  language: en
+  title: "The Adventures of Tom Sawyer, Part 5."
+  link_epub: http://www.gutenberg.org/ebooks/7197.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7197/7197-h/7197-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Male friendship -- Fiction
+    - Runaway children -- Fiction
+    - Adventure stories
+    - Humorous stories
+    - Child witnesses -- Fiction
+    - Bildungsromans
+    - Mississippi River Valley -- Fiction
+    - Missouri -- Fiction
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Boys -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: Twain, Mark
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7197
+- link_homepage: http://gutenberg.org/ebooks/7198
+  subtitle: 
+  language: en
+  title: "The Adventures of Tom Sawyer, Part 6."
+  link_epub: http://www.gutenberg.org/ebooks/7198.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7198/7198-h/7198-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Missouri -- Fiction
+    - Mississippi River Valley -- Fiction
+    - Humorous stories
+    - Bildungsromans
+    - Child witnesses -- Fiction
+    - Adventure stories
+    - Runaway children -- Fiction
+    - Boys -- Fiction
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Male friendship -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7198
+- link_homepage: http://gutenberg.org/ebooks/7199
+  subtitle: 
+  language: en
+  title: "The Adventures of Tom Sawyer, Part 7."
+  link_epub: http://www.gutenberg.org/ebooks/7199.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7199/7199-h/7199-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Boys -- Fiction
+    - Missouri -- Fiction
+    - Child witnesses -- Fiction
+    - Adventure stories
+    - Runaway children -- Fiction
+    - Mississippi River Valley -- Fiction
+    - Male friendship -- Fiction
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Bildungsromans
+    - Humorous stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7199
+- link_homepage: http://gutenberg.org/ebooks/7200
+  subtitle: 
+  language: en
+  title: "The Adventures of Tom Sawyer, Part 8."
+  link_epub: http://www.gutenberg.org/ebooks/7200.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/7200/7200-h/7200-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Child witnesses -- Fiction
+    - Humorous stories
+    - Bildungsromans
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Adventure stories
+    - Runaway children -- Fiction
+    - Missouri -- Fiction
+    - Male friendship -- Fiction
+    - Mississippi River Valley -- Fiction
+    - Boys -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-7200
+- link_homepage: http://gutenberg.org/ebooks/74
+  subtitle: 
+  language: en
+  title: The Adventures of Tom Sawyer
+  link_epub: http://www.gutenberg.org/ebooks/74.epub.images
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/74/74-h/74-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/74/pg74.cover.medium.jpg
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Missouri -- Fiction
+    - Boys -- Fiction
+    - Adventure stories
+    - Runaway children -- Fiction
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Child witnesses -- Fiction
+    - Male friendship -- Fiction
+    - Humorous stories
+    - Bildungsromans
+    - Mississippi River Valley -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 118.5
+  links_internal_image: []
+  id: Gutenberg-74
+- link_homepage: http://gutenberg.org/ebooks/76
+  subtitle: 
+  language: en
+  title: Adventures of Huckleberry Finn
+  link_epub: http://www.gutenberg.org/ebooks/76.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/76/76-h/76-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/76/pg76.cover.medium.jpg
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Race relations -- Fiction
+    - Fugitive slaves -- Fiction
+    - Male friendship -- Fiction
+    - Humorous stories
+    - Missouri -- Fiction
+    - Mississippi River -- Fiction
+    - Bildungsromans
+    - Boys -- Fiction
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Runaway children -- Fiction
+    - Adventure stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 140.76
+  links_internal_image: []
+  id: Gutenberg-76
+- link_homepage: http://gutenberg.org/ebooks/9007
+  subtitle: 
+  language: en
+  title: Adventures of Huckleberry Finn
+  link_epub: 
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/9007/9007-index.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - "Finn, Huckleberry (Fictitious character) -- Fiction"
+    - Boys -- Fiction
+    - Male friendship -- Fiction
+    - Mississippi River -- Fiction
+    - Race relations -- Fiction
+    - Adventure stories
+    - Missouri -- Fiction
+    - Runaway children -- Fiction
+    - Bildungsromans
+    - Fugitive slaves -- Fiction
+    - Humorous stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 140.76
+  links_internal_image: []
+  id: Gutenberg-9007
+- link_homepage: http://gutenberg.org/ebooks/9036
+  subtitle: 
+  language: en
+  title: Tom Sawyer Abroad
+  link_epub: 
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/9036/9036-index.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Americans -- Foreign countries -- Fiction
+    - Adventure stories
+    - Balloon ascensions -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 65.4
+  links_internal_image: []
+  id: Gutenberg-9036
+- link_homepage: http://gutenberg.org/ebooks/9037
+  subtitle: 
+  language: en
+  title: "Tom Sawyer, Detective"
+  link_epub: 
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/9037/9037-index.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Detective and mystery stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 70.72
+  links_internal_image: []
+  id: Gutenberg-9037
+- link_homepage: http://gutenberg.org/ebooks/9038
+  subtitle: 
+  language: en
+  title: The Adventures of Tom Sawyer
+  link_epub: 
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/9038/9038-index.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Child witnesses -- Fiction
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Male friendship -- Fiction
+    - Boys -- Fiction
+    - Runaway children -- Fiction
+    - Humorous stories
+    - Bildungsromans
+    - Mississippi River Valley -- Fiction
+    - Missouri -- Fiction
+    - Adventure stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 118.5
+  links_internal_image: []
+  id: Gutenberg-9038
+- link_homepage: http://gutenberg.org/ebooks/9147
+  subtitle: 
+  language: en
+  title: Moby Dick
+  link_epub: 
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/9147/9147-index.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Whales -- Fiction
+    - Mentally ill -- Fiction
+    - "Ahab, Captain (Fictitious character) -- Fiction"
+    - Ship captains -- Fiction
+    - Sea stories
+    - Whaling ships -- Fiction
+    - Adventure stories
+    - Psychological fiction
+    - Whaling -- Fiction
+  authors:
+  - viaf: '27068555'
+    name: "Melville, Herman"
+    lc: n79006936
+  fiction_confidence: 
+  popularity_rating: 68.6086956521739
+  links_internal_image: []
+  id: Gutenberg-9147
+- link_homepage: http://gutenberg.org/ebooks/91
+  subtitle: 
+  language: en
+  title: Tom Sawyer Abroad
+  link_epub: http://www.gutenberg.org/ebooks/91.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/91/91-h/91-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Adventure stories
+    - Balloon ascensions -- Fiction
+    - Americans -- Foreign countries -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 65.4
+  links_internal_image: []
+  id: Gutenberg-91
+- link_homepage: http://gutenberg.org/ebooks/928
+  subtitle: HTML Edition
+  language: en
+  title: "Alice's Adventures in Wonderland"
+  link_epub: http://www.gutenberg.org/ebooks/928.epub.noimages
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/dirs/etext97/alice30h.htm
+  subjects:
+    LCC:
+    - PR
+    - PZ
+    LCSH:
+    - Fantasy
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 250.153846153846
+  links_internal_image: []
+  id: Gutenberg-928
+- link_homepage: http://gutenberg.org/ebooks/93
+  subtitle: 
+  language: en
+  title: "Tom Sawyer, Detective"
+  link_epub: http://www.gutenberg.org/ebooks/93.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/93/93-h/93-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - "Sawyer, Tom (Fictitious character) -- Fiction"
+    - Mystery fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 70.72
+  links_internal_image: []
+  id: Gutenberg-93
+- link_homepage: http://gutenberg.org/ebooks/100
+  subtitle: 
+  language: en
+  title: The Complete Works of William Shakespeare
+  link_epub: http://www.gutenberg.org/ebooks/100.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/ebooks/100.html.noimages
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - "English drama -- Early modern and Elizabethan, 1500-1600"
+  authors:
+  - viaf: '96994048'
+    name: "Shakespeare, William"
+    lc: n78095332
+  fiction_confidence: 
+  popularity_rating: 26.84
+  links_internal_image: []
+  id: Gutenberg-100
+- link_homepage: http://gutenberg.org/ebooks/101
+  subtitle: 
+  language: en
+  title: 'The Hacker Crackdown: Law and Disorder on the Electronic Frontier'
+  link_epub: http://www.gutenberg.org/ebooks/101.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/101/101-h/101-h.htm
+  subjects:
+    LCC:
+    - HV
+    LCSH:
+    - Computer crimes -- United States
+    - Computer programming -- Corrupt practices -- United States
+    - Telephone -- Corrupt practices -- United States
+  authors:
+  - name: "Sterling, Bruce"
+  fiction_confidence: 
+  popularity_rating: 2.5
+  links_internal_image: []
+  id: Gutenberg-101
+- link_homepage: http://gutenberg.org/ebooks/102
+  subtitle: 
+  language: en
+  title: The Tragedy of Pudd'nhead Wilson
+  link_epub: http://www.gutenberg.org/ebooks/102.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/102/102-h/102-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Missouri -- Fiction
+    - Trials (Murder) -- Fiction
+    - Legal stories
+    - Impostors and imposture -- Fiction
+    - Race relations -- Fiction
+    - Passing (Identity) -- Fiction
+    - Infants switched at birth -- Fiction
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 13.5
+  links_internal_image: []
+  id: Gutenberg-102
+- link_homepage: http://gutenberg.org/ebooks/103
+  subtitle: 
+  language: en
+  title: Around the World in Eighty Days
+  link_epub: http://www.gutenberg.org/ebooks/103.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/103/103-h/103-h.htm
+  subjects:
+    LCC:
+    - PQ
+    LCSH:
+    - Voyages around the world -- Fiction
+    - Adventure stories
+  authors:
+  - viaf: '76323989'
+    name: "Verne, Jules"
+    lc: n79064013
+  fiction_confidence: 
+  popularity_rating: 32.0
+  links_internal_image: []
+  id: Gutenberg-103
+- link_homepage: http://gutenberg.org/ebooks/104
+  subtitle: "Given in Washington, D.C. March 4th, 1933"
+  language: en
+  title: Inaugural Address of Franklin Delano Roosevelt
+  link_epub: http://www.gutenberg.org/ebooks/104.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/104/104-h/104-h.htm
+  subjects:
+    LCC:
+    - E740
+    LCSH:
+    - "New Deal, 1933-1939"
+    - Presidents -- United States -- Inaugural addresses
+    - United States -- Politics and government -- 1933-1945
+  authors:
+  - viaf: '29542759'
+    name: "Roosevelt, Franklin D. (Franklin Delano)"
+    lc: n79022932
+  fiction_confidence: 
+  popularity_rating: 2.0
+  links_internal_image: []
+  id: Gutenberg-104
+- link_homepage: http://gutenberg.org/ebooks/105
+  subtitle: 
+  language: en
+  title: Persuasion
+  link_epub: http://www.gutenberg.org/ebooks/105.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/105/105-h/105-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Young women -- Fiction
+    - Dysfunctional families -- Fiction
+    - Love stories
+    - Motherless families -- Fiction
+    - Ship captains -- Fiction
+    - First loves -- Fiction
+    - Rejection (Psychology) -- Fiction
+    - England -- Social life and customs -- 19th century -- Fiction
+    - Regency fiction
+    - Psychological fiction
+  authors:
+  - viaf: '102333412'
+    name: "Austen, Jane"
+    lc: n79032879
+  fiction_confidence: 
+  popularity_rating: 36.9583333333333
+  links_internal_image: []
+  id: Gutenberg-105
+- link_homepage: http://gutenberg.org/ebooks/106
+  subtitle: 
+  language: en
+  title: Jungle Tales of Tarzan
+  link_epub: http://www.gutenberg.org/ebooks/106.epub.noimages
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/106/106-h/106-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - Tarzan (Fictitious character) -- Fiction
+    - Adventure stories
+    - Fantasy fiction
+    - Apes -- Fiction
+    - Africa -- Fiction
+    - Jungles -- Fiction
+  authors:
+  - viaf: '17220001'
+    name: "Burroughs, Edgar Rice"
+    lc: n80039681
+  fiction_confidence: 
+  popularity_rating: 9.71428571428572
+  links_internal_image: []
+  id: Gutenberg-106
+- link_homepage: http://gutenberg.org/ebooks/107
+  subtitle: 
+  language: en
+  title: Far from the Madding Crowd
+  link_epub: http://www.gutenberg.org/ebooks/107.epub.images
+  adult_audience_confidence: 
+  link_html: http://www.gutenberg.org/files/107/107-h/107-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Wessex (England) -- Fiction
+    - Women farmers -- Fiction
+    - Didactic fiction
+    - Triangles (Interpersonal relations) -- Fiction
+    - Pastoral fiction
+    - Farm life -- Fiction
+    - Love stories
+  authors:
+  - viaf: '54148778'
+    name: "Hardy, Thomas"
+    lc: n79046230
+  fiction_confidence: 
+  popularity_rating: 62.4444444444444
+  links_internal_image: []
+  id: Gutenberg-107
+- link_homepage: http://gutenberg.org/ebooks/108
+  subtitle: 
+  language: en
+  title: The Return of Sherlock Holmes
+  link_epub: http://www.gutenberg.org/ebooks/108.epub.images
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/108/108-h/108-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - "Holmes, Sherlock (Fictitious character) -- Fiction"
+    - "Detective and mystery stories, English"
+  authors:
+  - viaf: '65283845'
+    name: "Doyle, Arthur Conan"
+    lc: n79082292
+  fiction_confidence: 
+  popularity_rating: 56.8461538461538
+  links_internal_image: []
+  id: Gutenberg-108
+- link_homepage: http://gutenberg.org/ebooks/109
+  subtitle: 
+  language: en
+  title: "Renascence, and Other Poems"
+  link_epub: http://www.gutenberg.org/ebooks/109.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/109/109-h/109-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - American poetry
+  authors:
+  - viaf: '90721763'
+    name: "Millay, Edna St. Vincent"
+    lc: n79062746
+  fiction_confidence: 
+  popularity_rating: 6.5
+  links_internal_image: []
+  id: Gutenberg-109
+- link_homepage: http://gutenberg.org/ebooks/10
+  subtitle: 
+  language: en
+  title: The King James Version of the Bible
+  link_epub: http://www.gutenberg.org/ebooks/10.epub.noimages
+  link_html: http://www.gutenberg.org/files/10/10-h/10-h.htm
+  subjects:
+    LCC:
+    - BS
+    LCSH:
+    - Bible
+  authors: []
+  links_internal_image: []
+  id: Gutenberg-10
+- link_homepage: http://gutenberg.org/ebooks/110
+  subtitle: 
+  language: en
+  title: 'Tess of the d''Urbervilles: A Pure Woman'
+  link_epub: http://www.gutenberg.org/ebooks/110.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/110/110-h/110-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Children of clergy -- Fiction
+    - Poor families -- Fiction
+    - Women household employees -- Fiction
+    - Wessex (England) -- Fiction
+    - Triangles (Interpersonal relations) -- Fiction
+    - Pastoral fiction
+    - Children of the rich -- Fiction
+    - Rape victims -- Fiction
+    - Didactic fiction
+    - Man-woman relationships -- Fiction
+    - Women murderers -- Fiction
+  authors:
+  - viaf: '54148778'
+    name: "Hardy, Thomas"
+    lc: n79046230
+  fiction_confidence: 
+  popularity_rating: 18.1428571428571
+  links_internal_image: []
+  id: Gutenberg-110
+- link_homepage: http://gutenberg.org/ebooks/111
+  subtitle: 
+  language: en
+  title: Freckles
+  link_epub: http://www.gutenberg.org/ebooks/111.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/111/111-h/111-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - People with disabilities -- Fiction
+    - Orphans -- Fiction
+    - Swamps -- Fiction
+    - Indiana -- Fiction
+  authors:
+  - viaf: '100244177'
+    name: "Stratton-Porter, Gene"
+    lc: n79127897
+  fiction_confidence: 
+  popularity_rating: 11.3333333333333
+  links_internal_image: []
+  id: Gutenberg-111
+- link_homepage: http://gutenberg.org/ebooks/112
+  subtitle: 
+  language: en
+  title: Violists
+  link_epub: http://www.gutenberg.org/ebooks/112.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/112/112-h/112-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Violists -- Fiction
+    - Love stories
+    - Fathers and daughters -- Fiction
+    - Short stories
+  authors:
+  - name: "McGowan, Richard"
+  fiction_confidence: 
+  popularity_rating: 3.0
+  links_internal_image: []
+  id: Gutenberg-112
+- link_homepage: http://gutenberg.org/ebooks/113
+  subtitle: 
+  language: en
+  title: The Secret Garden
+  link_epub: http://www.gutenberg.org/ebooks/113.epub.noimages
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/113/113-h/113-h.htm
+  subjects:
+    LCC:
+    - PS
+    - PZ
+    LCSH:
+    - People with disabilities -- Fiction
+    - Gardens -- Fiction
+    - Yorkshire (England) -- Fiction
+    - Orphans -- Fiction
+  authors:
+  - viaf: '27061925'
+    name: "Burnett, Frances Hodgson"
+    lc: n80009729
+  fiction_confidence: 
+  popularity_rating: 66.4
+  links_internal_image: []
+  id: Gutenberg-113
+- link_homepage: http://gutenberg.org/ebooks/115
+  subtitle: 
+  language: en
+  title: United States Census Figures Back to 1630
+  link_epub: http://www.gutenberg.org/ebooks/115.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/ebooks/115.html.gen
+  subjects:
+    LCC:
+    - HA
+    LCSH:
+    - United States -- Population -- Statistics
+    - United States -- Statistics
+    - United States -- Census
+  authors:
+  - name: United States. Bureau of the Census
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-115
+- link_homepage: http://gutenberg.org/ebooks/116
+  subtitle: 
+  language: en
+  title: Motion Pictures of the Apollo 11 Lunar Landing
+  link_epub: 
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/116/116-h/116-index.htm
+  subjects:
+    LCC:
+    - TL
+    LCSH:
+    - Space flight to the moon
+    - Project Apollo (U.S.)
+    - Apollo 11 (Spacecraft)
+  authors:
+  - viaf: '140618185'
+    name: United States
+    lc: n78095330
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-116
+- link_homepage: http://gutenberg.org/ebooks/117
+  subtitle: 
+  language: en
+  title: Symphony No. 5 in C minor Opus 67
+  link_epub: http://www.gutenberg.org/ebooks/117.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/117/117-h/117-h.htm
+  subjects:
+    LCC:
+    - M
+    LCSH:
+    - Music
+  authors:
+  - viaf: '32182557'
+    name: "Beethoven, Ludwig van"
+    lc: n79107741
+  fiction_confidence: 
+  popularity_rating: 14.0
+  links_internal_image: []
+  id: Gutenberg-117
+- link_homepage: http://gutenberg.org/ebooks/118
+  subtitle: 
+  language: en
+  title: Big Dummy's Guide to the Internet
+  link_epub: http://www.gutenberg.org/ebooks/118.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/ebooks/118.html.gen
+  subjects:
+    LCC:
+    - TK
+    LCSH:
+    - Computer networks
+    - Internet
+  authors:
+  - name: Electronic Frontier Foundation
+  fiction_confidence: 
+  popularity_rating: 4.0
+  links_internal_image: []
+  id: Gutenberg-118
+- link_homepage: http://gutenberg.org/ebooks/119
+  subtitle: 
+  language: en
+  title: A Tramp Abroad
+  link_epub: http://www.gutenberg.org/ebooks/119.epub.images
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/119/119-h/119-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/119/pg119.cover.medium.jpg
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Europe -- Fiction
+    - Walking -- Fiction
+    - Americans -- Europe -- Fiction
+    - Humorous stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 24.1304347826087
+  links_internal_image: []
+  id: Gutenberg-119
+- link_homepage: http://gutenberg.org/ebooks/120
+  subtitle: 
+  language: en
+  title: Treasure Island
+  link_epub: http://www.gutenberg.org/ebooks/120.epub.images
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/120/120-h/120-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/120/pg120.cover.medium.jpg
+  subjects:
+    LCC:
+    - PR
+    - PZ
+    LCSH:
+    - Sea stories
+    - Treasure Island (Imaginary place) -- Fiction
+    - Treasure troves -- Fiction
+    - Pirates -- Fiction
+  authors:
+  - viaf: '95207986'
+    name: "Stevenson, Robert Louis"
+    lc: n78088964
+  fiction_confidence: 
+  popularity_rating: 39.5
+  links_internal_image: []
+  id: Gutenberg-120
+- link_homepage: http://gutenberg.org/ebooks/121
+  subtitle: 
+  language: en
+  title: Northanger Abbey
+  link_epub: http://www.gutenberg.org/ebooks/121.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/121/121-h/121-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Gentry -- England -- Fiction
+    - Young women -- Fiction
+    - England -- Social life and customs -- 19th century -- Fiction
+    - Books and reading -- Fiction
+    - Love stories
+    - Gothic fiction (Literary genre)
+    - Marriage -- Economic aspects -- Fiction
+    - Horror tales -- Appreciation -- Fiction
+    - Satire
+    - England -- Fiction
+  authors:
+  - viaf: '102333412'
+    name: "Austen, Jane"
+    lc: n79032879
+  fiction_confidence: 
+  popularity_rating: 37.7307692307692
+  links_internal_image: []
+  id: Gutenberg-121
+- link_homepage: http://gutenberg.org/ebooks/122
+  subtitle: 
+  language: en
+  title: The Return of the Native
+  link_epub: http://www.gutenberg.org/ebooks/122.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/122/122-h/122-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Mothers and sons -- Fiction
+    - Didactic fiction
+    - Love stories
+    - Wessex (England) -- Fiction
+    - People with visual disabilities -- Fiction
+    - Mate selection -- Fiction
+    - Adultery -- Fiction
+    - Heathlands -- Fiction
+  authors:
+  - viaf: '54148778'
+    name: "Hardy, Thomas"
+    lc: n79046230
+  fiction_confidence: 
+  popularity_rating: 60.1481481481481
+  links_internal_image: []
+  id: Gutenberg-122
+- link_homepage: http://gutenberg.org/ebooks/123
+  subtitle: 
+  language: en
+  title: At the Earth's Core
+  link_epub: http://www.gutenberg.org/ebooks/123.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/123/123-h/123-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Earth (Planet) -- Core -- Fiction
+    - Science fiction
+    - Fantasy fiction
+    - Adventure stories
+  authors:
+  - viaf: '17220001'
+    name: "Burroughs, Edgar Rice"
+    lc: n80039681
+  fiction_confidence: 
+  popularity_rating: 49.3913043478261
+  links_internal_image: []
+  id: Gutenberg-123
+- link_homepage: http://gutenberg.org/ebooks/124
+  subtitle: Apocrypha
+  language: en
+  title: Deuterocanonical Books of the Bible
+  link_epub: http://www.gutenberg.org/ebooks/124.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/ebooks/124.html.gen
+  subjects:
+    LCC:
+    - BS
+    LCSH:
+    - Apocryphal books (Old Testament)
+    - Bible. Apocrypha
+  authors:
+  - viaf: '265426576'
+    name: Anonymous
+    lc: 'null'
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-124
+- link_homepage: http://gutenberg.org/ebooks/125
+  subtitle: 
+  language: en
+  title: A Girl of the Limberlost
+  link_epub: http://www.gutenberg.org/ebooks/125.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/125/125-h/125-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Mothers and daughters -- Fiction
+    - Indiana -- Fiction
+    - Swamps -- Fiction
+    - Moths -- Fiction
+    - Conflict of generations -- Fiction
+    - Didactic fiction
+    - Bildungsromans
+    - Domestic fiction
+    - Girls -- Fiction
+  authors:
+  - viaf: '100244177'
+    name: "Stratton-Porter, Gene"
+    lc: n79127897
+  fiction_confidence: 
+  popularity_rating: 11.625
+  links_internal_image: []
+  id: Gutenberg-125
+- link_homepage: http://gutenberg.org/ebooks/126
+  subtitle: 
+  language: en
+  title: The Poison Belt
+  link_epub: http://www.gutenberg.org/ebooks/126.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/126/126-h/126-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Science fiction
+    - "Challenger, Professor (Fictitious character) -- Fiction"
+  authors:
+  - viaf: '65283845'
+    name:" Doyle, Arthur Conan"
+    lc: n79082292
+  fiction_confidence: 
+  popularity_rating: 26.5
+  links_internal_image: []
+  id: Gutenberg-126
+- link_homepage: http://gutenberg.org/ebooks/127
+  subtitle: 
+  language: en
+  title: The Number "e"
+  link_epub: http://www.gutenberg.org/ebooks/127.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/cache/epub/127/pg127.html.utf8
+  subjects:
+    LCC:
+    - QA
+    LCSH:
+    - Mathematical constants
+    - Mathematics
+  authors:
+  - name: "Nemiroff, Robert J."
+  - name: "Bonnell, Jerry T."
+  fiction_confidence: 
+  popularity_rating: 2.0
+  links_internal_image: []
+  id: Gutenberg-127
+- link_homepage: http://gutenberg.org/ebooks/128
+  subtitle: 
+  language: en
+  title: The Arabian Nights Entertainments
+  link_epub: http://www.gutenberg.org/ebooks/128.epub.noimages
+  adult_audience_confidence: 0.4
+  link_html: http://www.gutenberg.org/files/128/128-h/128-h.htm
+  subjects:
+    LCC:
+    - PJ
+    - PZ
+    LCSH:
+    - Children's stories
+    - Tales -- Arab countries
+    - Arabs -- Folklore
+    - Fairy tales -- Arab countries
+    - Folklore -- Arab countries
+    - Fairy tales
+  authors:
+  - viaf: '7406545'
+    name: "Lang, Andrew"
+    lc: n79054315
+  fiction_confidence: 
+  popularity_rating: 7.2
+  links_internal_image: []
+  id: Gutenberg-128
+- link_homepage: http://gutenberg.org/ebooks/129
+  subtitle: 
+  language: en
+  title: The Square Root of 2
+  link_epub: 
+  adult_audience_confidence: 1.0
+  link_html: 
+  subjects:
+    LCC:
+    - QA
+    LCSH:
+    - Mathematics
+    - Square root
+  authors:
+  - name: "Bonnell, Jerry T."
+  - name: "Nemiroff, Robert J."
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-129
+- link_homepage: http://gutenberg.org/ebooks/130
+  subtitle: 
+  language: en
+  title: Orthodoxy
+  link_epub: http://www.gutenberg.org/ebooks/130.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/ebooks/130.html.noimages
+  subjects:
+    LCC:
+    - BR
+    LCSH:
+    - "Christianity -- Essence, genius, nature"
+    - "Chesterton, G. K. (Gilbert Keith), 1874-1936"
+    - Apologetics
+  authors:
+  - viaf: '14767719'
+    name: "Chesterton, G. K. (Gilbert Keith)"
+    lc: n79021157
+  fiction_confidence: 
+  popularity_rating: 51.52
+  links_internal_image: []
+  id: Gutenberg-130
+- link_homepage: http://gutenberg.org/ebooks/131
+  subtitle: Delivered under the similitude of a dream, by John Bunyan
+  language: en
+  title: The Pilgrim's Progress from this world to that which is to come
+  link_epub: http://www.gutenberg.org/ebooks/131.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/131/131-h/131-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Christian pilgrims and pilgrimages -- Fiction
+    - Christian fiction
+  authors:
+  - viaf: '71388170'
+    name: "Bunyan, John"
+    lc: n78095526
+  fiction_confidence: 
+  popularity_rating: 27.0833333333333
+  links_internal_image: []
+  id: Gutenberg-131
+- link_homepage: http://gutenberg.org/ebooks/132
+  subtitle: 
+  language: en
+  title: The Art of War
+  link_epub: http://www.gutenberg.org/ebooks/132.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/ebooks/132.html.noimages
+  subjects:
+    LCC:
+    - U
+    LCSH:
+    - War -- Early works to 1800
+    - Military art and science -- Early works to 1800
+  authors:
+  - viaf: '200741950'
+    name: "Sunzi, active 6th century B.C."
+    lc: n80067475
+  fiction_confidence: 
+  popularity_rating: 48.8571428571429
+  links_internal_image: []
+  id: Gutenberg-132
+- link_homepage: http://gutenberg.org/ebooks/133
+  subtitle: 
+  language: en
+  title: The Damnation of Theron Ware
+  link_epub: http://www.gutenberg.org/ebooks/133.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/133/133-h/133-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Methodists -- Fiction
+    - Psychological fiction
+    - Belief and doubt -- Fiction
+    - Clergy -- Fiction
+    - New York (State) -- Fiction
+  authors:
+  - viaf: '22251233'
+    name: "Frederic, Harold"
+    lc: n79073600
+  fiction_confidence: 
+  popularity_rating: 6.0
+  links_internal_image: []
+  id: Gutenberg-133
+- link_homepage: http://gutenberg.org/ebooks/134
+  subtitle: 
+  language: en
+  title: "Maria; Or, The Wrongs of Woman"
+  link_epub: http://www.gutenberg.org/ebooks/134.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/134/134-h/134-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Women -- Fiction
+    - Autobiographical fiction
+    - Feminist fiction
+  authors:
+  - viaf: '51697482'
+    name: "Wollstonecraft, Mary"
+    lc: n78095613
+  fiction_confidence: 
+  popularity_rating: 5.2
+  links_internal_image: []
+  id: Gutenberg-134
+- link_homepage: http://gutenberg.org/ebooks/135
+  subtitle: 
+  language: en
+  title: Les Misérables
+  link_epub: http://www.gutenberg.org/ebooks/135.epub.images
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/135/135-h/135-h.htm
+  link_cover: http://www.gutenberg.org/cache/epub/135/pg135.cover.medium.jpg
+  subjects:
+    LCC:
+    - PQ
+    LCSH:
+    - Historical fiction
+    - Orphans -- Fiction
+    - Epic literature
+    - Paris (France) -- Fiction
+    - Ex-convicts -- Fiction
+  authors:
+  - viaf: '9847974'
+    name: "Hugo, Victor"
+    lc: n79091479
+  fiction_confidence: 
+  popularity_rating: 32.0833333333333
+  links_internal_image: []
+  id: Gutenberg-135
+- link_homepage: http://gutenberg.org/ebooks/136
+  subtitle: 
+  language: en
+  title: A Child's Garden of Verses
+  link_epub: http://www.gutenberg.org/ebooks/136.epub.noimages
+  adult_audience_confidence: 0.4
+  link_html: http://www.gutenberg.org/ebooks/136.html.gen
+  subjects:
+    LCC:
+    - PZ
+    - PR
+    LCSH:
+    - "Children's poetry, English"
+  authors:
+  - viaf: '95207986'
+    name: "Stevenson, Robert Louis"
+    lc: n78088964
+  fiction_confidence: 
+  popularity_rating: 58.0769230769231
+  links_internal_image: []
+  id: Gutenberg-136
+- link_homepage: http://gutenberg.org/ebooks/137
+  subtitle: 
+  language: en
+  title: "Sara Crewe; Or, What Happened at Miss Minchin's Boarding School"
+  link_epub: http://www.gutenberg.org/ebooks/137.epub.noimages
+  adult_audience_confidence: 0.5
+  link_html: http://www.gutenberg.org/files/137/137-h/137-h.htm
+  subjects:
+    LCC:
+    - PZ
+    - PS
+    LCSH:
+    - Schools -- Fiction
+    - Boarding schools -- Fiction
+    - London (England) -- Fiction
+    - Orphans -- Fiction
+  authors:
+  - viaf: '27061925'
+    name: "Burnett, Frances Hodgson"
+    lc: n80009729
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-137
+- link_homepage: http://gutenberg.org/ebooks/138
+  subtitle: 
+  language: en
+  title: "George Sand: Some Aspects of Her Life and Writings"
+  link_epub: http://www.gutenberg.org/ebooks/138.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/138/138-h/138-h.htm
+  subjects:
+    LCC:
+    - PQ
+    LCSH:
+    - "Sand, George, 1804-1876"
+    - "Women novelists, French -- 19th century -- Biography"
+  authors:
+  - viaf: '68953396'
+    name: "Doumic, René"
+    lc: no94037238
+  fiction_confidence: 
+  popularity_rating: 2.0
+  links_internal_image: []
+  id: Gutenberg-138
+- link_homepage: http://gutenberg.org/ebooks/139
+  subtitle: 
+  language: en
+  title: The Lost World
+  link_epub: http://www.gutenberg.org/ebooks/139.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/139/139-h/139-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Prehistoric peoples -- Fiction
+    - Dinosaurs -- Fiction
+    - "Challenger, Professor (Fictitious character) -- Fiction"
+    - Fantasy fiction
+    - South America -- Fiction
+  authors:
+  - viaf: '65283845'
+    name: "Doyle, Arthur Conan"
+    lc: n79082292
+  fiction_confidence: 
+  popularity_rating: 29.12
+  links_internal_image: []
+  id: Gutenberg-139
+- link_homepage: http://gutenberg.org/ebooks/13
+  subtitle: 
+  language: en
+  title: 'The Hunting of the Snark: An Agony in Eight Fits'
+  link_epub: http://www.gutenberg.org/ebooks/13.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/13/13-h/13-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - "Nonsense verses, English"
+  authors:
+  - viaf: '66462036'
+    name: "Carroll, Lewis"
+    lc: n79056546
+  fiction_confidence: 
+  popularity_rating: 11.9
+  links_internal_image: []
+  id: Gutenberg-13
+- link_homepage: http://gutenberg.org/ebooks/140
+  subtitle: 
+  language: en
+  title: The Jungle
+  link_epub: http://www.gutenberg.org/ebooks/140.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/140/140-h/140-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - Stockyards -- Fiction
+    - Working class -- Fiction
+    - Political fiction
+    - Meat industry and trade -- Fiction
+    - Chicago (Ill.) -- Fiction
+    - Immigrants -- Fiction
+    - Lithuanian Americans -- Fiction
+  authors:
+  - viaf: '32002923'
+    name: "Sinclair, Upton"
+    lc: n79127862
+  fiction_confidence: 
+  popularity_rating: 29.44
+  links_internal_image: []
+  id: Gutenberg-140
+- link_homepage: http://gutenberg.org/ebooks/141
+  subtitle: 
+  language: en
+  title: Mansfield Park
+  link_epub: http://www.gutenberg.org/ebooks/141.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/141/141-h/141-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Domestic fiction
+    - Adoptees -- Fiction
+    - Country homes -- Fiction
+    - Children of the rich -- Fiction
+    - Love stories
+    - England -- Fiction
+    - Uncles -- Fiction
+    - Young women -- Fiction
+    - Cousins -- Fiction
+  authors:
+  - viaf: '102333412'
+    name: "Austen, Jane"
+    lc: n79032879
+  fiction_confidence: 
+  popularity_rating: 38.3333333333333
+  links_internal_image: []
+  id: Gutenberg-141
+- link_homepage: http://gutenberg.org/ebooks/142
+  subtitle: 
+  language: en
+  title: "The $30,000 Bequest, and Other Stories"
+  link_epub: http://www.gutenberg.org/ebooks/142.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/142/142-h/142-h.htm
+  subjects:
+    LCC:
+    - PS
+    LCSH:
+    - United States -- Social life and customs -- Fiction
+    - "Humorous stories, American"
+    - Short stories
+  authors:
+  - viaf: '50566653'
+    name: "Twain, Mark"
+    lc: n79021164
+  fiction_confidence: 
+  popularity_rating: 1.0
+  links_internal_image: []
+  id: Gutenberg-142
+- link_homepage: http://gutenberg.org/ebooks/143
+  subtitle: 
+  language: en
+  title: The Mayor of Casterbridge
+  link_epub: http://www.gutenberg.org/ebooks/143.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/143/143-h/143-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Mayors -- Fiction
+    - Psychological fiction
+    - Wessex (England) -- Fiction
+    - Runaway husbands -- Fiction
+    - Atonement -- Fiction
+    - Men -- England -- Fiction
+    - Fathers and daughters -- Fiction
+  authors:
+  - viaf: '54148778'
+    name: "Hardy, Thomas"
+    lc: n79046230
+  fiction_confidence: 
+  popularity_rating: 29.8846153846154
+  links_internal_image: []
+  id: Gutenberg-143
+- link_homepage: http://gutenberg.org/ebooks/144
+  subtitle: 
+  language: en
+  title: The Voyage Out
+  link_epub: http://www.gutenberg.org/ebooks/144.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/144/144-h/144-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Ocean travel -- Fiction
+    - Women travelers -- Fiction
+    - Love stories
+    - Young women -- Fiction
+    - British -- South America -- Fiction
+    - Bildungsromans
+  authors:
+  - viaf: '39385478'
+    name: "Woolf, Virginia"
+    lc: n79041870
+  fiction_confidence: 
+  popularity_rating: 12.6
+  links_internal_image: []
+  id: Gutenberg-144
+- link_homepage: http://gutenberg.org/ebooks/145
+  subtitle: 
+  language: en
+  title: Middlemarch
+  link_epub: http://www.gutenberg.org/ebooks/145.epub.noimages
+  adult_audience_confidence: 1.0
+  link_html: http://www.gutenberg.org/files/145/145-h/145-h.htm
+  subjects:
+    LCC:
+    - PR
+    LCSH:
+    - Domestic fiction
+    - Didactic fiction
+    - Married people -- Fiction
+    - Bildungsromans
+    - England -- Fiction
+    - Young women -- Fiction
+    - Love stories
+    - City and town life -- Fiction
+  authors:
+  - viaf: '89000553'
+    name: "Eliot, George"
+    lc: n79045512
+  fiction_confidence: 
+  popularity_rating: 30.4814814814815
+  links_internal_image: []
+  id: Gutenberg-145
