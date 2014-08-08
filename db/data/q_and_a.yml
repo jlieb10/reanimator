@@ -3,10 +3,10 @@ tasks:
 -
   name: Title Task
   category: Title
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: Which title is better?
     options:
       -
@@ -20,25 +20,25 @@ tasks:
 -
   name: Find Short Title
   category: Title
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: Is it possible to shorten the title?
     options:
       - 
         value: Yes
         # what can it be shortened to?
-        additional_input: true
+        additional_input: short_text
       - 
         value: No
 -
   name: Subtitle Task
   category: Title
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: How important is the subtitle?
     options:
       - 
@@ -48,14 +48,14 @@ tasks:
       - 
         value: Not all of it
         # what can it be shortened to?
-        additional_input: true
+        additional_input: short_text
 -
   name: Description Quality
   category: Description
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: Rate the Gutenberg Description
     options: 
       - 
@@ -73,10 +73,10 @@ tasks:
 -
   name: Description Audience
   category: Description
-  point_value: #!
+  # point_value: #!
   questions:
   -
-    expectation: single
+    expectation: radio
     content: Who is the audience of this description?
     options: 
       - 
@@ -91,10 +91,10 @@ tasks:
 -
   name: Cover Quality
   category: Covers
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: Rate the Gutenberg Cover
     options: 
       - 
@@ -114,10 +114,10 @@ tasks:
 -
   name: Cover Comparison
   category: Covers
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: "Compare these two covers:"
     options:
       - 
@@ -131,10 +131,10 @@ tasks:
 
   name: Evaluate Image from Text as Cover
   category: Covers
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: Would this image make good cover art?
     options: 
       - 
@@ -152,16 +152,16 @@ tasks:
       - 
         value: Not suitable
         # why isnt this suitable
-        additional_input: true
+        additional_input: short_text
       - 
         value: No opinion
 -
   name: Fiction Genre
   category: Classification
-  point_value: #!
+  # point_value: #!
   questions:
   -
-    expectation: single
+    expectation: select
     content: Is there a good subcategory of fiction for this book?
     options: 
       - 
@@ -185,7 +185,7 @@ tasks:
       - 
         value: Other
         # which other genre would be suitable?
-        additional_input: true
+        additional_input: short_text
       - 
         value: Just "fiction" is fine
       - 
@@ -193,10 +193,10 @@ tasks:
 -
   name: Modern Standards for Juvenile Literature
   category: Classification
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: Would this be suitable for children today?
     options: 
       - 
@@ -208,16 +208,16 @@ tasks:
       - 
         value: It's outdated for another reason
         # why is this outdated?
-        additional_input: true
+        additional_input: short_text
       - 
         value: It's a misclassified book for adults
 -
   name: Target Age
   category: Classification
-  point_value: #!
+  # point_value: #!
   questions:
   -
-    expectation: single
+    expectation: radio
     content: This book is classified as "juvenile literature" but for what age group?
     options: 
       - 
@@ -231,10 +231,10 @@ tasks:
 -
   name: Modern Standards for Nonfiction
   category: Classification
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: single
+    expectation: radio
     content: Is this book still relevant?
     options: 
       - 
@@ -250,41 +250,41 @@ tasks:
 -
   name: Write a Description
   category: Heavy Duty
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: text
+    expectation: text_area
     content: Write a description for this book
     options: 
      - 
       value: Input
-      additional_input: true
+      additional_input: long_text
 -
   name: Pull Quote
   category: Heavy Duty
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: text
+    expectation: text_area
     content: Find a pull quote from this book
     options: 
       - 
         value: Input
-        additional_input: true
+        additional_input: long_text
 -
   name: Overall Evaluation
   category: Heavy Duty
-  point_value: #!
+  # point_value: #!
   questions:
   - 
-    expectation: text
+    expectation: text_area
     content: Please evaluate this book overall for presentation to patrons. 
     options: 
       - 
         value: input
-        additional_input: true
+        additional_input: long_text
   -
-    expectation: single
+    expectation: radio
     content: Who would you recommend this to?
     options:
       -
