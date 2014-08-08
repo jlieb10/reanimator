@@ -11,6 +11,8 @@ require 'pp'
 
 tasks = YAML.load(File.read(File.join(__dir__, 'data', 'tasks.yml')))
 
+
+# task seeds
 tasks["tasks"].each do |task|
   Task.create do |t|
     t.name     = task["name"]
@@ -42,3 +44,5 @@ tasks["tasks"].each do |task|
     
   end
 end
+
+

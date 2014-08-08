@@ -3,7 +3,7 @@
 FactoryGirl.define do
   factory :question do
     content "What is this about?"
-    expectation { Question::VALID_EXPECTATIONS.sample }
+    expectation { Question::VALID_EXPECTATIONS_ENUM.sample }
     task { build_stubbed(:task) }
   end
 end

@@ -4,9 +4,10 @@ class CreateBooks < ActiveRecord::Migration
 
       # an array of titles
       # ["William Shakespear", "The complete works of William Shakespeare."]
-      t.text :title
+      t.text :titles
 
       # an array of descriptions
+      # []
       t.text :descriptions
 
       t.string :subtitle
