@@ -24,8 +24,6 @@ class CreateBooks < ActiveRecord::Migration
       # [ "last name, first name", "last name, first name"]
       t.text :authors
 
-      t.date :date_published
-
       # will be a hash of links
       # {
       # :home => "http://gutenberg.org/ebooks/10643"
@@ -38,7 +36,6 @@ class CreateBooks < ActiveRecord::Migration
       t.text :links
 
       t.string :language
-      t.string :publisher
     end
   end
 end

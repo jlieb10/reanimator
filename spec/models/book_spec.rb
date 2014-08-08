@@ -48,6 +48,7 @@ RSpec.describe Book, :type => :model do
       expect(book.descriptions.size).to eq(2)
     end
 
+
     it "allows the links attribute to be treated as a hash" do
       book = build(:book)
       expect(book.links).to be_an_instance_of(Hash)

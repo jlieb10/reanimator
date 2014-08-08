@@ -23,10 +23,8 @@ ActiveRecord::Schema.define(version: 20140808150836) do
     t.string "type"
     t.string "nid"
     t.text   "authors"
-    t.date   "date_published"
     t.text   "links"
     t.string "language"
-    t.string "publisher"
   end
 
   create_table "options", force: true do |t|
