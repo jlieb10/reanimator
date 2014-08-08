@@ -19,8 +19,9 @@ RSpec.describe Question, :type => :model do
     end
 
     context "with an invalid expectation" do
-      subject { build(:question, :expectation => "something weird") }
-      it { should be_invalid }
+      it "should be invalid" do
+        expect { build(:question, :expectation => "something weird") }.to raise_error
+      end
     end
   end
 
