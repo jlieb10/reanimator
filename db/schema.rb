@@ -11,19 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140808150836) do
+ActiveRecord::Schema.define(version: 20140808194057) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "books", force: true do |t|
+  create_table "gutenberg_books", force: true do |t|
     t.text   "titles"
-    t.text   "descriptions"
     t.string "subtitle"
-    t.string "type"
     t.string "nid"
     t.text   "authors"
     t.text   "links"
+    t.string "language"
+  end
+
+  create_table "oclc_books", force: true do |t|
+    t.text   "titles"
+    t.text   "descriptions"
+    t.string "nid"
     t.string "language"
   end
 

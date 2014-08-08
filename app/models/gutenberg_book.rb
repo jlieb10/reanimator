@@ -1,9 +1,10 @@
-class Book < ActiveRecord::Base
+class GutenbergBook < ActiveRecord::Base
 
 
   serialize :titles         , Array
   serialize :authors        , Array
-  serialize :descriptions   , Array
   #==============================#
   serialize :links          , Hash
+
+  
 end

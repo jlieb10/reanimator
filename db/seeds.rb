@@ -65,8 +65,7 @@ module BookSeeder
     end
 
     def handle_oclc_hash(hash)
-      Book.create do |b|
-        b.type     = "OCLC"
+      OclcBook.create do |b|
         b.nid      = hash["id"]
         b.language = hash["language"]
 
@@ -76,8 +75,7 @@ module BookSeeder
     end
 
     def handle_gutenberg_hash(hash)
-      Book.create do |b|
-        b.type     = "Gutenberg"
+      GutenbergBook.create do |b|
         b.nid      = hash["id"]
         b.subtitle = hash["subtitle"]
         b.titles  << hash["title"]
