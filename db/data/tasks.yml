@@ -1,4 +1,3 @@
-# Should convert this to JSON when possible
 tasks:
 -
   name: Title Task
@@ -27,11 +26,11 @@ tasks:
     content: Is it possible to shorten the title?
     options:
       - 
-        value: Yes
+        value: "Yes"
         # what can it be shortened to?
         additional_input: short_text
       - 
-        value: No
+        value: "No"
 -
   name: Subtitle Task
   category: Title
@@ -253,7 +252,7 @@ tasks:
   # point_value: #!
   questions:
   - 
-    expectation: text_area
+    expectation: none
     content: Write a description for this book
     options: 
      - 
@@ -265,7 +264,7 @@ tasks:
   # point_value: #!
   questions:
   - 
-    expectation: text_area
+    expectation: none
     content: Find a pull quote from this book
     options: 
       - 
@@ -277,7 +276,7 @@ tasks:
   # point_value: #!
   questions:
   - 
-    expectation: text_area
+    expectation: none
     content: Please evaluate this book overall for presentation to patrons. 
     options: 
       - 
