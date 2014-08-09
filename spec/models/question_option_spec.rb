@@ -14,4 +14,31 @@ RSpec.describe QuestionOption, :type => :model do
 
     end
   end
+
+  describe "custom #additional_input= method" do
+    it "works when given a symbol/string with one of the BASE_ADDITIONAL_DATATYPES" do 
+      q_o = create(:question_option)
+      q_o.additional_input = :image
+
+      expect(q_o.requires_no_input?).to be false
+      expect(q_o.requires_image?).to be true
+    end
+
+    it "works when given a any object that responds to #to_s" do 
+      a = Object.new
+      def a.to_s
+        "short_text"
+      end
+
+      q_o = create(:question_option)
+      q_o.additional_input = a
+
+      expect(q_o.requires_no_input?).to be false
+      expect(q_o.requires_short_text?).to be true
+    end
+
+    it "behaves normally when argument is not a BASE_ADDITIONAL_DATATYPES" do
+      expect { build(:question_option).additional_input = "something invalid" }.to raise_error(ArgumentError)
+    end
+  end
 end
