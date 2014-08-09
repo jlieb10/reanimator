@@ -11,12 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140808194057) do
+ActiveRecord::Schema.define(version: 20140809152921) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "gutenberg_books", force: true do |t|
+  create_table "equivalencies", force: true do |t|
+    t.float  "confidence"
+    t.string "oclc_work_nid"
+    t.string "book_nid"
+    t.string "book_type"
+  end
+
+  create_table "gutenberg_books", id: false, force: true do |t|
     t.text   "titles"
     t.string "subtitle"
     t.string "nid"
@@ -25,11 +32,15 @@ ActiveRecord::Schema.define(version: 20140808194057) do
     t.string "language"
   end
 
-  create_table "oclc_books", force: true do |t|
+  create_table "oclc_books", id: false, force: true do |t|
     t.text   "titles"
     t.text   "descriptions"
     t.string "nid"
     t.string "language"
+  end
+
+  create_table "oclc_works", id: false, force: true do |t|
+    t.string "nid"
   end
 
   create_table "options", force: true do |t|

@@ -1,6 +1,6 @@
 class CreateBooks < ActiveRecord::Migration
   def change
-    create_table :gutenberg_books do |t|
+    create_table :gutenberg_books, :id => false, :primary_key => :nid do |t|
 
       # an array of titles
       # ["William Shakespear", "The complete works of William Shakespeare."]

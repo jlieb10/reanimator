@@ -1,6 +1,6 @@
 class CreateOclcBooks < ActiveRecord::Migration
   def change
-    create_table :oclc_books do |t|
+    create_table :oclc_books, :id => false, :primary_key => :nid do |t|
 
       # an array of titles
       # ["William Shakespear", "The complete works of William Shakespeare."]
