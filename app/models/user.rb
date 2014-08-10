@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+  # --------------------------------------------------------------------------------
+  # | id | email | name | image_url | provider | auth_id | created_at | updated_at |
+  # --------------------------------------------------------------------------------
+
+  has_many :submissions
 
   validates_uniqueness_of :email
   validates :email, :name, :provider, :presence => true

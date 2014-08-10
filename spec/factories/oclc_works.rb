@@ -2,5 +2,6 @@
 
 FactoryGirl.define do
   factory :oclc_work do
+    nid { "owi-#{rand(1..20_000)}" }
   end
 end

@@ -3,7 +3,7 @@ class WorkSeeder
     attr_accessor :work_files, :equivalency_files
 
     def run
-      parse_files(work_files)       { |data| seed_works(data) }
+      parse_files(work_files)        { |data| seed_works(data) }
       parse_files(equivalency_files) { |data| seed_equivalency(data) }
     end
 
@@ -18,7 +18,7 @@ class WorkSeeder
 
     def seed_works(works)
       works.each do |obj|
-        OclcWork.create(:nid => obj["id"])
+      OclcWork.find_or_create_by(:nid => obj["id"])
       end
     end
 

@@ -1,4 +1,7 @@
 class Task < ActiveRecord::Base
+  # --------------------------------------
+  # | id | category | name | point_value | 
+  # --------------------------------------
 
   # more to come
   VALID_CATEGORIES = %w( Title Description Covers Classification Heavy\ Duty )

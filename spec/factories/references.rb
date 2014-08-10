@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :reference do
+    referenced { build_stubbed([:oclc_work, :gutenberg_book, :oclc_book].sample) }
+    submission { build_stubbed(:submission) }
   end
 end

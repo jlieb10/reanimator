@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20140810010847) do
   create_table "references", force: true do |t|
     t.string   "referenced_type"
     t.string   "referenced_nid"
+    t.string   "column_name"
     t.integer  "submission_id"
     t.datetime "created_at"
     t.datetime "updated_at"

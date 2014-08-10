@@ -1,4 +1,8 @@
 class QuestionOption < ActiveRecord::Base
+  # ---------------------------------------------------
+  # | id | question_id | option_id | additional_input |
+  # ---------------------------------------------------
+
   # these will translate to scopes named 
   # #requires_no_input, #requires_text, #requires_image etc.
   # and boolean helpers named #requires_no_input?, #requires_text?, #requires_image? etc.
