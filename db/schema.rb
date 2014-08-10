@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140809152921) do
+ActiveRecord::Schema.define(version: 20140810010847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,14 @@ ActiveRecord::Schema.define(version: 20140809152921) do
   end
 
   add_index "questions", ["task_id"], name: "index_questions_on_task_id", using: :btree
+
+  create_table "references", force: true do |t|
+    t.string   "referenced_type"
+    t.string   "referenced_nid"
+    t.integer  "submission_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "submissions", force: true do |t|
     t.integer  "user_id"
