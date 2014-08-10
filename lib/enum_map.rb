@@ -19,7 +19,9 @@ class EnumMap
   def redifine_setter_method!
     tap do |em|
       @class.send(:define_method, "#{@column}=") do |val|
-        val = em.block[val] if em.enum_values.include? val.to_s
+        if em.enum_values.include? val.to_s and em.block.present?
+          val = em.block[val]
+        end
         super(val)
       end
     end
@@ -33,7 +35,11 @@ class EnumMap
         when Integer
           em.enum_values[old_val]
         when String, Symbol
-          em.enum_values.find { |ev| em.block[ev] == old_val  }
+          if em.block.present?
+            em.enum_values.find { |ev| em.block[ev] == old_val  }
+          else
+            old_val
+          end
         end
       end
     end
