@@ -64,9 +64,11 @@ ActiveRecord::Schema.define(version: 20140808150836) do
   add_index "submissions", ["user_id"], name: "index_submissions_on_user_id", using: :btree
 
   create_table "tasks", force: true do |t|
-    t.string  "name"
-    t.integer "category"
-    t.integer "point_value", default: 0
+    t.string   "name"
+    t.integer  "category"
+    t.integer  "point_value", default: 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
