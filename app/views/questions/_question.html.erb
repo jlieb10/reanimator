@@ -1,5 +1,6 @@
 <%= content_tag :h6, question.content %>
-<%= form_for current_user.submissions.new do |builder|%>
+
+<%= form_for Submission.new do |builder|%>
   <%= builder.hidden_field :question_id, value: question.id %>
 
   <% if question.expects_none? %>
