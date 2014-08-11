@@ -4,5 +4,8 @@ class Reference < ActiveRecord::Base
   # -----------------------------------------------------------------------
   
   belongs_to :submission
-  belongs_to :referenced, :polymorphic => true, :foreign_key => :referenced_nid
+  
+  belongs_to :referenced, 
+             :polymorphic => true, 
+             :foreign_key => :referenced_nid
 end

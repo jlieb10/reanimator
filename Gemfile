@@ -43,7 +43,7 @@ gem "omniauth-google-oauth2"
 # https://github.com/zurb/foundation-rails
 gem "foundation-rails"
 
-#gem for font-awesome instead of manual install (symbols)
+# gem for font-awesome instead of manual install (symbols)
 gem "font-awesome-rails"
 
 group :development, :test do

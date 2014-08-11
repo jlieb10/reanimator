@@ -22,4 +22,14 @@ class OclcWork < ActiveRecord::Base
            :source_type => OclcBook, 
            :source => :book
 
+
+  scope :having_gutenberg_books, ->(min = 1) {
+    joins(:gutenberg_books).group('"oclc_works"."nid"').having("COUNT(gutenberg_books.nid) >= #{min}")
+  }
+
+  scope :having_oclc_books, ->(min = 1) {
+    joins(:oclc_books).group('"oclc_works"."nid"').having("COUNT(oclc_books.nid) >= #{min}")    
+  }
+
+
 end

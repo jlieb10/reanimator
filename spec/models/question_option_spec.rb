@@ -20,8 +20,8 @@ RSpec.describe QuestionOption, :type => :model do
       q_o = create(:question_option)
       q_o.additional_input = :image
 
-      expect(q_o.requires_no_input?).to be false
-      expect(q_o.requires_image?).to be true
+      expect(q_o.require_no_input?).to be false
+      expect(q_o.require_image?).to be true
     end
 
     it "works when given a any object that responds to #to_s" do 
@@ -33,8 +33,8 @@ RSpec.describe QuestionOption, :type => :model do
       q_o = create(:question_option)
       q_o.additional_input = a
 
-      expect(q_o.requires_no_input?).to be false
-      expect(q_o.requires_short_text?).to be true
+      expect(q_o.require_no_input?).to be false
+      expect(q_o.require_short_text?).to be true
     end
 
     it "behaves normally when argument is not a BASE_ADDITIONAL_DATATYPES" do

@@ -33,8 +33,12 @@ class BookSeeder
         b.nid      = hash["id"]
         b.language = hash["language"]
 
-        b.titles       << handle_potential_inconsistency(hash["title"])
-        b.descriptions << handle_potential_inconsistency(hash["description"])
+        ["title", "description"].each do |attribute|
+          # push to the titles, descriptions arrays of to oclc book
+          if hash[attribute].present?
+            b.send(attribute.pluralize) << handle_potential_inconsistency(hash[attribute])
+          end
+        end
       end
     end
 
@@ -65,7 +69,7 @@ class BookSeeder
             h
           end
         end
-      when String
+      else
         value
       end
     end

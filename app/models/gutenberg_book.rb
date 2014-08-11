@@ -20,4 +20,6 @@ class GutenbergBook < ActiveRecord::Base
   serialize :authors, Array
   serialize :links  , Hash
 
+  include BookScopes
+
 end

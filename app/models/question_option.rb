@@ -5,10 +5,10 @@ class QuestionOption < ActiveRecord::Base
 
   ADDITIONAL_DATATYPES = %w( no_input image short_text long_text )
   # these enum values will translate to scopes named 
-  # #requires_no_input, #requires_text, #requires_image etc.
-  # and boolean helpers named #requires_no_input?, #requires_text?, #requires_image? etc.
+  # #require_no_input, #require_text, #require_image etc.
+  # and boolean helpers named #require_no_input?, #require_text?, #require_image? etc.
   include EnumHandler
-  enum(:additional_input => ADDITIONAL_DATATYPES) { |i| "requires_#{i}" }
+  enum(:additional_input => ADDITIONAL_DATATYPES) { |i| "require_#{i}" }
 
   belongs_to :question
   belongs_to :option

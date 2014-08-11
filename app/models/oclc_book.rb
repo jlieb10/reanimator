@@ -8,7 +8,7 @@ class OclcBook < ActiveRecord::Base
   # this also applies to the way we establish relationships
   # between models
   self.primary_key =      :nid
-  validates_uniqueness_of :nid  
+  validates_uniqueness_of :nid
   
   has_many :equivalencies, 
            :as => :book, 
@@ -20,5 +20,5 @@ class OclcBook < ActiveRecord::Base
   serialize :descriptions, Array
   serialize :titles      , Array
 
-
+  include BookScopes
 end
