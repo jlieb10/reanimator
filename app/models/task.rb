@@ -8,7 +8,8 @@ class Task < ActiveRecord::Base
   # #in_title, #in_description, #in_covers etc.
   # and boolean helpers named #in_title?, #in_description?, #in_covers? etc.
   include EnumHandler
-  enum(:category => VALID_CATEGORIES) { |c| "in_#{c.gsub(/\s/,'_').underscore}" }
+
+  enum(:category => VALID_CATEGORIES) { |c| "in_#{c.parameterize('_')}" }
 
   # tasks in a particular category should have unique names
   validates_presence_of   :name, :category
@@ -17,9 +18,5 @@ class Task < ActiveRecord::Base
   has_many :questions
 
   accepts_nested_attributes_for(:questions)
-
-  def to_param
-    category.gsub(/\s/, '-').underscore
-  end
 
 end

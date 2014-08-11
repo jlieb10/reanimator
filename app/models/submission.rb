@@ -8,5 +8,6 @@ class Submission < ActiveRecord::Base
   belongs_to :option
   has_many   :references
 
+  validates_presence_of :question_id, :option_id, :user_id
   # needs validation that is scoped to question_option, and references
 end
