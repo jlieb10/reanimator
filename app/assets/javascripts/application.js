@@ -25,8 +25,8 @@ $(document).ready(function() {
   };
 
   function updateAuthor() {
-    $('#authors1').text(randomAuthor());
-    $('#authors2').text(randomAuthor());
+    $('#authors1').text(randomAuthor()).fadeToggle(1000);
+    $('#authors2').text(randomAuthor()).fadeToggle(1000);
   };
 
   updateAuthor();
