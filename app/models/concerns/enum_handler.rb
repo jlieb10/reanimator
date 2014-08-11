@@ -22,10 +22,10 @@ module EnumHandler
             new_args[column] = em.values
           end
         end
-        
+
         super(new_args)
-        enum_maps.each(&:redifine_setter_method!)
-                 .each(&:redifine_getter_method!)
+        enum_maps.each(&:redefine_setter_method!)
+                 .each(&:redefine_getter_method!)
       else
         super
       end
