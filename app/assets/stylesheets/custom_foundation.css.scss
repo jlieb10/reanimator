@@ -1,4 +1,4 @@
-// Navbar Styles
+// // Navbar Styles
 // Overriding Default Accordion Settings
 div.content.active {
   &#titletasks, &#covertasks, &#desctasks, &#classtasks {
@@ -8,7 +8,6 @@ div.content.active {
 }
 
 li a, dl.accordion dd.accordion-navigation a.accordion-title {
-  background: #333333;
   color: #FFFFFF
 }
 
@@ -36,9 +35,13 @@ i.fa.fa-caret-right {
   margin: 0 5px;
 }
 
-li.title.back.js-generated {
+.top-bar-section .has-dropdown > a:after {
   display: none;
 }
+
+// li.title.back.js-generated {
+//   display: none;
+// }
 
 body {
   background: image-url('congruent_pentagon.png');
@@ -54,18 +57,18 @@ div.root.intro {
   margin: 20 auto;
   background-color: rgba(255, 255, 255, 0.6);
   padding: 20px;
-  border: 5px solid #777;
+  border: 5px solid #000040;
 }
 
-nav.top-bar {
-  margin-bottom: 2rem;
-}
+// nav.top-bar {
+//   margin-bottom: 2rem;
+// }
 
-span#authors1, span#authors2 {
-  font-weight: 400;
-  display: inline-block;
-  min-width: 12rem;
-  border-bottom: 5px solid #777;
-  text-align: left;
-  padding: 0 20px;
-}
+// span#authors1, span#authors2 {
+//   font-weight: 400;
+//   display: inline-block;
+//   min-width: 12rem;
+//   border-bottom: 5px solid #777;
+//   text-align: left;
+//   padding: 0 20px;
+// }
