@@ -1,7 +1,7 @@
 // // Navbar Styles
 // Overriding Default Accordion Settings
 div.content.active {
-  &#titletasks, &#covertasks, &#desctasks, &#classtasks {
+  &[id$='accord-btn']{
     padding: 0;
     margin: 0;
   }
