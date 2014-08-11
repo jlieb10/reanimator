@@ -16,4 +16,23 @@
 //= require turbolinks
 //= require_tree .
 
-$(function(){ $(document).foundation(); });
+$(document).ready(function() {
+  var authors = ['Shakespeare', 'Tolstoy', 'Austen', 'Dickens', 'Woolf', 'Faulkner', 'Dickinson', 'Dostoyevsky', 'Tolkien', 'Joyce', 'Cervantes', 'Hemingway', 'Poe', 'Nabakov', 'Orwell', 'Christie', 'Márquez', 'Angelou', 'Morrison', 'Shelley', 'Dante', 'Beckett', 'Borges', 'Brontë', 'Chaucer', 'Conrad', 'Eliot', 'Kafka', 'Melville', 'Swift', 'Twain', 'Whitman']
+
+  function randomAuthor() {
+    indx = Math.floor(Math.random() * (authors.length - 1));
+    return authors[indx];
+  };
+
+  function updateAuthor() {
+    $('#authors1').text(randomAuthor());
+    $('#authors2').text(randomAuthor());
+  };
+
+  updateAuthor();
+
+  setInterval(function(){updateAuthor()}, 1000);
+
+  $(function(){ $(document).foundation();
+  });
+});

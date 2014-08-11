@@ -1,19 +1,74 @@
-// Navbar Styles
+// // Navbar Styles
 // Overriding Default Accordion Settings
 div.content.active {
   &#titletasks, &#covertasks, &#desctasks, &#classtasks {
     padding: 0;
     margin: 0;
-    background: #333333;
   }
 }
 
 li a, dl.accordion dd.accordion-navigation a.accordion-title {
-  background: #333333;
   color: #FFFFFF
 }
 
-// Adding L-R margin to sign in/out button
-li.session-button {
-  margin: 0 10px;
+li.divider.session-l {
+  margin-right: 10px
 }
+
+li.divider.session-r {
+  margin-left: 10px
+}
+
+div.content li {
+  border-bottom: 1px solid white;
+}
+
+div.content li:first-child {
+  border-top: 1px solid white;
+}
+
+ul.dropdown dd {
+  min-width: 200px;
+}
+
+i.fa.fa-caret-right {
+  margin: 0 5px;
+}
+
+.top-bar-section .has-dropdown > a:after {
+  display: none;
+}
+
+// li.title.back.js-generated {
+//   display: none;
+// }
+
+body {
+  background: image-url('congruent_pentagon.png');
+}
+
+section.main {
+  text-align: center;
+}
+
+div.root.intro {
+  display: inline-block;
+  min-width: 70%;
+  margin: 20 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border: 5px solid #000040;
+}
+
+// nav.top-bar {
+//   margin-bottom: 2rem;
+// }
+
+// span#authors1, span#authors2 {
+//   font-weight: 400;
+//   display: inline-block;
+//   min-width: 12rem;
+//   border-bottom: 5px solid #777;
+//   text-align: left;
+//   padding: 0 20px;
+// }

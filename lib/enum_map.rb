@@ -16,7 +16,7 @@ class EnumMap
     @values ||= enum_values.map { |k| @block[k] }
   end
 
-  def redifine_setter_method!
+  def redefine_setter_method!
     tap do |em|
       @class.send(:define_method, "#{@column}=") do |val|
         if em.enum_values.include? val.to_s and em.block.present?
@@ -27,7 +27,7 @@ class EnumMap
     end
   end
 
-  def redifine_getter_method!
+  def redefine_getter_method!
     tap do |em|
       @class.send(:define_method, @column) do
         old_val = super()
