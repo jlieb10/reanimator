@@ -1,48 +1,9 @@
 <dl class="accordion" data-accordion>
   <!-- Title Tasks -->
-  <%= render 'partials/task_accordion_dropdown', :tasks => Task.in_title, :category => "Title" %>
+  <%= task_accordion_button(:titles) %>
+  <%= task_accordion_button(:covers) %>
+  <%= task_accordion_button(:descriptions) %>
+  <%= task_accordion_button(:classifications) %>
+  <%= task_accordion_button(:heavy_duty) %>
 
-  <dd class="accordion-navigation">
-    <a href="#titletasks" class="accordion-title">Titles<span class="right"><i class="fa fa-caret-down"></i></span></a>
-    <div id="titletasks" class="content">
-      <li><a href="#"><i class="fa fa-caret-right"></i>Compare Titles</a></li>
-      <li><a href="#"><i class="fa fa-caret-right"></i>Shorten Titles</a></li>
-      <li><a href="#"><i class="fa fa-caret-right"></i>Subtitles</a></li>
-    </div>
-  </dd>
-  <!-- Cover Tasks -->
-  <dd class="accordion-navigation">
-    <a href="#covertasks" class="accordion-title">Covers<span class="right"><i class="fa fa-caret-down"></i></span></a>
-    <div id="covertasks" class="content">
-      <li><a href="#"><i class="fa fa-caret-right"></i>Quality</a></li>
-      <li><a href="#"><i class="fa fa-caret-right"></i>New Cover</a></li>
-    </div>
-  </dd>
-  <!-- Description Tasks -->
-  <dd class="accordion-navigation">
-    <a href="#desctasks" class="accordion-title">Descriptions<span class="right"><i class="fa fa-caret-down"></i></span></a>
-    <div id="desctasks" class="content">
-      <li><a href="#"><i class="fa fa-caret-right"></i>Quality</a></li>
-      <li><a href="#"><i class="fa fa-caret-right"></i>Audience</a></li>
-
-    </div>
-  </dd>
-  <!-- Classification Tasks -->
-  <dd class="accordion-navigation">
-    <a href="#classtasks" class="accordion-title">Classifying<span class="right"><i class="fa fa-caret-down"></i></span></a>
-    <div id="classtasks" class="content">
-      <li><a href="#"><i class="fa fa-caret-right"></i>Fiction Subgenres</a></li>
-      <li><a href="#"><i class="fa fa-caret-right"></i>Nonfiction Standards</a></li>
-      <li><a href="#"><i class="fa fa-caret-right"></i>Juvenile Literature</a></li>
-      <li><a href="#"><i class="fa fa-caret-right"></i>Target Age</a></li>
-    </div>
-  </dd>
-  <!-- Random Task -->
-  <dd class="accordion-navigation">
-    <a href="#" class="accordion-title">Surprise Me</a>
-  </dd>
-  <!-- Heavy Duty Tasks -->
-  <dd class="accordion-navigation">
-    <a href="#" class="accordion-title">Read A Book</a>
-  </dd>
 </dl>

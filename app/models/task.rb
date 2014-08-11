@@ -3,7 +3,7 @@ class Task < ActiveRecord::Base
   # | id | category | name | point_value | 
   # --------------------------------------
 
-  VALID_CATEGORIES = %w( Title Description Covers Classification Heavy\ Duty )
+  VALID_CATEGORIES = %w( Titles Descriptions Covers Classifications Heavy\ Duty )
   # these enum values will translate to scopes named 
   # #in_title, #in_description, #in_covers etc.
   # and boolean helpers named #in_title?, #in_description?, #in_covers? etc.
