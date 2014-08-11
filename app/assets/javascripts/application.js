@@ -25,13 +25,20 @@ $(document).on( 'page:change', function() {
   };
 
   function updateAuthor() {
-    $('#authors1').text(randomAuthor()).fadeToggle(1000);
-    $('#authors2').text(randomAuthor()).fadeToggle(1000);
+    var auth = $('#authors1, #authors2');
+
+    if(auth.is(':visible')) {
+      auth.fadeOut(1000, function(){
+        $(this).text(randomAuthor());
+      });
+    } else {
+      auth.fadeIn(1000);
+    };
   };
 
   updateAuthor();
 
-  setInterval(function(){updateAuthor()}, 1000);
+  setInterval(updateAuthor, 1100);
 
   $(document).foundation();
 });
