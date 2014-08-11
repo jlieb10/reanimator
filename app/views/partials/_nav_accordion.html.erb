@@ -1,5 +1,7 @@
 <dl class="accordion" data-accordion>
   <!-- Title Tasks -->
+  <%= render 'partials/task_accordion_dropdown', :tasks => Task.in_title, :category => "Title" %>
+
   <dd class="accordion-navigation">
     <a href="#titletasks" class="accordion-title">Titles<span class="right"><i class="fa fa-caret-down"></i></span></a>
     <div id="titletasks" class="content">

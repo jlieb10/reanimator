@@ -1,0 +1,17 @@
+<%= content_tag :dd, class: "accordion-navigation" do %>
+  <%= link_to '#titletasks', class: 'accordion-title' do%>
+    <%= category %>
+    <span class="right"><i class="fa fa-caret-down"></i></span>
+  <% end %>
+
+  <%= content_tag :div, :id => 'titletasks', class: 'content' do %>
+    <% tasks.each do |task| %>
+      <!-- li inside a div? -->
+      <%= content_tag :li do %>
+        <%= link_to task do %>
+          <i class="fa fa-caret-right"></i><%= task.name %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+<% end %>

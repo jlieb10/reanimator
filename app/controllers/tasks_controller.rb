@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   
   def show
-    @tasks = Task.where(category: params[:category])
+    @task = Task.find(params[:id])
   end
 
 end

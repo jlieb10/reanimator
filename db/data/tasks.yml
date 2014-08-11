@@ -1,6 +1,6 @@
 tasks:
 -
-  name: Title Task
+  name: Compare Titles
   category: Title
   # point_value: #!
   questions:
@@ -17,7 +17,7 @@ tasks:
       - 
         value: These Aren't the Same Book
 -
-  name: Find Short Title
+  name: Shorten Titles
   category: Title
   # point_value: #!
   questions:
@@ -32,7 +32,7 @@ tasks:
       - 
         value: "No"
 -
-  name: Subtitle Task
+  name: Subtitles
   category: Title
   # point_value: #!
   questions:
