@@ -1,0 +1,9 @@
+<%= content_tag :h6, question.content %>
+
+<% if question.expects_none? %>
+
+<% else %>
+  <%= content_tag :ul do %>
+    <%= render question.options %>
+  <% end %>
+<% end %>

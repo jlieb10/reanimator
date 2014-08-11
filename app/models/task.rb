@@ -17,4 +17,9 @@ class Task < ActiveRecord::Base
   has_many :questions
 
   accepts_nested_attributes_for(:questions)
+
+  def to_param
+    category.gsub(/\s/, '-').underscore
+  end
+
 end
