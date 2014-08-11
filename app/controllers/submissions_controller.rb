@@ -2,6 +2,7 @@ class SubmissionsController < ApplicationController
 
   def create
     current_user.submissions.create(submissions_params)
+    
   end
 
   private
