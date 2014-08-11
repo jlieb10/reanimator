@@ -26,30 +26,19 @@ $(document).on( 'page:change', function() {
 
   function updateAuthor() {
     var auth = $('#authors1, #authors2');
-    var width = $('h1.')
 
     if(auth.is(':visible')) {
-      auth.fadeOut(500, function(){
+      auth.fadeOut(1000, function(){
         $(this).text(randomAuthor());
-        $(this).parent('h1').animate({width, 1000);
       });
     } else {
-      auth.fadeIn(500);
+      auth.fadeIn(1000);
     };
-
-    // if(auth2.is(':visible')) {
-    //   auth2.fadeOut(500, function(){
-    //     auth2.text(randomAuthor()+"?");
-    //   });
-    // } else {
-    //   auth2.fadeIn(500);
-    // };
   };
 
   updateAuthor();
 
-  setInterval(function(){updateAuthor()}, 500);
+  setInterval(updateAuthor, 1100);
 
   $(document).foundation();
-  });
 });
