@@ -19,6 +19,10 @@ module BookScopes
       end
       where(arel_table[column].eq(empty_value))
     }
+
+    scope :not_missing, ->(column) {
+      where(missing(column).where_values.map(&:not).inject(&:and))
+    }
   end
 
 end

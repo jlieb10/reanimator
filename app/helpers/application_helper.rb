@@ -5,9 +5,9 @@ module ApplicationHelper
 
   def session_btn
     if signed_in?
-      render "partials/signinbtn"
+      link_to "Sign Out", sign_out_path, :class => "small button round", :method => :delete
     else
-      render "partials/signoutbtn"
+      link_to "Sign in with Google", sign_in_path, :class => "small button round", :method => :post
     end
   end
 

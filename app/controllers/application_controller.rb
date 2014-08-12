@@ -5,4 +5,11 @@ class ApplicationController < ActionController::Base
 
   private
     include SimpleAuthentication
+
+  def authenticate!
+    unless signed_in?
+      redirect_to root_path
+    end
+  end
+  
 end
