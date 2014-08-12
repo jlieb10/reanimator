@@ -5,9 +5,9 @@ module ApplicationHelper
 
   def session_btn
     if signed_in?
-      render "partials/signinbtn"
-    else
       render "partials/signoutbtn"
+    else
+      render "partials/signinbtn"
     end
   end
 

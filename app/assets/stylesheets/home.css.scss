@@ -13,29 +13,35 @@ section.main {
   text-align: center;
 }
 
-div.root.intro, div#about {
-  display: inline-block;
-  width: 80%;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: 20px;
-  border: 5px solid #000040;
-  margin: 2rem auto;
-}
-
-div#about {
-  width: 70%;
-}
-
-div#about h4 {
-  padding: 0 2rem;
-  line-height: 2.5rem;
-}
-
-div#about h4 a {
-  text-decoration: none;
-  border-bottom: 1px dotted;
-  margin-bottom: -2;
-  color:#000040;
+div {
+  &.root.intro {
+    display: inline-block;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: rgba(0 , 0, 64, 0.2);
+    padding: 20px;
+    border: 5px solid #000040;
+    margin: 0 auto;
+  }
+  &#about {
+    display: inline-block;
+    min-width: 70%;
+    max-width: 90%;
+    background-color: rgba(255,255,255, 0.4);
+    padding: 20px;
+    border: 5px solid #000040;
+    margin: 2rem auto;
+    h4 {
+      padding: 0 2rem;
+      line-height: 2.5rem;
+      a {
+        text-decoration: none;
+        border-bottom: 1px dashed;
+        margin-bottom: -4;
+        color: #000040;
+      }
+    }
+  }
 }
 
 span.rotate-wrap {
