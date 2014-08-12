@@ -1,13 +1,18 @@
-<%= content_tag :h6, question.content %>
-
+<div class="question panel">
+<%= content_tag :h4, question.task.name %>
 <%= form_for Submission.new do |builder|%>
+<fieldset>
+<legend><%= content_tag :h4, question.content %></legend>
   <%= builder.hidden_field :question_id, value: question.id %>
 
   <% if question.expects_none? %>
   <% elsif question.expects_checkbox? %>
   <% elsif question.expects_radio? %>
     <%= builder.collection_radio_buttons :option_id, question.options, :id, :value %>
+    <br />
   <% elsif question.expects_select? %>
   <% end %>
   <%= builder.submit 'Submit!' %>
 <% end %>
+</fieldset>
+</div>
