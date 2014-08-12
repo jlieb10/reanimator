@@ -1,3 +1,52 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background: image-url('congruent_pentagon.png');
+}
+
+h1 {
+  margin: 1rem;
+}
+
+section.main {
+  text-align: center;
+}
+
+div {
+  &.root.intro {
+    display: inline-block;
+    min-width: 100%;
+    max-width: 100%;
+    background-color: rgba(0 , 0, 64, 0.2);
+    padding: 20px;
+    border: 5px solid #000040;
+    margin: 0 auto;
+  }
+  &#about {
+    display: inline-block;
+    min-width: 70%;
+    max-width: 90%;
+    background-color: rgba(255,255,255, 0.4);
+    padding: 20px;
+    border: 5px solid #000040;
+    margin: 2rem auto;
+    h4 {
+      padding: 0 2rem;
+      line-height: 2.5rem;
+      a {
+        text-decoration: none;
+        border-bottom: 1px dashed;
+        margin-bottom: -4;
+        color: #000040;
+      }
+    }
+  }
+}
+
+span.rotate-wrap {
+  display: inline-block;
+  min-width: 10rem;
+  padding: 0 20px;
+}
+
