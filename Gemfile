@@ -62,6 +62,9 @@ group :development, :test do
   # gem 'capybara-rails'
 end
 
+# a gem to easily create unions and intersects
+# https://github.com/GeorgeTaveras1231/easy_union_set
+gem 'easy_union_set', '1.0.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

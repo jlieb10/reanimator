@@ -6,15 +6,19 @@ tasks:
   questions:
   - 
     construct_meta:
-      column: title
+      column: titles
       scopes:
-        not_missing: title
+        not_missing: titles
+
       subject:
         models: GutenbergBook
       references:
         models:
           - GutenbergBook
           - OclcBook
+        scopes:
+          in_same_work_as: "%(subject)"
+
 
     expectation: radio
     content: Which title is better?
@@ -34,7 +38,7 @@ tasks:
   questions:
   - 
     construct_meta:
-      column: title
+      column: titles
       scopes: 
         missing: subtitle
         not_missing: titles
