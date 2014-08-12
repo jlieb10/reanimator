@@ -77,7 +77,6 @@ tasks:
 -
   name: Description Quality
   category: Descriptions
-
   # point_value: #!
   questions:
   -
@@ -107,7 +106,7 @@ tasks:
         value: This description should not be used
 -
   name: Description Audience
-  category: Descriptions
+  category: Description
   # point_value: #!
   questions:
   -
@@ -192,7 +191,7 @@ tasks:
         value: No opinion
 -
   name: Fiction Genre
-  category: Classifications
+  category: Classification
   # point_value: #!
   questions:
   -
@@ -227,7 +226,7 @@ tasks:
         value: Not Fiction
 -
   name: Modern Standards for Juvenile Literature
-  category: Classifications
+  category: Classification
   # point_value: #!
   questions:
   -
@@ -248,7 +247,7 @@ tasks:
         value: It's a misclassified book for adults
 -
   name: Target Age
-  category: Classifications
+  category: Classification
   # point_value: #!
   questions:
   -
@@ -265,7 +264,7 @@ tasks:
         value: It's a misclassified book for adults
 -
   name: Modern Standards for Nonfiction
-  category: Classifications
+  category: Classification
   # point_value: #!
   questions:
   -
