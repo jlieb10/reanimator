@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :submissions
 
   validates_uniqueness_of :email
-  validates :email, :name, :provider, :presence => true
+  validates_presence_of   :email, :name, :provider
 
   def self.from_omniauth(auth)
     iauth = auth.with_indifferent_access

@@ -3,6 +3,7 @@
 FactoryGirl.define do
   factory :submission do
     user { build_stubbed(:user) }
-    question_option { build_stubbed(:question_option) }
+    question { build_stubbed(:question) }
+    option { build_stubbed(:option) }
   end
 end

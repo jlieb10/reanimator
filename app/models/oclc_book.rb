@@ -9,13 +9,6 @@ class OclcBook < ActiveRecord::Base
   # between models
   self.primary_key =      :nid
   validates_uniqueness_of :nid
-  
-  has_many :equivalencies, 
-           :as => :book, 
-           :foreign_key => :book_nid
-
-  has_many :oclc_works, 
-           :through => :equivalencies
 
   serialize :descriptions, Array
   serialize :titles      , Array

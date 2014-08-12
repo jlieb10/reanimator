@@ -3,6 +3,4 @@ module ApplicationHelper
   # ei. #signed_in?, #current_user
   include SimpleAuthentication
 
-  
-
 end

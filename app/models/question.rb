@@ -1,7 +1,7 @@
 class Question < ActiveRecord::Base
-  # ------------------------------------------------------------------
-  # | id | task_id | content | expectation | created_at | updated_at |
-  # ------------------------------------------------------------------
+  # -----------------------------------------------------------------------------------
+  # | id | task_id | content | expectation | created_at | updated_at | construct_meta |
+  # -----------------------------------------------------------------------------------
 
   VALID_EXPECTATIONS = %w( none radio select checkbox )
   # these enum translate to scopes named 
@@ -16,5 +16,6 @@ class Question < ActiveRecord::Base
   has_many   :question_options
   has_many   :options, :through => :question_options
 
+  serialize :construct_meta
 
 end
