@@ -11,13 +11,7 @@ li a, dl.accordion dd.accordion-navigation a.accordion-title {
   color: #FFFFFF
 }
 
-li.divider.session-l {
-  margin-right: 10px
-}
 
-li.divider.session-r {
-  margin-left: 10px
-}
 
 div.content li {
   border-bottom: 1px solid white;
@@ -37,4 +31,10 @@ i.fa.fa-caret-right {
 
 .top-bar-section .has-dropdown > a:after {
   display: none;
+}
+
+.button.session {
+  margin: 0 10px;
+  overflow: auto;
+  width: auto;
 }

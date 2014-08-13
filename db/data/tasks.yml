@@ -11,6 +11,10 @@ tasks:
         not_missing: titles
 
       subject:
+        scopes:
+          # might cancel out the one above
+          sharing_works: []
+
         models: GutenbergBook
       references:
         models:

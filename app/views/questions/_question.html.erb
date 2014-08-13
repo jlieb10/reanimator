@@ -1,13 +1,26 @@
-<%= content_tag :h6, question.content %>
-
-<%= form_for Submission.new do |builder|%>
-  <%= builder.hidden_field :question_id, value: question.id %>
-
-  <% if question.expects_none? %>
-  <% elsif question.expects_checkbox? %>
-  <% elsif question.expects_radio? %>
-    <%= builder.collection_radio_buttons :option_id, question.options, :id, :value %>
-  <% elsif question.expects_select? %>
-  <% end %>
-  <%= builder.submit 'Submit!' %>
+<% @constructs.each do |construct| %>
+  <%= render construct %>
 <% end %>
+
+<div class="question panel">
+<%= content_tag :h4, question.task.name %>
+  <fieldset>
+    <legend><%= content_tag :h4, question.content %></legend>
+    <%= form_for Submission.new, :html => {:class => "form"} do |builder|%>
+      <%= builder.hidden_field :question_id, value: question.id %>
+        <% if question.expects_none? %>
+        <% elsif question.expects_checkbox? %>
+        <% elsif question.expects_radio? %>
+        <%= builder.collection_radio_buttons :option_id, question.options, :id, :value do |b| %>
+        <section>
+          <%= b.label(class: "button question") { b.radio_button(class: "hide") + b.text } %>
+        </section>
+        <% end %>
+        <br />
+        <% elsif question.expects_select? %>
+      <% end %>
+  <!-- <%#= builder.submit 'Submit!' %> -->
+    <% end %>
+  </fieldset>
+</div>
+

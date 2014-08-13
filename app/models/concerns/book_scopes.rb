@@ -1,4 +1,14 @@
 module BookScopes
+  class << self
+    def assert_valid_keys(hash, *keys)
+      valid_keys = keys
+      hash.assert_valid_keys(*valid_keys)
+      valid_keys.each do |k| 
+        hash.fetch(k) { |name| raise ArgumentError, "Missing key: #{name}" } 
+      end
+    end
+  end
+
   extend ActiveSupport::Concern
   
   included do
@@ -17,7 +27,7 @@ module BookScopes
              :through => :references,
              :source => :submission
 
-    scope :missing, ->(column) {
+    scope :missing, ->(column, block = nil) {
       unless column_names.include? column.to_s
         raise ArgumentError, "#{column} is not a column in #{table_name}"
       end
@@ -32,54 +42,94 @@ module BookScopes
         ar_column = serialized_attributes[column.to_s]
         empty_value = ar_column.dump(ar_column.load(nil))
       end
-      where(arel_table[column].eq(empty_value))
+      query = arel_table[column].eq(empty_value)
+      query = block.present? ? block.call(query) : query
+      where(query)
     }
 
     scope :not_missing, ->(column) {
-      where(missing(column).where_values.map(&:not).inject(&:and))
+      missing(column, ->(query){ query.not })
     }
 
     scope :referenced, ->(opts = {}) {
-      valid_keys = [:user, :question]
-      opts.assert_valid_keys(*valid_keys)
-      valid_keys.each { |k| opts.fetch(k) { |name| raise ArgumentError, "Missing key: #{name}" }  }
+      BookScopes.assert_valid_keys(opts, :user, :question)
+
+      submissions = Submission.arel_table
 
       joins(:submitted_instances)
-        .where(Submission.arel_table[:user_id].eq(opts[:user].id))
-        .where(Submission.arel_table[:question_id].eq(opts[:question].id))
+        .where(submissions[:user_id].eq(opts[:user].id))
+        .where(submissions[:question_id].eq(opts[:question].id))
     }
 
 
     scope :unreferenced, ->(opts = {}) {
-      # must refactor
-      valid_keys = [:user, :question]
-      opts.assert_valid_keys(*valid_keys)
-      valid_keys.each { |k| opts.fetch(k) { |name| raise ArgumentError, "Missing key: #{name}" }  }
-
+      BookScopes.assert_valid_keys(opts, :user, :question)
+      
       user, question = opts[:user], opts[:question]
 
-      submissions_table = Submission.arel_table
-      references_table = Reference.arel_table
-      book_table = self.arel_table
+      submissions = Submission.arel_table
+      references  = Reference.arel_table
+      books       = self.arel_table
+      outer_join  = Arel::Nodes::OuterJoin
 
-      join = book_table.join(references_table, Arel::Nodes::OuterJoin).on(
-                          references_table[:referenced_nid].eq(book_table[:nid])
-                          .and(references_table[:referenced_type].eq(self.name)))
-                        .join(submissions_table, Arel::Nodes::OuterJoin).on(references_table[:submission_id].eq(submissions_table[:id]))
-                        .join_sources
+      join = 
+          books.join(references, outer_join)
+                  .on(references[:referenced_nid].eq(books[:nid])
+                  .and(references[:referenced_type].eq(self.name)))
+               .join(submissions, outer_join)
+                  .on(references[:submission_id].eq(submissions[:id]))
+               .join_sources
 
-      joins(join).where('"references"."referenced_nid" ISNULL') |
-      joins(join).where('"submissions"."user_id" != ?', user.id) |
-      joins(join).where('"submissions"."user_id" = ? AND "submissions"."question_id" != ?', user.id, question.id)
+      # this is making an sql union, not a ruby union
+      joins(join).where(references[:referenced_nid].eq(nil)) |
+      joins(join).where(submissions[:user_id].not_eq(user.id)) |
+      joins(join).where(submissions[:user_id].eq(user.id).and(submissions[:question_id].not_eq(question.id)))
+    }
+
+    scope :having_works, -> {
+      equivalencies = Equivalency.arel_table
+      books         = self.arel_table
+      outer_join    = Arel::Nodes::OuterJoin
+
+      join = 
+        books.join(equivalencies, outer_join)
+               .on(equivalencies[:book_nid].eq(books[:nid]))
+             .join_sources
+
+      joins(join).where(equivalencies[:book_nid].not_eq(nil)).uniq
+    }
+
+    scope :sharing_works, -> {
+
+      sub_query = OclcWork.joins(:equivalencies)
+                          .having("COUNT(equivalencies) > 1")
+                          .group(:nid)
+                          .to_sql
+
+      joins(<<-SQL)
+       INNER JOIN "equivalencies"
+       ON "equivalencies"."book_nid" = "#{table_name}"."#{primary_key}"
+       AND "equivalencies"."book_type" = '#{self.name}'
+       INNER JOIN (#{sub_query}) 
+       AS works_with_equivalencies
+       ON "equivalencies"."oclc_work_nid" = "works_with_equivalencies"."nid"
+      SQL
     }
 
     scope :in_same_work_as, ->(book) {
+      oclc_works = OclcWork.arel_table
+
       if (work_nids = book.oclc_works.pluck(:nid)).any?
-        joins(:oclc_works).where('"oclc_works"."nid" IN (?)', work_nids)
+        joins(:oclc_works)
+          .where(oclc_works[:nid].in(work_nids))
+          .where.not(:nid => book.nid)
       else
         none
       end
     }
   end
+
+
+
 
 end

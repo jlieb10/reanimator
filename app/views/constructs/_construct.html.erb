@@ -1,0 +1,13 @@
+<% construct.subject.each do |subject| %>
+  <%= render subject %>
+  <%= subject.main.attributes %>
+<% end %>
+
+<% if construct.has? :references %>
+  
+  <% construct.references.each do |reference| %>
+    <%= render reference %>
+    <%= reference.main.attributes %>
+  <% end %>
+
+<% end %>

@@ -1,0 +1,18 @@
+fieldset legend {
+  background: transparent;
+}
+
+div.question.panel {
+  background-color: rgba(255,255,255, 0.4);
+  margin: 0 auto;
+  width: 75%;
+}
+
+label.button.question {
+  background: rgba(0,0,100, 0.6);
+  width: 90%;
+  margin: 1px auto;
+  border: 2px solid #FFFFFF;
+  border-radius: 5%;
+  font-size: 1.2rem;
+}
