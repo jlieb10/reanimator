@@ -1,13 +1,16 @@
 class TasksController < ApplicationController
-  # before_action :authenticate!
+  before_action :authenticate!
 
   def show
     @task = Task.find(params[:id])
     @questions = @task.questions
-    @constructs = @questions.map do |question| 
-      QuestionConstruct.new(current_user, question).tap do |construct|
-        construct.parse_meta(:subject)
-        construct.parse_meta(:references) if question.construct_meta.key?("references")
+    
+    @submission = current_user.submissions.new
+
+    @constructs = @questions.map do |question|
+      QuestionConstructor.new(current_user, question).tap do |c|
+        c.construct(:subject)
+        c.construct(:references) if question.construct_meta.key?("references")
       end
     end
 

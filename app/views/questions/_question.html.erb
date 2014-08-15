@@ -1,12 +1,14 @@
-<% @constructs.each do |construct| %>
-  <%= render construct %>
-<% end %>
-
 <div class="question panel">
 <%= content_tag :h4, question.task.name %>
   <fieldset>
     <legend><%= content_tag :h4, question.content %></legend>
-    <%= form_for Submission.new, :html => {:class => "form"} do |builder|%>
+    <%= form_for @submission, :html => {:class => "form"} do |builder|%>
+      <% @constructs.each do |construct| %>
+        <%= render construct %>
+        
+        <%= construct.reference_fields(builder) %>
+      <% end %>
+
       <%= builder.hidden_field :question_id, value: question.id %>
         <% if question.expects_none? %>
         <% elsif question.expects_checkbox? %>

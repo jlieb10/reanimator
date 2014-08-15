@@ -8,4 +8,7 @@ class Reference < ActiveRecord::Base
   belongs_to :referenced, 
              :polymorphic => true, 
              :foreign_key => :referenced_nid
+
+
+  validates_uniqueness_of :submission_id, :scope => [:referenced_nid, :referenced_type, :role, :column_name]
 end

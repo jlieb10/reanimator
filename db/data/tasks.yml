@@ -4,6 +4,7 @@ tasks:
   category: Titles
   # point_value: #!
   questions:
+###### ------------------------ Which title is better?
   - 
     construct_meta:
       column: titles
@@ -12,10 +13,10 @@ tasks:
 
       subject:
         scopes:
-          # might cancel out the one above
           sharing_works: []
 
         models: GutenbergBook
+
       references:
         models:
           - GutenbergBook
@@ -35,6 +36,7 @@ tasks:
         value: About the Same
       - 
         value: These Aren't the Same Book
+######---------------------------------------------------------
 -
   name: Shorten Titles
   category: Titles
@@ -46,6 +48,8 @@ tasks:
       scopes: 
         missing: subtitle
         not_missing: titles
+        ## change to a scope
+        having: "LENGTH(gutenberg_books.title) > 30"
       subject:
         models: GutenbergBook
 
@@ -94,6 +98,7 @@ tasks:
       references:
         models: OclcBook
         scopes:
+          in_same_work_as: "%(subject)"
           not_missing: description
         column: description
 

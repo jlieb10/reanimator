@@ -8,13 +8,16 @@
   </ul>
   <!-- Dropdown Menu -->
   <section class="top-bar-section">
-    <ul class="right">
-      <li class="has-dropdown not-click">
-        <a href="#">Tasks</a>
-        <ul class="dropdown">
-          <%= render "partials/nav_accordion" %>
-        </ul>
-      </li>
+
+      <ul class="right">
+        <% if signed_in? %>
+          <li class="has-dropdown not-click">
+            <a href="#">Tasks</a>
+            <ul class="dropdown">
+              <%= render "partials/nav_accordion" %>
+            </ul>
+          </li>
+        <% end %>
       <!-- Sign In Button -->
       <li class="session-button"><%= session_btn %></li>
     </ul>
