@@ -24,7 +24,6 @@ tasks:
         scopes:
           in_same_work_as: "%(subject)"
 
-
     expectation: radio
     content: Which title is better?
     options:
@@ -49,7 +48,7 @@ tasks:
         missing: subtitle
         not_missing: titles
         ## change to a scope
-        having: "LENGTH(gutenberg_books.title) > 30"
+        # having: "LENGTH(gutenberg_books.titles) > 30"
       subject:
         models: GutenbergBook
 

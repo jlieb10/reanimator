@@ -26,7 +26,7 @@ module BookScopes
              :through => :references,
              :source => :submission
 
-    scope :missing, ->(column, block = nil) {
+    scope :missing, ->(column, &block) {
       unless column_names.include? column.to_s
         raise ArgumentError, "#{column} is not a column in #{table_name}"
       end
@@ -47,7 +47,7 @@ module BookScopes
     }
 
     scope :not_missing, ->(column) {
-      missing(column, ->(clause){ clause.not })
+      missing(column) { |clause| clause.not }
     }
 
     scope :referenced, ->(opts = {}) {
@@ -102,6 +102,10 @@ module BookScopes
       joins(join).where(equivalencies[:book_nid].not_eq(nil)).uniq
     }
 
+    scope :same, ->(attribute, opts = {}) { 
+
+    }
+
     scope :sharing_works, -> {
 
       sub_query = OclcWork.joins(:equivalencies)
@@ -109,7 +113,7 @@ module BookScopes
                           .group(:nid)
                           .to_sql
 
-      joins(<<-SQL)
+      joins <<-SQL
        INNER JOIN "equivalencies"
        ON "equivalencies"."book_nid" = "#{table_name}"."#{primary_key}"
        AND "equivalencies"."book_type" = '#{self.name}'

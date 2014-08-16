@@ -28,8 +28,8 @@ class QuestionConstructor
   def reference_fields(builder)
     builder.fields_for("references_attributes[]", builder.object.references.new) do |sub_builder|
       @constructs.inject('') do |html, (_, collection)|
-        collection.inject(html) do |html, construct|
-          html + construct.to_fields(sub_builder)
+        collection.inject(html) do |h, construct|
+          h + construct.to_fields(sub_builder)
         end
       end.html_safe
     end.html_safe
@@ -68,7 +68,7 @@ class QuestionConstructor
       end
       construct.main = construct.pool.sample
 
-      binding.pry if construct.main.nil?
+      # binding.pry if construct.main.nil?
 
       construct.column = Column.new(construct.main, sub_level_hash[:column])
 
@@ -89,7 +89,7 @@ class QuestionConstructor
     def complete_sub_level_hash!(top_level_hash, sub_level_hash)
       sub_level_hash[:column] ||= top_level_hash[:column]
       sub_level_hash[:scopes] ||= {}
-      sub_level_hash[:scopes].merge!(top_level_hash[:scopes])
+      sub_level_hash[:scopes].merge!(top_level_hash[:scopes]) unless top_level_hash[:scopes].nil?
       sub_level_hash[:models] = [sub_level_hash[:models]].flatten
       sub_level_hash
     end
