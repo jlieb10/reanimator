@@ -1,9 +1,8 @@
 module BookScopes
   class << self
-    def assert_valid_keys(hash, *keys)
-      valid_keys = keys
+    def assert_valid_keys(hash, *valid_keys)
       hash.assert_valid_keys(*valid_keys)
-      valid_keys.each do |k| 
+      valid_keys.map do |k| 
         hash.fetch(k) { |name| raise ArgumentError, "Missing key: #{name}" } 
       end
     end
@@ -39,16 +38,16 @@ module BookScopes
         # be represented as NULL if its an empty value
         #   - this code takes the measure to represent it as it would be in the db
         #     by calling the #dump method of the column's serializer
-        ar_column = serialized_attributes[column.to_s]
+        ar_column   = serialized_attributes[column.to_s]
         empty_value = ar_column.dump(ar_column.load(nil))
       end
-      query = arel_table[column].eq(empty_value)
-      query = block.present? ? block.call(query) : query
-      where(query)
+      clause = arel_table[column].eq(empty_value)
+      clause = block.present? ? block.call(clause) : clause
+      where(clause)
     }
 
     scope :not_missing, ->(column) {
-      missing(column, ->(query){ query.not })
+      missing(column, ->(clause){ clause.not })
     }
 
     scope :referenced, ->(opts = {}) {
@@ -63,27 +62,32 @@ module BookScopes
 
 
     scope :unreferenced, ->(opts = {}) {
-      BookScopes.assert_valid_keys(opts, :user, :question)
-      
-      user, question = opts[:user], opts[:question]
+      user, question, role = BookScopes.assert_valid_keys(opts, :user, :question, :role)
 
       submissions = Submission.arel_table
       references  = Reference.arel_table
       books       = self.arel_table
       outer_join  = Arel::Nodes::OuterJoin
 
-      join = 
-          books.join(references, outer_join)
-                  .on(references[:referenced_nid].eq(books[:nid])
-                  .and(references[:referenced_type].eq(self.name)))
-               .join(submissions, outer_join)
-                  .on(references[:submission_id].eq(submissions[:id]))
-               .join_sources
+      join = books.join(references, outer_join)
+                     .on(references[:referenced_nid].eq(books[:nid])
+                     .and(references[:referenced_type].eq(self.name)))
+                  .join(submissions, outer_join)
+                     .on(references[:submission_id].eq(submissions[:id]))
+                  .join_sources
+
+      where_clauses = []
+      where_clauses << references[:referenced_nid].eq(nil)
+      where_clauses << submissions[:user_id].not_eq(user.id)
+      where_clauses << submissions[:user_id]
+                          .eq(user.id)
+                          .and(submissions[:question_id]
+                            .not_eq(question.id)
+                            .or(references[:role].not_eq(role.to_s.singularize)))
 
       # this is making an sql union, not a ruby union
-      joins(join).where(references[:referenced_nid].eq(nil)) |
-      joins(join).where(submissions[:user_id].not_eq(user.id)) |
-      joins(join).where(submissions[:user_id].eq(user.id).and(submissions[:question_id].not_eq(question.id)))
+      # using easy_union_set gem
+      where_clauses.map { |clause| joins(join).where(clause) }.inject(:|)
     }
 
     scope :having_works, -> {
@@ -91,8 +95,7 @@ module BookScopes
       books         = self.arel_table
       outer_join    = Arel::Nodes::OuterJoin
 
-      join = 
-        books.join(equivalencies, outer_join)
+      join = books.join(equivalencies, outer_join)
                .on(equivalencies[:book_nid].eq(books[:nid]))
              .join_sources
 
