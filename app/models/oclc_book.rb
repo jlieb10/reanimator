@@ -10,8 +10,8 @@ class OclcBook < ActiveRecord::Base
   self.primary_key =      :nid
   validates_uniqueness_of :nid
 
-  serialize :descriptions, Array
-  serialize :titles      , Array
+  # serialize :descriptions, Array
+  # serialize :titles      , Array
 
   include BookScopes
 end
