@@ -54,14 +54,17 @@ class QuestionConstructor
 
       temp_pools = construct.models.map do |model|
         start_pool = model.unreferenced(user: @user, question: @question, role: key)
-        pool = if sub_level_hash[:scopes].any?
-                  sub_level_hash[:scopes].inject(start_pool) do |inner_pool ,(scope, args)|
-                    inner_pool.send(scope, *parse_args(args))
-                  end
-                else
-                  start_pool
-                end
+
+        if sub_level_hash[:scopes].any?
+          sub_level_hash[:scopes].inject(start_pool) do |inner_pool ,(scope, args)|
+            inner_pool.send(scope, *parse_args(args))
+          end
+        else
+          start_pool
+        end
       end
+
+      # binding.pry 
 
       construct.pool = temp_pools.inject do |last_pool, pool| 
         last_pool.to_a.concat(pool.to_a)
@@ -76,13 +79,27 @@ class QuestionConstructor
     end
 
     def parse_args(args)
+      # binding.pry
       args = [args].flatten
       args.map do |arg|
-        if /%\((?<eval_str>\w+)\)/ =~ arg
-          @constructs[eval_str].first.main
-        else
-          arg
+        case arg
+        when String
+          handle_interpolation(arg)
+        when Hash
+          {}.tap do |h|
+            arg.each do |key, val|
+              h[key] = handle_interpolation(val)
+            end
+          end
         end
+      end
+    end
+
+    def handle_interpolation(str)
+      if /%\((?<eval_str>\w+)\)/ =~ str
+        @constructs[eval_str].first.main
+      else
+        str
       end
     end
 

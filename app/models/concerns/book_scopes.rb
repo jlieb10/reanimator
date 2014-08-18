@@ -26,7 +26,7 @@ module BookScopes
              :through => :references,
              :source => :submission
 
-    scope :missing, ->(column, &block) {
+    scope :missing, ->(column, block = nil) {
       unless column_names.include? column.to_s
         raise ArgumentError, "#{column} is not a column in #{table_name}"
       end
@@ -47,7 +47,7 @@ module BookScopes
     }
 
     scope :not_missing, ->(column) {
-      missing(column) { |clause| clause.not }
+      missing(column, ->(clause) { clause.not })
     }
 
     scope :referenced, ->(opts = {}) {
@@ -102,10 +102,6 @@ module BookScopes
       joins(join).where(equivalencies[:book_nid].not_eq(nil)).uniq
     }
 
-    scope :same, ->(attribute, opts = {}) { 
-
-    }
-
     scope :sharing_works, -> {
 
       sub_query = OclcWork.joins(:equivalencies)
@@ -134,9 +130,27 @@ module BookScopes
         none
       end
     }
+
+    scope :having_different, ->(attribute, opts = {}) {
+      as = opts.with_indifferent_access[:as]
+
+      lowercase_function = Arel::Nodes::NamedFunction.new('LOWER', [arel_table[attribute]])
+
+      attribute_value = as.send(attribute)
+      attribute_value = if attribute_value.is_a? Array
+                          # if attribute is serialized as array
+                          attribute_value.map(&:downcase).to_yaml
+                        else
+                          attribute_value.downcase
+                        end
+
+      where(lowercase_function.not_eq(attribute_value))
+    }
+
+    scope :with_varying, ->( attribute ) {
+      
+    }
+
   end
-
-
-
 
 end

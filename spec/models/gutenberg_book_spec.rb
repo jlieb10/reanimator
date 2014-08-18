@@ -281,30 +281,6 @@ RSpec.describe GutenbergBook, :type => :model do
         expect(books_sharing_works).to include(book_in_work)
       end
 
-      it "returns books that share a work a specified amount of instances" do
-        # first_work = create(:oclc_work)
-        # second_work = create(:oclc_work)
-
-        # book_in_work = create(:gutenberg_book)
-        # another_book_in_work = create(:gutenberg_book)
-
-        # book_sharing_two_works = create(:gutenberg_book)
-
-        # first_work.equivalencies << create(:equivalency, :book => book_in_work, :oclc_work => nil)
-        # second_work.equivalencies << create(:equivalency, :book => another_book_in_work, :oclc_work => nil)
-        
-        # first_work.equivalencies << create(:equivalency, :book => book_sharing_two_works, :oclc_work => nil)
-        # second_work.equivalencies << create(:equivalency, :book => book_sharing_two_works, :oclc_work => nil)
-
-        # books_sharing_works = GutenbergBook.sharing_works(2)
-
-        # # binding.pry
-
-        # expect(books_sharing_works).to include(book_sharing_two_works)
-        # expect(books_sharing_works).not_to include(book_in_work)
-        # expect(books_sharing_works).not_to include(another_book_in_work)
-      end
-
       it "does not return books that have works but are not shared with other books" do
         first_work = create(:oclc_work)
         second_work = create(:oclc_work)
@@ -322,7 +298,6 @@ RSpec.describe GutenbergBook, :type => :model do
 
         expect(books_sharing_works).to be_empty
       end
-
     end
 
     describe "#in_same_work_as" do
@@ -342,6 +317,18 @@ RSpec.describe GutenbergBook, :type => :model do
 
         expect(books_in_work).to include(another_book_in_work)
         expect(books_in_work).not_to include(book_not_in_work)
+      end
+    end
+
+    describe "#having_different" do
+      it "returns records which have values differing from the given attribute on the given object" do
+        first = create(:gutenberg_book, :titles => ["first"])
+        second = create(:gutenberg_book, :titles => ["second"])
+        third = create(:gutenberg_book, :titles => ["first"])
+
+        books = GutenbergBook.having_different(:titles, :as => second)
+        expect(books).to include(first, third)
+        expect(books).not_to include(second)
       end
     end
   end
