@@ -49,8 +49,9 @@ class BookSeeder
         b.titles  << hash["title"]
         b.language = hash["language"]
         b.authors  = hash["authors"].map { |a| a["name"] }
-
+        b.links    ||= {}
         hash.each do |key, value|
+          
           if /links?_(?<link_type>\w+)/ =~ key && !value.blank?
             b.links[link_type.to_sym] = value
           end
