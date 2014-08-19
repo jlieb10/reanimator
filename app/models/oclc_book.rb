@@ -10,5 +10,12 @@ class OclcBook < ActiveRecord::Base
   self.primary_key =      :nid
   validates_uniqueness_of :nid
 
+  include BookRelations
   include BookScopes
+
+  def add_descriptions *descriptions
+    self.descriptions.concat(descriptions).tap do
+      attribute_will_change!(:descriptions)
+    end
+  end
 end

@@ -1,68 +1,69 @@
 module BookScopes
-  class << self
-    def assert_valid_keys(hash, *valid_keys)
-      hash.assert_valid_keys(*valid_keys)
-      valid_keys.map do |k| 
-        hash.fetch(k) { |name| raise ArgumentError, "Missing key: #{name}" } 
-      end
-    end
-  end
 
   extend ActiveSupport::Concern
   
   included do
-    has_many :equivalencies, 
-             :as => :book, 
-             :foreign_key => :book_nid
-
-    has_many :oclc_works, 
-             :through => :equivalencies
-
-    has_many :references, 
-             :as => :referenced,
-             :foreign_key => :referenced_nid
-
-    has_many :submitted_instances,
-             :through => :references,
-             :source => :submission
+    
+    scope :simple_join, ->(table, opts={ on: nil }) {
+      # - uses primary key by default
+      # - this is to avoid using active record joins which
+      # create a table alias for polymorphic relations
+      # ei.joins(:equivalencies) creates "equivalencies_gutenberg_books"
+      # for gutenberg_books
+      on = opts.with_indifferent_access[:on]
+      joins <<-SQL
+        INNER JOIN "#{table}"
+        ON "#{table}"."#{on}" = "#{table_name}"."#{primary_key}"
+      SQL
+    }
 
     scope :missing, ->(column, block = nil) {
       unless column_names.include? column.to_s
         raise ArgumentError, "#{column} is not a column in #{table_name}"
       end
 
-      empty_value = nil
-      
-      if serialized_attributes.key?(column.to_s)
-        # if the column is serialized, it means that in the db it wont
-        # be represented as NULL if its an empty value
-        #   - this code takes the measure to represent it as it would be in the db
-        #     by calling the #dump method of the column's serializer
-        ar_column   = serialized_attributes[column.to_s]
-        empty_value = ar_column.dump(ar_column.load(nil))
+      psql_column = columns_hash[column.to_s]
+      arel_column = arel_table[column]
+
+      if psql_column.array
+        # if column is array
+        array_upper = Arel::Nodes::NamedFunction.new("ARRAY_UPPER", [arel_column, 1])
+
+        query = array_upper.eq(nil)
+      elsif psql_column.type == :hstore
+        # if column is hash
+        a_keys      = Arel::Nodes::NamedFunction.new("AKEYS", [arel_column])
+        array_upper = Arel::Nodes::NamedFunction.new("ARRAY_UPPER", [a_keys, 1])
+
+        query = array_upper.eq(nil)
+      else
+        query = arel_column.eq(nil)
       end
-      clause = arel_table[column].eq(empty_value)
-      clause = block.present? ? block.call(clause) : clause
-      where(clause)
+
+      query = block ? block.call(query) : query
+
+      where(query)
     }
 
     scope :not_missing, ->(column) {
-      missing(column, ->(clause) { clause.not })
+      missing(column, ->(query) { query.not })
     }
 
     scope :referenced, ->(opts = {}) {
-      BookScopes.assert_valid_keys(opts, :user, :question)
+      user, question, role = BookScopes.assert_and_return_valid_keys(opts, :user, :question, :role)
 
       submissions = Submission.arel_table
+      references = Reference.arel_table
 
       joins(:submitted_instances)
-        .where(submissions[:user_id].eq(opts[:user].id))
-        .where(submissions[:question_id].eq(opts[:question].id))
+        .where(submissions[:user_id].eq(user.id))
+        .where(submissions[:question_id].eq(question.id))
+        .where(references[:role].eq(role))
     }
 
 
     scope :unreferenced, ->(opts = {}) {
-      user, question, role = BookScopes.assert_valid_keys(opts, :user, :question, :role)
+      user, question, role = BookScopes.assert_and_return_valid_keys(opts, :user, :question, :role)
 
       submissions = Submission.arel_table
       references  = Reference.arel_table
@@ -87,7 +88,8 @@ module BookScopes
 
       # this is making an sql union, not a ruby union
       # using easy_union_set gem
-      where_clauses.map { |clause| joins(join).where(clause) }.inject(:|)
+      query = where_clauses.map { |clause| "(#{joins(join).where(clause).to_sql})" }.join(' UNION ')
+      from("(#{query}) AS \"#{table_name}\"")
     }
 
     scope :having_works, -> {
@@ -103,20 +105,17 @@ module BookScopes
     }
 
     scope :sharing_works, -> {
-
-      sub_query = OclcWork.joins(:equivalencies)
-                          .having("COUNT(equivalencies) > 1")
-                          .group(:nid)
-                          .to_sql
-
-      joins <<-SQL
-       INNER JOIN "equivalencies"
-       ON "equivalencies"."book_nid" = "#{table_name}"."#{primary_key}"
-       AND "equivalencies"."book_type" = '#{self.name}'
-       INNER JOIN (#{sub_query}) 
-       AS works_with_equivalencies
-       ON "equivalencies"."oclc_work_nid" = "works_with_equivalencies"."nid"
+      # must join equivalencies
+      #
+      # join with the oclc works that have atleast 2 equivalencies
+      # meaning they share the work with atleast one other book
+      oclc_works_with_atleast_two_equivalencies = OclcWork.having_atleast_equivalencies(2).to_sql
+      join = <<-SQL
+        INNER JOIN (#{oclc_works_with_atleast_two_equivalencies}) 
+        AS "works_with_atleast_two_books"
+        ON "works_with_atleast_two_books"."nid" = "equivalencies"."oclc_work_nid"
       SQL
+      joins(join)
     }
 
     scope :in_same_work_as, ->(book) {
@@ -136,21 +135,32 @@ module BookScopes
 
       lowercase_function = Arel::Nodes::NamedFunction.new('LOWER', [arel_table[attribute]])
 
-      attribute_value = as.send(attribute)
-      attribute_value = if attribute_value.is_a? Array
-                          # if attribute is serialized as array
-                          attribute_value.map(&:downcase).to_yaml
-                        else
-                          attribute_value.downcase
-                        end
+      attribute_value = as.send(attribute).downcase
 
       where(lowercase_function.not_eq(attribute_value))
     }
 
-    scope :with_varying, ->( attribute ) {
-      
+    scope :with_inconsistent_titles, ->{
+      # must join equivalencies
+      works_having_books_with_inconsistent_titles = OclcWork.having_books_with_inconsistent_titles.to_sql
+      join = <<-SQL
+        INNER JOIN (#{works_having_books_with_inconsistent_titles})
+        AS "works_with_inconsistent_books"
+        ON "works_with_inconsistent_books"."nid" = "equivalencies"."oclc_work_nid"
+      SQL
+
+      joins(join)
     }
 
+  end
+
+  class << self
+    def assert_and_return_valid_keys(hash, *valid_keys)
+      hash.assert_valid_keys(*valid_keys)
+      valid_keys.map do |k| 
+        hash.fetch(k) { |name| raise ArgumentError, "Missing key: #{name}" } 
+      end
+    end
   end
 
 end

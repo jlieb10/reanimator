@@ -24,7 +24,7 @@ class QuestionConstructor
       {
         referenced_nid: main.nid,
         referenced_type: main.class.name,
-        column_name: column.name,
+        column_name: column && column.name,
         role: @role
       }
     end

@@ -32,12 +32,9 @@ class BookSeeder
       OclcBook.create do |b|
         b.nid      = hash["id"]
         b.language = hash["language"]
-
-        ["title", "description"].each do |attribute|
-          # push to the titles, descriptions arrays of to oclc book
-          if hash[attribute].present?
-            b.send(attribute.pluralize) << handle_potential_inconsistency(hash[attribute])
-          end
+        ['description', 'title'].each do |attribute|
+          value = handle_potential_inconsistency(hash[attribute])
+          b.send("#{attribute}=", value)
         end
       end
     end
@@ -46,9 +43,9 @@ class BookSeeder
       GutenbergBook.create do |b|
         b.nid      = hash["id"]
         b.subtitle = hash["subtitle"]
-        b.titles  << hash["title"]
+        b.title    = hash["title"]
         b.language = hash["language"]
-        b.authors  = hash["authors"].map { |a| a["name"] }
+        b.add_authors(hash["authors"].map { |a| a["name"] })
         b.links    ||= {}
         hash.each do |key, value|
           
@@ -60,19 +57,23 @@ class BookSeeder
     end
 
 
-    def handle_potential_inconsistency(value)
-      case value
+    def handle_potential_inconsistency(raw_data, delim = ' - ')
+      return nil if raw_data.nil?
+      
+      collected_values = []
+      case raw_data
       when Array
-        value.map do |h|
-          if h.is_a? Hash
-            h["@value"]
+        collected_values = raw_data.map do |element|
+          if element.is_a? Hash
+            element["@value"]
           else
-            h
+            element
           end
         end
       else
-        value
+        collected_values = [raw_data]
       end
+      collected_values.join(delim)
     end
   end
 end

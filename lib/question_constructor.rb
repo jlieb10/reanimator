@@ -64,16 +64,12 @@ class QuestionConstructor
         end
       end
 
-      # binding.pry 
-
       construct.pool = temp_pools.inject do |last_pool, pool| 
         last_pool.to_a.concat(pool.to_a)
       end
       construct.main = construct.pool.sample
 
-      # binding.pry if construct.main.nil?
-
-      construct.column = Column.new(construct.main, sub_level_hash[:column])
+      construct.column = sub_level_hash[:column] && Column.new(construct.main, sub_level_hash[:column])
 
       construct
     end

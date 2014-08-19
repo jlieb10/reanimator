@@ -22,14 +22,41 @@ class OclcWork < ActiveRecord::Base
            :source_type => OclcBook, 
            :source => :book
 
+  scope :having_books_with_inconsistent_titles, -> {
+    from = <<-SQL
+          (SELECT 
+            oclc_works.nid as work_nid,
+            LOWER("title") as title
+          FROM oclc_books
+          INNER JOIN equivalencies ON equivalencies.book_nid = oclc_books.nid
+          INNER JOIN oclc_works ON equivalencies.oclc_work_nid = oclc_works.nid
+          GROUP BY work_nid, title
+        UNION
+          SELECT
+            oclc_works.nid as work_nid,
+            LOWER("title") as title
+          FROM gutenberg_books
+          INNER JOIN equivalencies ON equivalencies.book_nid = gutenberg_books.nid
+          INNER JOIN oclc_works ON equivalencies.oclc_work_nid = oclc_works.nid
+          GROUP BY work_nid, title) 
+        AS books
+    SQL
 
-  scope :having_gutenberg_books, ->(min = 1) {
-    joins(:gutenberg_books).group('"oclc_works"."nid"').having("COUNT(gutenberg_books.nid) >= #{min}")
+    join = <<-SQL
+      INNER JOIN oclc_works ON books.work_nid = oclc_works.nid
+    SQL
+
+    self.from(from)
+        .joins(join)
+        .group(:nid)
+        .having("COUNT(books.title) > 1")
   }
 
-  scope :having_oclc_books, ->(min = 1) {
-    joins(:oclc_books).group('"oclc_works"."nid"').having("COUNT(oclc_books.nid) >= #{min}")    
+  scope :having_atleast_equivalencies, ->(count = 2) {
+    # having atleast 2 or blank equivalencies
+    joins(:equivalencies)
+    .group('"oclc_works"."nid"')
+    .having(["COUNT(\"equivalencies\") > ?", count - 1])
   }
-
 
 end

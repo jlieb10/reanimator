@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140813204826) do
+ActiveRecord::Schema.define(version: 20140819161604) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,21 +25,21 @@ ActiveRecord::Schema.define(version: 20140813204826) do
   end
 
   create_table "gutenberg_books", id: false, force: true do |t|
+    t.text   "title"
     t.string "subtitle"
     t.string "nid"
     t.string "language"
     t.hstore "links"
-    t.text   "titles",   default: [], array: true
     t.text   "authors",  default: [], array: true
   end
 
-  add_index "gutenberg_books", ["links"], name: "index_gutenberg_books_on_links", using: :gist
+  add_index "gutenberg_books", ["links"], name: "gutenberg_books_links", using: :gin
 
   create_table "oclc_books", id: false, force: true do |t|
+    t.text   "title"
+    t.text   "description"
     t.string "nid"
     t.string "language"
-    t.text   "titles",       default: [], array: true
-    t.text   "descriptions", default: [], array: true
   end
 
   create_table "oclc_works", id: false, force: true do |t|

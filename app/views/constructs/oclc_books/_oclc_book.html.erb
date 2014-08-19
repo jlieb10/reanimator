@@ -1,3 +1,5 @@
 <%= oclc_book %>
 
-<%= render oclc_book.column %>
+<% if oclc_book.column %>
+  <%= render oclc_book.column %>
+<% end %>

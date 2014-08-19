@@ -5,13 +5,17 @@ tasks:
   questions:
   - 
     construct_meta:
-      column: titles
+      column: title
       scopes:
-        not_missing: titles
+        not_missing: title
 
       subject:
         scopes:
+          simple_join: [ "equivalencies", "on": "book_nid"]
+          # => #sharing works & #with_inconsistent_titles
+          # need to be chained after a join with equivalencies
           sharing_works: []
+          with_inconsistent_titles: []
 
         models: GutenbergBook
 
@@ -21,10 +25,7 @@ tasks:
           - OclcBook
         scopes:
           in_same_work_as: "%(subject)"
-          having_different: 
-            - titles
-            - 
-              as: "%(subject)"
+          having_different: [ "title", as: "%(subject)" ]
 
     expectation: radio
     content: Are these the same book?
@@ -44,11 +45,13 @@ tasks:
         models: GutenbergBook
         scopes:
           sharing_works: []
+
       references:
         models: OclcBook
         scopes:
           in_same_work_as: "%(subject)"
           not_missing: description
+
         column: description
 
     content: Does this description work?

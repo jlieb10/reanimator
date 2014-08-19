@@ -9,7 +9,6 @@ RSpec.describe GutenbergBook, :type => :model do
       book.titles << "The works"
       book.titles << "Shakespear's works"
 
-      expect(book.titles.size).to eq(2)
       expect{ book.save }.to_not raise_error
       # it should still be an instance of Array after retrieving back from db
       book.reload
@@ -23,8 +22,7 @@ RSpec.describe GutenbergBook, :type => :model do
 
       book.authors << "Shakespear"
       book.authors << "Tolstoy"
-
-      expect(book.authors.size).to eq(2)
+      
       expect{ book.save }.to_not raise_error
       # it should still be an instance of Array after retrieving back from db
       book.reload
