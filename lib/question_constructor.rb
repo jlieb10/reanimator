@@ -28,8 +28,8 @@ class QuestionConstructor
   def reference_fields(builder)
     builder.fields_for("references_attributes[]", builder.object.references.new) do |sub_builder|
       @constructs.inject('') do |html, (_, collection)|
-        collection.inject(html) do |html, construct|
-          html + construct.to_fields(sub_builder)
+        collection.inject(html) do |h, construct|
+          h + construct.to_fields(sub_builder)
         end
       end.html_safe
     end.html_safe
@@ -54,13 +54,14 @@ class QuestionConstructor
 
       temp_pools = construct.models.map do |model|
         start_pool = model.unreferenced(user: @user, question: @question, role: key)
-        pool = if sub_level_hash[:scopes].any?
-                  sub_level_hash[:scopes].inject(start_pool) do |inner_pool ,(scope, args)|
-                    inner_pool.send(scope, *parse_args(args))
-                  end
-                else
-                  start_pool
-                end
+
+        if sub_level_hash[:scopes].any?
+          sub_level_hash[:scopes].inject(start_pool) do |inner_pool ,(scope, args)|
+            inner_pool.send(scope, *parse_args(args))
+          end
+        else
+          start_pool
+        end
       end
 
       construct.pool = temp_pools.inject do |last_pool, pool| 
@@ -68,28 +69,40 @@ class QuestionConstructor
       end
       construct.main = construct.pool.sample
 
-      binding.pry if construct.main.nil?
-
-      construct.column = Column.new(construct.main, sub_level_hash[:column])
+      construct.column = sub_level_hash[:column] && Column.new(construct.main, sub_level_hash[:column])
 
       construct
     end
 
     def parse_args(args)
+      # binding.pry
       args = [args].flatten
       args.map do |arg|
-        if /%\((?<eval_str>\w+)\)/ =~ arg
-          @constructs[eval_str].first.main
-        else
-          arg
+        case arg
+        when String
+          handle_interpolation(arg)
+        when Hash
+          {}.tap do |h|
+            arg.each do |key, val|
+              h[key] = handle_interpolation(val)
+            end
+          end
         end
+      end
+    end
+
+    def handle_interpolation(str)
+      if /%\((?<eval_str>\w+)\)/ =~ str
+        @constructs[eval_str].first.main
+      else
+        str
       end
     end
 
     def complete_sub_level_hash!(top_level_hash, sub_level_hash)
       sub_level_hash[:column] ||= top_level_hash[:column]
       sub_level_hash[:scopes] ||= {}
-      sub_level_hash[:scopes].merge!(top_level_hash[:scopes])
+      sub_level_hash[:scopes].merge!(top_level_hash[:scopes]) unless top_level_hash[:scopes].nil?
       sub_level_hash[:models] = [sub_level_hash[:models]].flatten
       sub_level_hash
     end

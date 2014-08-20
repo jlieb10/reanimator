@@ -2,18 +2,20 @@ tasks:
 -
   name: Compare Titles
   category: Titles
-  # point_value: #!
   questions:
-###### ------------------------ Which title is better?
   - 
     construct_meta:
-      column: titles
+      column: title
       scopes:
-        not_missing: titles
+        not_missing: title
 
       subject:
         scopes:
+          simple_join: [ "equivalencies", "on": "book_nid"]
+          # => #sharing works & #with_inconsistent_titles
+          # need to be chained after a join with equivalencies
           sharing_works: []
+          with_inconsistent_titles: []
 
         models: GutenbergBook
 
@@ -23,100 +25,122 @@ tasks:
           - OclcBook
         scopes:
           in_same_work_as: "%(subject)"
-
+          having_different: [ "title", as: "%(subject)" ]
 
     expectation: radio
-    content: Which title is better?
+    content: Are these the same book?
     options:
       -
-        value: First Title
-      - 
-        value: Second Title
-      - 
-        value: About the Same
-      - 
-        value: These Aren't the Same Book
-######---------------------------------------------------------
--
-  name: Shorten Titles
-  category: Titles
-  # point_value: #!
-  questions:
-  - 
-    construct_meta:
-      column: titles
-      scopes: 
-        missing: subtitle
-        not_missing: titles
-        ## change to a scope
-        having: "LENGTH(gutenberg_books.title) > 30"
-      subject:
-        models: GutenbergBook
-
-    expectation: radio
-    content: Is it possible to shorten the title?
-    options:
-      - 
         value: "Yes"
-        # what can it be shortened to?
-        additional_input: short_text
       - 
         value: "No"
--
-  name: Subtitles
-  category: Titles
-  # point_value: #!
-  questions:
-  - 
-    construct_meta:
-      column: subtitle
-      scopes:
-        not_missing: subtitle
-      subject:
-        models: GutenbergBook
 
-    expectation: radio
-    content: How important is the subtitle?
-    options:
-      - 
-        value: It's important
-      - 
-        value: Leave it off
-      - 
-        value: Not all of it
-        # what can it be shortened to?
-        additional_input: short_text
 -
-  name: Description Quality
+  name: Rate Description
   category: Descriptions
-  # point_value: #!
   questions:
-  - 
+  -
     construct_meta:
       subject:
         models: GutenbergBook
+        scopes:
+          sharing_works: []
+
       references:
         models: OclcBook
         scopes:
           in_same_work_as: "%(subject)"
           not_missing: description
+
         column: description
 
+    content: Does this description work?
     expectation: radio
-    content: Rate the Gutenberg Description
-    options: 
+    options:
+      -
+        value: "Yes"
       - 
-        value: This description is great!
-      - 
-        value: This description is usable
-      - 
-        value: This description would be usable if corrected
-      - 
-        value: This description is too specific
-      - 
-        value: This description is from a different book
-      - 
-        value: This description should not be used
+        value: "No"
+######---------------------------------------------------------
+# -
+#   name: Shorten Titles
+#   category: Titles
+#   # point_value: #!
+#   questions:
+#   - 
+#     construct_meta:
+#       column: titles
+#       scopes: 
+#         missing: subtitle
+#         not_missing: titles
+
+#       subject:
+#         models: GutenbergBook
+
+#     expectation: radio
+#     content: Is it possible to shorten the title?
+#     options:
+#       - 
+#         value: "Yes"
+#         # what can it be shortened to?
+#         additional_input: short_text
+#       - 
+#         value: "No"
+# -
+#   name: Subtitles
+#   category: Titles
+#   # point_value: #!
+#   questions:
+#   - 
+#     construct_meta:
+#       column: subtitle
+#       scopes:
+#         not_missing: subtitle
+#       subject:
+#         models: GutenbergBook
+
+#     expectation: radio
+#     content: How important is the subtitle?
+#     options:
+#       - 
+#         value: It's important
+#       - 
+#         value: Leave it off
+#       - 
+#         value: Not all of it
+#         # what can it be shortened to?
+#         additional_input: short_text
+# -
+#   name: Description Quality
+#   category: Descriptions
+#   # point_value: #!
+#   questions:
+#   - 
+#     construct_meta:
+#       subject:
+#         models: GutenbergBook
+#       references:
+#         models: OclcBook
+#         scopes:
+#           in_same_work_as: "%(subject)"
+#           not_missing: description
+#         column: description
+
+#     expectation: radio
+#     content: Rate the Gutenberg Description
+#     options: 
+#       - 
+#         value: This description is great!
+#       - 
+#         value: This description is usable
+#       - 
+#         value: This description would be usable if corrected
+#       - 
+#         value: This description is too specific
+#       - 
+#         value: This description is from a different book
+#       - 
+#         value: This description should not be used
 # -
 #   name: Description Audience
 #   category: Description

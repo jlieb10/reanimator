@@ -1,4 +1,5 @@
 class GutenbergBook < ActiveRecord::Base
+  store_accessor :links
   # --------------------------------------------------------
   # | nid | titles | subtitle | authors | language | links |
   # --------------------------------------------------------
@@ -9,10 +10,14 @@ class GutenbergBook < ActiveRecord::Base
   self.primary_key =      :nid
   validates_uniqueness_of :nid  
 
-  serialize :titles , Array
-  serialize :authors, Array
-  serialize :links  , Hash
-
+  include BookRelations
   include BookScopes
+
+  def add_authors *authors
+    self.authors.tap do |a|
+      a.concat(*authors)
+      attribute_will_change!(:authors)
+    end
+  end
 
 end
