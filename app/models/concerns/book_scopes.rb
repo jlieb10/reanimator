@@ -11,10 +11,11 @@ module BookScopes
       # ei.joins(:equivalencies) creates "equivalencies_gutenberg_books"
       # for gutenberg_books
       on = opts.with_indifferent_access[:on]
-      joins <<-SQL
+      join = <<-SQL
         INNER JOIN "#{table}"
         ON "#{table}"."#{on}" = "#{table_name}"."#{primary_key}"
       SQL
+      joins(join)
     }
 
     scope :missing, ->(column, block = nil) {
@@ -104,17 +105,24 @@ module BookScopes
       joins(join).where(equivalencies[:book_nid].not_eq(nil)).uniq
     }
 
-    scope :sharing_works, -> {
-      # must join equivalencies
-      #
-      # join with the oclc works that have atleast 2 equivalencies
-      # meaning they share the work with atleast one other book
-      oclc_works_with_atleast_two_equivalencies = OclcWork.having_atleast_equivalencies(2).to_sql
+    scope :sharing_works_with_unreferenced_books, ->(opts = {}) {
+      # needs to join equivalencies
+
       join = <<-SQL
-        INNER JOIN (#{oclc_works_with_atleast_two_equivalencies}) 
-        AS "works_with_atleast_two_books"
-        ON "works_with_atleast_two_books"."nid" = "equivalencies"."oclc_work_nid"
+        INNER JOIN (#{OclcWork.having_unrenferenced_books(opts).to_sql})
+        AS works_with_unreferenced_books
+        ON works_with_unreferenced_books.nid = equivalencies.oclc_work_nid
       SQL
+      joins(join)
+    }
+
+    scope :sharing_works_with_books_not_missing, -> (attribute, opts = {}) {
+      join = <<-SQL
+        INNER JOIN (#{OclcWork.having_books_that_are_not_missing(attribute, opts).to_sql})
+        AS works_with_books_not_missing
+        ON works_with_books_not_missing.nid = equivalencies.oclc_work_nid
+      SQL
+
       joins(join)
     }
 
@@ -148,7 +156,6 @@ module BookScopes
         AS "works_with_inconsistent_books"
         ON "works_with_inconsistent_books"."nid" = "equivalencies"."oclc_work_nid"
       SQL
-
       joins(join)
     }
 
@@ -156,9 +163,9 @@ module BookScopes
 
   class << self
     def assert_and_return_valid_keys(hash, *valid_keys)
-      hash.assert_valid_keys(*valid_keys)
+      # hash.with_indifferent_access.assert_valid_keys(*valid_keys)
       valid_keys.map do |k| 
-        hash.fetch(k) { |name| raise ArgumentError, "Missing key: #{name}" } 
+        hash.with_indifferent_access.fetch(k) { |name| raise ArgumentError, "Missing key: #{name}" } 
       end
     end
   end

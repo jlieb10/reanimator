@@ -53,14 +53,13 @@ class QuestionConstructor
       construct.models = sub_level_hash[:models].map { |m| Kernel.const_get(m) }
 
       temp_pools = construct.models.map do |model|
-        start_pool = model.unreferenced(user: @user, question: @question, role: key)
 
         if sub_level_hash[:scopes].any?
-          sub_level_hash[:scopes].inject(start_pool) do |inner_pool ,(scope, args)|
+          sub_level_hash[:scopes].inject(model) do |inner_pool ,(scope, args)|
             inner_pool.send(scope, *parse_args(args))
           end
         else
-          start_pool
+          model
         end
       end
 
@@ -68,6 +67,8 @@ class QuestionConstructor
         last_pool.to_a.concat(pool.to_a)
       end
       construct.main = construct.pool.sample
+
+      binding.pry if construct.main.nil?
 
       construct.column = sub_level_hash[:column] && Column.new(construct.main, sub_level_hash[:column])
 
@@ -92,8 +93,15 @@ class QuestionConstructor
     end
 
     def handle_interpolation(str)
-      if /%\((?<eval_str>\w+)\)/ =~ str
-        @constructs[eval_str].first.main
+      if /%\((?<meta_char>[#:])(?<meta_word>\w+)\)/ =~ str
+        case meta_char
+        when '#'
+          # reference a method
+          send(meta_word)
+        when ':'
+          # reference a construct
+          @constructs[meta_word].first.main
+        end
       else
         str
       end
