@@ -3,7 +3,7 @@ tasks:
   name: Compare Titles
   category: Titles
   questions:
-  - 
+  -
     construct_meta:
       column: title
       scopes:
@@ -28,11 +28,11 @@ tasks:
           having_different: [ "title", as: "%(subject)" ]
 
     expectation: radio
-    content: Are these the same book?
+    content: Do these titles refer to the same book?
     options:
       -
         value: "Yes"
-      - 
+      -
         value: "No"
 
 -
@@ -54,12 +54,12 @@ tasks:
 
         column: description
 
-    content: Does this description work?
+    content: Is this a valid description?
     expectation: radio
     options:
       -
         value: "Yes"
-      - 
+      -
         value: "No"
 ######---------------------------------------------------------
 # -
@@ -67,10 +67,10 @@ tasks:
 #   category: Titles
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     construct_meta:
 #       column: titles
-#       scopes: 
+#       scopes:
 #         missing: subtitle
 #         not_missing: titles
 
@@ -80,18 +80,18 @@ tasks:
 #     expectation: radio
 #     content: Is it possible to shorten the title?
 #     options:
-#       - 
+#       -
 #         value: "Yes"
 #         # what can it be shortened to?
 #         additional_input: short_text
-#       - 
+#       -
 #         value: "No"
 # -
 #   name: Subtitles
 #   category: Titles
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     construct_meta:
 #       column: subtitle
 #       scopes:
@@ -102,11 +102,11 @@ tasks:
 #     expectation: radio
 #     content: How important is the subtitle?
 #     options:
-#       - 
+#       -
 #         value: It's important
-#       - 
+#       -
 #         value: Leave it off
-#       - 
+#       -
 #         value: Not all of it
 #         # what can it be shortened to?
 #         additional_input: short_text
@@ -115,7 +115,7 @@ tasks:
 #   category: Descriptions
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     construct_meta:
 #       subject:
 #         models: GutenbergBook
@@ -128,18 +128,18 @@ tasks:
 
 #     expectation: radio
 #     content: Rate the Gutenberg Description
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: This description is great!
-#       - 
+#       -
 #         value: This description is usable
-#       - 
+#       -
 #         value: This description would be usable if corrected
-#       - 
+#       -
 #         value: This description is too specific
-#       - 
+#       -
 #         value: This description is from a different book
-#       - 
+#       -
 #         value: This description should not be used
 # -
 #   name: Description Audience
@@ -149,14 +149,14 @@ tasks:
 #   -
 #     expectation: radio
 #     content: Who is the audience of this description?
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: Adults
-#       - 
+#       -
 #         value: Children
-#       - 
+#       -
 #         value: Both
-#       - 
+#       -
 #         # maybe a why? followup
 #         value: This description should not be used
 # -
@@ -164,67 +164,67 @@ tasks:
 #   category: Covers
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     expectation: radio
 #     content: Rate the Gutenberg Cover
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: Great
-#       - 
+#       -
 #         value: Usable
-#       - 
+#       -
 #         value: Generic or computer-generated
-#       - 
+#       -
 #         value: Awful
-#       - 
+#       -
 #         value: Too Specific
-#       - 
+#       -
 #         value: For a different book
-#       - 
+#       -
 #         value: This Isn't for a book
 # -
 #   name: Cover Comparison
 #   category: Covers
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     expectation: radio
 #     content: "Compare these two covers:"
 #     options:
-#       - 
+#       -
 #         value: Left cover is better
-#       - 
+#       -
 #         value: Right cover is better
-#       - 
+#       -
 #         value: No preference
-#       - 
+#       -
 #         value: These are not for the same work
 
 #   name: Evaluate Image from Text as Cover
 #   category: Covers
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     expectation: radio
 #     content: Would this image make good cover art?
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: Yes
-#       - 
+#       -
 #         value: Yes if Cropped
-#       - 
+#       -
 #         value: No - Generic/Dull
-#       - 
+#       -
 #         value: No - Not Representative
-#       - 
+#       -
 #         value: No - Image is visually too crowded
-#       - 
+#       -
 #         value: Scan quality is too bad to judge
-#       - 
+#       -
 #         value: Not suitable
 #         # why isnt this suitable
 #         additional_input: short_text
-#       - 
+#       -
 #         value: No opinion
 # -
 #   name: Fiction Genre
@@ -234,53 +234,53 @@ tasks:
 #   -
 #     expectation: select
 #     content: Is there a good subcategory of fiction for this book?
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: Adventure
-#       - 
+#       -
 #         value: Crime
-#       - 
+#       -
 #         value: Fantasy
-#       - 
+#       -
 #         value: Horror
-#       - 
+#       -
 #         value: Mystery
-#       - 
+#       -
 #         value: Romance
-#       - 
+#       -
 #         value: SciFi
-#       - 
+#       -
 #         value: Western
-#       - 
+#       -
 #         value: Inspirational
-#       - 
+#       -
 #         value: Other
 #         # which other genre would be suitable?
 #         additional_input: short_text
-#       - 
+#       -
 #         value: Just "fiction" is fine
-#       - 
+#       -
 #         value: Not Fiction
 # -
 #   name: Modern Standards for Juvenile Literature
 #   category: Classification
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     expectation: radio
 #     content: Would this be suitable for children today?
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: Yes
-#       - 
+#       -
 #         value: No it's horribly racist/sexist
-#       - 
+#       -
 #         value: No it's dangerous
-#       - 
+#       -
 #         value: It's outdated for another reason
 #         # why is this outdated?
 #         additional_input: short_text
-#       - 
+#       -
 #         value: It's a misclassified book for adults
 # -
 #   name: Target Age
@@ -290,44 +290,44 @@ tasks:
 #   -
 #     expectation: radio
 #     content: This book is classified as "juvenile literature" but for what age group?
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: Preschool
-#       - 
+#       -
 #         value: Grade school
-#       - 
+#       -
 #         value: Young adults
-#       - 
+#       -
 #         value: It's a misclassified book for adults
 # -
 #   name: Modern Standards for Nonfiction
 #   category: Classification
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     expectation: radio
 #     content: Is this book still relevant?
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: Yes! No reservations
-#       - 
+#       -
 #         value: Yes but it may have inaccuracies
-#       - 
+#       -
 #         value: Yes because we're not likely to get anything better
-#       - 
+#       -
 #         value: No it's been updated
-#       - 
+#       -
 #         value: No it's based on an archaic worldview
 # -
 #   name: Write a Description
 #   category: Heavy Duty
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     expectation: none
 #     content: Write a description for this book
-#     options: 
-#      - 
+#     options:
+#      -
 #       value: Input
 #       additional_input: long_text
 # -
@@ -335,11 +335,11 @@ tasks:
 #   category: Heavy Duty
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     expectation: none
 #     content: Find a pull quote from this book
-#     options: 
-#       - 
+#     options:
+#       -
 #         value: Input
 #         additional_input: long_text
 # -
@@ -347,11 +347,11 @@ tasks:
 #   category: Heavy Duty
 #   # point_value: #!
 #   questions:
-#   - 
+#   -
 #     expectation: none
-#     content: Please evaluate this book overall for presentation to patrons. 
-#     options: 
-#       - 
+#     content: Please evaluate this book overall for presentation to patrons.
+#     options:
+#       -
 #         value: input
 #         additional_input: long_text
 #   -
