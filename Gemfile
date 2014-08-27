@@ -60,6 +60,10 @@ group :development, :test do
   # http://rubydoc.info/github/jnicklas/capybara/master
   # https://github.com/jnicklas/capybara
   # gem 'capybara-rails'
+
+  # to live troubleshoot errors on REPL:
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 # a gem to easily create unions and intersects

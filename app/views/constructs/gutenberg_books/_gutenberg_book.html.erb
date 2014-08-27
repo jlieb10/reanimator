@@ -1,3 +1,7 @@
 <% if gutenberg_book.column %>
   <%= render gutenberg_book.column %>
 <% end %>
+
+<% if gutenberg_book.links["html"] %>
+  <%= link_to "View", gutenberg_book.links["html"], class: 'button round'  %><br />
+<% end %>
