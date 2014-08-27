@@ -2,9 +2,14 @@ class SubmissionsController < ApplicationController
 
   def create
     @submission = current_user.submissions.new(submission_params)
-    if @submission.save
-      redirect_to task_path(@submission.question.task)
-    else
+    respond_to do |format|
+
+      if @submission.save
+        format.html { redirect_to task_path(@submission.question.task) }
+        format.js { redirect_to task_path(@submission.question.task) }
+      else
+
+      end
 
     end
   end

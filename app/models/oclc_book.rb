@@ -13,9 +13,9 @@ class OclcBook < ActiveRecord::Base
   include BookRelations
   include BookScopes
 
-  def add_descriptions *descriptions
-    self.descriptions.concat(descriptions).tap do
-      attribute_will_change!(:descriptions)
-    end
+
+  def to_url
+    "http://www.worldcat.org/oclc/#{nid}"
   end
+
 end

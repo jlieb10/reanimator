@@ -30,12 +30,14 @@ class BookSeeder
 
     def handle_oclc_hash(hash)
       OclcBook.create do |b|
-        b.nid      = hash["id"]
-        b.language = hash["language"]
-        ['description', 'title'].each do |attribute|
-          value = handle_potential_inconsistency(hash[attribute])
-          b.send("#{attribute}=", value)
-        end
+        b.nid         = hash["id"]
+        b.language    = hash["language"]
+        b.description = handle_potential_inconsistency(hash["description"])
+
+        title = handle_potential_inconsistency(hash["title"])
+        title &&= title[/(?<actual>[^[:punct:]].+[^[:punct:]])[[:punct:]]*$/, :actual]
+
+        b.title = title
       end
     end
 

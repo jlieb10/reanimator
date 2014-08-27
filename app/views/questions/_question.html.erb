@@ -2,7 +2,7 @@
 <%= content_tag :h4, question.task.name %>
   <fieldset>
     <legend><%= content_tag :h4, question.content %></legend>
-    <%= form_for @submission, :html => {:class => "form"} do |builder|%>
+    <%= form_for @submission, :html => {:class => "form"}, :remote => true do |builder|%>
       <% @constructs.each do |construct| %>
         <%= render construct %>
         
@@ -10,6 +10,7 @@
       <% end %>
 
       <%= builder.hidden_field :question_id, value: question.id %>
+        <!-- Originally designed with other question formats in mind -->
         <% if question.expects_none? %>
         <% elsif question.expects_checkbox? %>
         <% elsif question.expects_radio? %>

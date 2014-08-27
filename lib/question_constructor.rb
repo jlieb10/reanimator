@@ -16,8 +16,7 @@ class QuestionConstructor
     top_level_hash = @question.construct_meta.with_indifferent_access
     sub_level_hashes = [top_level_hash.fetch(key)].flatten
     sub_level_hashes.each do |sub_level_hash|  
-      @constructs[key] ||= [] 
-      @constructs[key] << parse_sub_hash(top_level_hash, sub_level_hash, key)
+      @constructs[key] = parse_sub_hash(top_level_hash, sub_level_hash, key)
       define_singleton_method key do
         @constructs[key]
       end
@@ -27,10 +26,8 @@ class QuestionConstructor
 
   def reference_fields(builder)
     builder.fields_for("references_attributes[]", builder.object.references.new) do |sub_builder|
-      @constructs.inject('') do |html, (_, collection)|
-        collection.inject(html) do |h, construct|
-          h + construct.to_fields(sub_builder)
-        end
+      @constructs.inject('') do |html, (_, construct)|        
+        html + construct.to_fields(sub_builder)
       end.html_safe
     end.html_safe
   end
@@ -85,7 +82,13 @@ class QuestionConstructor
         when Hash
           {}.tap do |h|
             arg.each do |key, val|
-              h[key] = handle_interpolation(val)
+              if val.is_a? Array
+                h[key] = parse_args(val)
+              elsif val.is_a? Hash
+                h[key] = parse_args(val)
+              else
+                h[key] = handle_interpolation(val)
+              end
             end
           end
         end
@@ -100,7 +103,7 @@ class QuestionConstructor
           send(meta_word)
         when ':'
           # reference a construct
-          @constructs[meta_word].first.main
+          @constructs[meta_word].main
         end
       else
         str

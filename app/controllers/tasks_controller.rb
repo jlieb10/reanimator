@@ -2,6 +2,7 @@ class TasksController < ApplicationController
   before_action :authenticate!
 
   def show
+
     @task = Task.find(params[:id])
     @questions = @task.questions
     
@@ -14,6 +15,10 @@ class TasksController < ApplicationController
       end
     end
 
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
 end

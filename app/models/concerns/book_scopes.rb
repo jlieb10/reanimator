@@ -74,22 +74,26 @@ module BookScopes
       join = books.join(references, outer_join)
                      .on(references[:referenced_nid].eq(books[:nid])
                      .and(references[:referenced_type].eq(self.name)))
-                  .join(submissions, outer_join)
-                     .on(references[:submission_id].eq(submissions[:id]))
                   .join_sources
+                  # .join(submissions, outer_join)
+                  #    .on(references[:submission_id].eq(submissions[:id]))
 
       where_clauses = []
-      where_clauses << references[:referenced_nid].eq(nil)
-      where_clauses << submissions[:user_id].not_eq(user.id)
-      where_clauses << submissions[:user_id]
+      where_clauses << joins(join).where(references[:referenced_nid].eq(nil))
+      where_clauses << joins(:submitted_instances).where(submissions[:user_id].not_eq(user.id))
+      where_clauses << joins(:submitted_instances).where(submissions[:user_id]
                           .eq(user.id)
                           .and(submissions[:question_id]
-                            .not_eq(question.id)
-                            .or(references[:role].not_eq(role.to_s.singularize)))
+                            .not_eq(question.id)))
 
-      # this is making an sql union, not a ruby union
-      # using easy_union_set gem
-      query = where_clauses.map { |clause| "(#{joins(join).where(clause).to_sql})" }.join(' UNION ')
+      where_clauses << joins(:submitted_instances).where(submissions[:user_id]
+                          .eq(user.id)
+                          .and(submissions[:question_id]
+                            .eq(question.id)
+                            .and(references[:role].not_eq(role.to_s.singularize))))
+
+      
+      query = where_clauses.map(&:to_sql).join(' UNION ')
       from("(#{query}) AS \"#{table_name}\"")
     }
 
@@ -103,6 +107,22 @@ module BookScopes
              .join_sources
 
       joins(join).where(equivalencies[:book_nid].not_eq(nil)).uniq
+    }
+
+    scope :sharing_works, ->(scopes = {}, group_method = "INTERSECT"){
+      scopes &&= scopes.with_indifferent_access
+
+      querries = [ OclcWork.all.to_sql ] + scopes.map do |(scope, args)|
+        args = [args].flatten
+        OclcWork.send(scope, *args).to_sql
+      end 
+
+      join = <<-SQL
+        INNER JOIN (#{querries.join(" #{group_method} ")})
+        AS grouped_oclc_works
+        ON grouped_oclc_works.nid = equivalencies.oclc_work_nid
+      SQL
+      joins(join)
     }
 
     scope :sharing_works_with_unreferenced_books, ->(opts = {}) {

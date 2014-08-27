@@ -113,9 +113,9 @@ class OclcWork < ActiveRecord::Base
     not_missing_querry_for = -> (table){
       model = table.to_s.classify.constantize
       <<-SQL
-        SELECT nid, #{attribute}
+        (SELECT nid, #{attribute}
         FROM (#{model.not_missing(attribute).to_sql})
-        AS not_missing_#{table}
+        AS not_missing_#{table})
       SQL
     }
     if only.present?

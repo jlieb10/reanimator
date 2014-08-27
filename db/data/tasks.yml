@@ -52,12 +52,13 @@ tasks:
         models: GutenbergBook
         scopes:
           simple_join: [ "equivalencies", "on": "book_nid"]
-          sharing_works_with_unreferenced_books: 
-            user: "%(#user)" 
-            question: "%(#question)" 
-            role: "reference"
-            only: oclc_books
-          sharing_works_with_books_not_missing: [ "description", only: oclc_books ]
+          sharing_works:
+            having_books_that_are_not_missing: [ "description", only: oclc_books ]
+            having_unrenferenced_books: 
+              user: "%(#user)" 
+              question: "%(#question)" 
+              role: reference
+              only: oclc_books
 
       references:
         models: OclcBook
@@ -66,7 +67,7 @@ tasks:
           unreferenced:
             user: "%(#user)"
             question: "%(#question)"
-            role: "reference"
+            role: reference
 
           in_same_work_as: "%(:subject)"
           not_missing: description
