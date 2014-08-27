@@ -15,7 +15,7 @@ class OclcBook < ActiveRecord::Base
 
 
   def to_url
-    "http://www.worldcat.org/oclc/#{nid}"
+    "http://www.worldcat.org/oclc/#{nid[/(?<id>\d+)$/, :id]}"
   end
 
 end

@@ -1,8 +1,12 @@
-<%= render construct.subject %>
 
+<div class="clearfix book-match row">
+  <div class="left book small-12 large-6">
+    <%= render construct.subject %>
+  </div>
 
-<% if construct.has? :references %>
-
-  <%= render construct.references %>
-    
-<% end %>
+  <% if construct.has? :references %>
+    <div class="right book small-12 large-6">
+      <%= render construct.references %>
+    </div>
+  <% end %>
+</div>

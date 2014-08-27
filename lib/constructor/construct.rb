@@ -8,6 +8,10 @@ class QuestionConstructor
       @role = role.to_s.singularize.to_sym
     end
 
+    def stub_column(name)
+      Column.new(main, name)
+    end
+
     def table
       main.class.table_name
     end
