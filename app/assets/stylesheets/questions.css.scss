@@ -3,25 +3,27 @@ fieldset legend {
 }
 
 div.question.panel {
-  background-color: rgba(255,255,255, 0.7);
+  background-color: rgba(255,255,255, 0.9);
   margin: 0 auto;
-  width: 75%;
+  @media screen and (max-width: 640px){
+    width: 100%
+  }
+  @media screen and (min-width: 640px){
+    width: 75%;
+  }
 }
 
 label.button.question {
-  background: rgba(0,0,100, 0.6);
-  width: 90%;
+  width: 100%;
   margin: 1px auto;
-  border: 2px solid #FFFFFF;
-  border-radius: 5%;
   font-size: 1.2rem;
 }
 
 .main h2 {
-  color: rgba(255,255,255, 0.9);
+  color: white;
 }
 
 .main h4 {
-  color: rgba(0,0,100, 0.9);
+  color: black;
   font-size: 1.8rem;
 }

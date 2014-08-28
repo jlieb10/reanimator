@@ -63,9 +63,8 @@ class QuestionConstructor
       construct.pool = temp_pools.inject do |last_pool, pool| 
         last_pool.to_a.concat(pool.to_a)
       end
+      
       construct.main = construct.pool.sample
-
-      binding.pry if construct.main.nil?
 
       construct.column = sub_level_hash[:column] && Column.new(construct.main, sub_level_hash[:column])
 
@@ -73,7 +72,6 @@ class QuestionConstructor
     end
 
     def parse_args(args)
-      # binding.pry
       args = [args].flatten
       args.map do |arg|
         case arg

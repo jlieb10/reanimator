@@ -1,17 +1,61 @@
 // Place all the styles related to the Tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#main-task {
 
-.book-match {
-  margin-bottom: 1rem;
-
-  .book {
-    margin: 1.2rem 0 0 0;
-    // padding: 1rem;
-    // width: 50%;
+  @media screen and (min-width: 640px) {
+    margin-top: 5%;
   }
-}
+  
+  .book-match {
+    margin-bottom: 1rem;
+    
+    background: #ffffe0;
 
-.oclc-description {
-  text-align: justify;
+    box-shadow: 0px 0px 10px #ccc;
+
+    .book {
+      margin: 1.2rem 0 0 0;
+
+      max-height: 250px;
+      overflow: scroll;
+
+      padding-right: 1rem;
+      padding-left: 1rem;
+      &.left .icons {
+        text-align: left;
+      }
+      &.right {
+        @media screen and (max-width: 640px) {
+          margin-top: 2%;
+          border-top: 1px dotted black;
+          padding-top: 3%;
+        }
+        @media screen and (min-width: 640px) {
+          border-left: 1px solid black;
+        }
+        .icons {
+          text-align: right;
+        }
+      }
+    }
+
+  }
+
+  .icon-nav {
+    padding: 1.5rem;
+    padding-bottom: 0.8rem;
+    clear: both;
+    .icons i {
+      // padding: 10%;
+      color: black;
+    }
+  }
+
+  .oclc-description {
+    text-align: justify;
+    // padding-right: 1rem;
+    // padding-left: 1rem;
+    // border-left: 1px solid black;
+  }
 }

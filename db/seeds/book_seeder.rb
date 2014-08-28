@@ -35,7 +35,7 @@ class BookSeeder
         b.description = handle_potential_inconsistency(hash["description"])
 
         title = handle_potential_inconsistency(hash["title"])
-        title &&= title[/(?<actual>[^[:punct:]].+[^[:punct:]])[[:punct:]]*$/, :actual]
+        title &&= title[/(?<actual>[^[.!,]].+[^[.!,]])[[.!,]]*$/, :actual]
 
         b.title = title
       end

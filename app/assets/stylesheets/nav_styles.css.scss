@@ -1,17 +1,25 @@
 // // Navbar Styles
 // Overriding Default Accordion Settings
-div.content.active {
-  &[id$='accord-btn']{
-    padding: 0;
-    margin: 0;
+
+// ! -- stale
+// div.content.active {
+//   &[id$='accord-btn']{
+//     padding: 0;
+//     margin: 0;
+//   }
+// }
+
+
+nav.top-bar {
+  @media screen and (min-width: 640px) {
+    display: none;
+    
   }
 }
 
 li a, dl.accordion dd.accordion-navigation a.accordion-title {
   color: #FFFFFF
 }
-
-
 
 div.content li {
   border-bottom: 1px solid white;
@@ -32,9 +40,19 @@ i.fa.fa-caret-right {
 .top-bar-section .has-dropdown > a:after {
   display: none;
 }
+.top-bar-section .has-dropdown > a {
+  padding-right: 18.33337px !important;
+}
 
 .button.session {
-  margin: 0 10px;
+  @media screen and (max-width: 640px) {
+    margin: 0 0;
+  }
+  
+  @media screen and (min-width: 640px) {
+    margin: 0 10px;
+  }
+
   overflow: auto;
   width: auto;
 }

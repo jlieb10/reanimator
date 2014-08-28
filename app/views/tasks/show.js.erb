@@ -1,1 +1,9 @@
-$('#main-task').html('<%= j(render(@task)) %>');
+(function(){
+  var $task = $('#main-task'),
+      content;
+
+  $task.fadeOut( 'fast', function() {
+    $task.html('<%= j(render(@task)) %>');    
+  }).fadeIn( 'fast' );
+
+})();
