@@ -1,12 +1,15 @@
 (function(){
 
   $( document ).on( 'page:change', function(){
+
     var attachNavAnimationOnMouseClose,
         detachNavAnimationOnMouseClose,
-        $nav = $( 'nav.top-bar' );
+        $nav = $( 'nav.top-bar' ),
+        $win = $( window ),
+        $doc = $( document );
 
     attachNavAnimationOnMouseClose = function ( ) {
-      $( document ).on( 'mousemove', 'body, nav.top-bar', function( e ){
+      $doc.on( 'mousemove', 'body, nav.top-bar', function( e ){
         var $this = $( this );
 
         e.stopPropagation();
@@ -18,19 +21,18 @@
       });
     };
 
-    detachNavAnimationOnMouseClose = $.prototype.off.bind( $( document ), 'mousemove', 'body, nav.top-bar' );
+    detachNavAnimationOnMouseClose = $.prototype.off.bind( $doc, 'mousemove', 'body, nav.top-bar' );
+    
+    if( $win.width() >= 640 ) attachNavAnimationOnMouseClose();
 
-    if( $( window ).width() >= 640 ) attachNavAnimationOnMouseClose();
-
-    $( window ).on( 'resize', function() {
-      if( $( window ).width() < 640 ) {
-        detachNavAnimationOnMouseClose(); 
+    $win.on( 'resize', function() {
+      if( $win.width() < 640 ) {
+        detachNavAnimationOnMouseClose();
         $nav.slideDown( 'fast' );
       }
       else {
         attachNavAnimationOnMouseClose();
         $nav.slideUp( 'fast' );
-
       }
     });
 

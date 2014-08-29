@@ -1,28 +1,25 @@
 <div class="question panel">
-<%#= content_tag :h4, question.task.name %>
-  <!-- <fieldset> -->
-    <%= content_tag :h4, question.content, class: 'centered' %>
-    <%= form_for @submission, :html => {:class => "form"}, :remote => true do |builder|%>
-      <% @constructs.each do |construct| %>
-        <%= render construct %>
-        
-        <%= construct.reference_fields(builder) %>
-      <% end %>
+  <%= content_tag :h4, question.content, class: 'centered' %>
+  <%= form_for @submission, :html => {:class => "form"}, :remote => true do |builder|%>
+    <% @constructs.each do |construct| %>
 
-      <%= builder.hidden_field :question_id, value: question.id %>
-        <!-- Originally designed with other question formats in mind -->
-        <% if question.expects_none? %>
-        <% elsif question.expects_checkbox? %>
-        <% elsif question.expects_radio? %>
-        <%= builder.collection_radio_buttons :option_id, question.options, :id, :value do |b| %>
-        <section>
-          <%= b.label(class: "button question") { b.radio_button(class: "hide") + b.text } %>
-        </section>
-        <% end %>
-        <br />
-        <% elsif question.expects_select? %>
-      <% end %>
-  <!-- <%#= builder.submit 'Submit!' %> -->
+      <%= render construct %>  
+      <%= construct.reference_fields(builder) %>
     <% end %>
-  <!-- </fieldset> -->
+
+    <%= builder.hidden_field :question_id, value: question.id %>
+    <!-- Originally designed with other question formats in mind -->
+    <% if question.expects_none? %>
+    <% elsif question.expects_checkbox? %>
+    <% elsif question.expects_radio? %>
+      <%= builder.collection_radio_buttons :option_id, question.options, :id, :value do |b| %>
+      <section>
+        <%= b.label(class: "button question") { b.radio_button(class: "hide") + b.text } %>
+      </section>
+      <% end %>
+      <br />
+    <% elsif question.expects_select? %>
+    <% end %>
+<!-- <%#= builder.submit 'Submit!' %> -->
+  <% end %>
 </div>
