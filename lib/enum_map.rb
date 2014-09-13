@@ -20,7 +20,7 @@ class EnumMap
     tap do |em|
       @class.send(:define_method, "#{@column}=") do |val|
         if em.enum_values.include? val.to_s and em.block.present?
-          val = em.block[val]
+          val = em.block.call(val)
         end
         super(val)
       end

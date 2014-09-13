@@ -1,3 +1,4 @@
+# 
 tasks:
 -
   name: Compare Titles
@@ -11,7 +12,7 @@ tasks:
 
       subject:
         scopes:
-          simple_join: [ "equivalencies", "on": "book_nid"]
+          simple_join: [ "equivalencies", "on": "book_nid" ]
           # => #sharing_works_with_unreferenced_books & #with_inconsistent_titles
           # need to be chained after a join with equivalencies
           sharing_works_with_unreferenced_books: 
@@ -79,7 +80,7 @@ tasks:
         value: "Yes"
       -
         value: "No"
-######---------------------------------------------------------
+#####---------------------------------------------------------
 # -
 #   name: Shorten Titles
 #   category: Titles
