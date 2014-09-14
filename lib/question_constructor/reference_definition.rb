@@ -20,14 +20,13 @@ class QuestionConstructor
     end
 
     def reference
-      Reference.new(@role).tap do |ref|
-        ref.object = @pool_block.call.sample # FIXME: Is there a better way to do this?
-      end
+      object = @pool_block.call.sample # FIXME: Is there a better way to do this?
+      Reference.new(:role => @role, :referenced => object, :column_name => @column)
     end
 
     def method_missing(name, *args, &block)
       if @strategy.references.key? name
-        @stategy.references[name]
+        @strategy.references[name].reference.referenced
       else
         super
       end

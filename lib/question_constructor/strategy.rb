@@ -3,7 +3,9 @@ class QuestionConstructor
   module Strategy
 
     class Base
-      
+        
+      attr_reader :references
+
       def initialize(user, question, references)
         @user = user
         @question = question

@@ -12,10 +12,11 @@ class CompareTitlesStrategy < QuestionConstructor::Strategy::Base
   define_reference do |user, question|
     column :title
     pool do
-      model = [GutenbergBook, OclcBook].sample
-      model.unreferenced(:user => user, :question => question, :role => :reference)
-           .in_same_work_as(subject)
-           .having_different(:title, :as => subject)
+      [GutenbergBook, OclcBook].flat_map do |model|
+        model.unreferenced(:user => user, :question => question, :role => :reference)
+             .in_same_work_as(subject)
+             .having_different(:title, :as => subject)
+      end
     end
   end
 

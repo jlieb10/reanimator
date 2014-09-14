@@ -9,9 +9,8 @@ class TasksController < ApplicationController
     @submission = current_user.submissions.new
 
     @constructs = @questions.map do |question|
-      QuestionConstructor.new(current_user, question).tap do |c|
-        c.construct(:subject)
-        c.construct(:references) if question.construct_meta.key?("references")
+      QuestionConstructor.new(current_user, question).tap do |qc|
+        qc.generate_references
       end
     end
 

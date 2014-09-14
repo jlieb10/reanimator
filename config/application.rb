@@ -8,7 +8,9 @@ Bundler.require(*Rails.groups)
 
 module Reanimator
   class Application < Rails::Application
-     config.autoload_paths << Rails.root.join("lib")
+     config.eager_load_paths << Rails.root.join("lib")
+     config.eager_load_paths << Rails.root.join("lib", 'question_constructor')
+     config.eager_load_paths << Rails.root.join("lib", 'question_constructor', 'strategies')
      
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers

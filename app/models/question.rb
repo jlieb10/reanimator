@@ -18,4 +18,7 @@ class Question < ActiveRecord::Base
 
   serialize :construct_meta
 
+  def suggested_strategy
+    "#{self.task.name.gsub(' ', '')}Strategy".constantize rescue nil
+  end
 end

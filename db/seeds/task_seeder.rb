@@ -23,7 +23,6 @@ class TaskSeeder
           # after creating task
           task["questions"].each do |question|
             Question.create do |q|
-              q.construct_meta = question["construct_meta"]
               q.expectation    = question["expectation"]
               q.content        = question["content"]
               q.task           = t
