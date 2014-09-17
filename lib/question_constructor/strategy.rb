@@ -19,7 +19,7 @@ class QuestionConstructor
 
     private
 
-    def self.define_reference(role = :reference, &block) 
+    def self.define_reference(role, &block) 
       instance_exec(role, block) do |ref_role, ref_block|
         @defined_references ||= {}
         @defined_references[ref_role] = ref_block

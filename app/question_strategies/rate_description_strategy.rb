@@ -15,7 +15,7 @@ class RateDescriptionStrategy < QuestionConstructor::Strategy
     end
   end
 
-  define_reference do |user, question|
+  define_reference :reference do |user, question|
     column :description
     pool do
       OclcBook.unreferenced(:user => user, :question => question, :role => :reference)
