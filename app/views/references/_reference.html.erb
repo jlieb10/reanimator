@@ -1,2 +1,5 @@
-<%= reference.referenced.inspect %>
-<%= reference.column_name %>
+<% if reference.column_name.present? %>
+  <%= reference.referenced.send(reference.column_name) %>
+<% else %>
+  <%= reference.referenced.title %>
+<% end %>
