@@ -1,6 +1,9 @@
 class QuestionConstructor
 
+  class StrategyMissingError < RuntimeError; end
+
   attr_reader :references
+  attr_accessor :strategy
 
   def initialize(user, question, strategy = nil)
     @user = user
@@ -27,7 +30,11 @@ class QuestionConstructor
   alias_method :to_a, :all
 
   def generate_references
-    @strategy.new(@user, @question, @references).generate_references
+    if @strategy
+      @strategy.new(@user, @question, @references).generate_references
+    else
+      raise StrategyMissingError, 'a strategy has not been specified'
+    end
   end
 
   def [] reference_name
@@ -46,15 +53,9 @@ class QuestionConstructor
     'question_constructor/question_constructor'
   end
 
-  def reference_fields(builder, input_type = :hidden)
+  def reference_fields(builder)
     self.each_with_object([]).with_index do |(ref, html), i|
-      # FIXME: move to reference model
-      html << builder.fields_for("reference_attributes[]", ref) do |r_builder|
-        r_builder.send("#{input_type}_field", :role, :id => "reference_role_#{i}") +
-        r_builder.send("#{input_type}_field", :referenced_type, :id => "reference_referenced_type_#{i}") +
-        r_builder.send("#{input_type}_field", :referenced_nid, :id => "reference_referenced_nid_#{i}") +
-        r_builder.send("#{input_type}_field", :column_name, :id => "reference_column_name_#{i}")
-      end.html_safe
+      html << ref.hidden_fields(builder, "_#{i}")
     end.join.html_safe
   end
 end

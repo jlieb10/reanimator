@@ -1,4 +1,4 @@
-class CompareTitlesStrategy < QuestionConstructor::Strategy::Base 
+class CompareTitlesStrategy < QuestionConstructor::Strategy
   
   define_reference :subject do |user, question| 
     column :title
