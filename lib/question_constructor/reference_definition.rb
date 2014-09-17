@@ -20,8 +20,7 @@ class QuestionConstructor
     end
 
     def reference
-      object = @pool_block.call.sample # FIXME: Is there a better way to do this?
-      Reference.new(:role => @role, :referenced => object, :column_name => @column)
+      @reference ||= Reference.new(:role => @role, :referenced => @pool_block.call.sample, :column_name => @column)
     end
 
     def method_missing(name, *args, &block)

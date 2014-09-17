@@ -9,7 +9,7 @@ class CompareTitlesStrategy < QuestionConstructor::Strategy::Base
     end
   end
 
-  define_reference do |user, question|
+  define_reference :reference do |user, question|
     column :title
     pool do
       [GutenbergBook, OclcBook].flat_map do |model|

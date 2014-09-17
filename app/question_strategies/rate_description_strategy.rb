@@ -1,4 +1,4 @@
-class DescriptionsStrategy < QuestionConstructor::Strategy::Base
+class RateDescriptionStrategy < QuestionConstructor::Strategy::Base
   
   define_reference :subject do |user, question|
     pool do
